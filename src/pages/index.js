@@ -1,12 +1,14 @@
 import React from 'react'
 
 import Layout from '../components/layout'
+import gitHubLogo from '../../assets/github.svg';
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <h1 style={{textAlign: 'center'}}>🚧 Under Construction! 🚧</h1>
+      <a href='https://github.com/tadasant/tadasant'>
+        <img style={{maxHeight: '2em'}} src={gitHubLogo} alt='GitHub Logo' />
+      </a>
   </Layout>
 )
 
