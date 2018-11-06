@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/shell'
 import gitHubLogo from '../../assets/github.svg';
 import linkedInLogo from '../../assets/linkedin.svg';
 
