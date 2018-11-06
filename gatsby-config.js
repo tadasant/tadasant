@@ -2,5 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Tadasant',
   },
-  plugins: ['gatsby-plugin-react-helmet'],
+  plugins: [
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components',
+  ],
 }
