@@ -1,10 +1,10 @@
 import React from 'react'
-import Layout from '../components/shell'
+import Shell from '../components/shell'
 import gitHubLogo from '../../assets/github.svg';
 import linkedInLogo from '../../assets/linkedin.svg';
 
 const IndexPage = () => (
-  <Layout>
+  <Shell>
     <h1 style={{textAlign: 'center'}}>🚧 Under Construction! 🚧</h1>
     {/*<Link to="/about/">About</Link>*/}
 
@@ -21,7 +21,7 @@ const IndexPage = () => (
       </div>
     </div>
 
-  </Layout>
+  </Shell>
 )
 
 export default IndexPage
