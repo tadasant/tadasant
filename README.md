@@ -17,12 +17,7 @@ Personal site for [Tadas Antanavicius](https://github.com/tadasant)
 Technology used:
 * Gatsby Static Site Generator
 * GraphQL
-
-Planned:
 * `styled-components`
-* MailChimp integration
-* Disqus integration
-* AddThis integration
 
 ## Deploy
 
