@@ -4,8 +4,8 @@
   "version": "0.0.1",
   "author": "Tadas Antanavicius <antanaviciust@gmail.com>",
   "dependencies": {
-    "gatsby": "next",
-    "gatsby-plugin-react-helmet": "next",
+    "gatsby": "2.0.40",
+    "gatsby-plugin-react-helmet": "3.0.1",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0"
