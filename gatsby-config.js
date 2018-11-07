@@ -8,6 +8,7 @@ module.exports = {
     'gatsby-transformer-remark',
     'gatsby-plugin-extract-schema',
     'gatsby-plugin-typescript',
+    'gatsby-plugin-favicon',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
