@@ -7,6 +7,7 @@ module.exports = {
     'gatsby-plugin-styled-components',
     'gatsby-transformer-remark',
     'gatsby-plugin-extract-schema',
+    'gatsby-plugin-typescript',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
