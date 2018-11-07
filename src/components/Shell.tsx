@@ -23,20 +23,12 @@ const Shell: SFC<IProps> = ({ children, data }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Tadas Antanavicius\' personal website. Tadas is a software engineer, entrepreneur, and blogger based in the United States. Here you\'ll find basic information about him, his blog, and links to his other profiles around the web.' },
+        { name: 'keywords', content: 'tadas antanavicius, antanavicius, tadas antanavicius, tadasant' },
         { name: 'google-site-verification', content: 'l4GtLlU7oAqrgl5VPmt1t8KcE1kWkWgeg4oXTcge5J0' },
       ]}
     />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.0875rem 1.45rem',
-      }}
-    >
-      {children}
-    </div>
+    {children}
   </>
 )
 
