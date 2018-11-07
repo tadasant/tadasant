@@ -7453,3 +7453,29 @@ export namespace SiteTitleQuery {
     title?: string | null
   }
 }
+
+export namespace GetBlogData {
+  export type Variables = {
+    slug: string
+  }
+
+  export type Query = {
+    __typename?: 'Query'
+
+    markdownRemark?: MarkdownRemark | null
+  }
+
+  export type MarkdownRemark = {
+    __typename?: 'MarkdownRemark'
+
+    html?: string | null
+
+    frontmatter?: Frontmatter | null
+  }
+
+  export type Frontmatter = {
+    __typename?: 'frontmatter_2'
+
+    title?: string | null
+  }
+}

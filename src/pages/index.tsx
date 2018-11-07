@@ -1,9 +1,10 @@
-import React from 'react'
-import Shell from '../components/shell'
+import { SFC } from 'react'
+import * as React from 'react';
+import Shell from '../components/shell';
 import gitHubLogo from '../../assets/github.svg';
 import linkedInLogo from '../../assets/linkedin.svg';
 
-const IndexPage = () => (
+const IndexPage: SFC = () => (
   <Shell>
     <h1 style={{textAlign: 'center'}}>🚧 Under Construction! 🚧</h1>
     {/*<Link to="/about/">About</Link>*/}

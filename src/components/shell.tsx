@@ -40,6 +40,7 @@ const Shell: SFC<IProps> = ({ children, data }) => (
   </>
 )
 
+// TODO look into converting to HOC
 const container: SFC = props => (
   <StaticQuery
     query={SITE_TITLE_QUERY}
