@@ -1,6 +1,6 @@
 import { SFC } from 'react'
 import * as React from 'react';
-import Shell from '../components/shell';
+import Shell from '../components/Shell';
 import gitHubLogo from '../../assets/github.svg';
 import linkedInLogo from '../../assets/linkedin.svg';
 
