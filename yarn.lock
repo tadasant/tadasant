@@ -4014,6 +4014,11 @@ gatsby-link@^2.0.6:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
+gatsby-plugin-extract-schema@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-extract-schema/-/gatsby-plugin-extract-schema-0.0.4.tgz#77cf9c2ae8581060bb5dcafbe24491b652f6eedd"
+  integrity sha512-MunYq+THr1wKOm01YX49UJnO9M3fZNngGk3OA+vYJ0QFBJOuZjDG/FakgenZieERxkPbGvaLc2a3pBqUxuTyUQ==
+
 gatsby-plugin-page-creator@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.0.3.tgz#391affa4d21c8f115ec1f44b1c541a6b05cb6e13"
