@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "sourceMap": true,
-    "noImplicitAny": false, // TODO toggle
+    "noImplicitAny": true, // TODO toggle
     "module": "commonjs",
     "target": "esnext",
     "jsx": "react",
