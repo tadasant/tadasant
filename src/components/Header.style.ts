@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import constants from '../styling/constants'
-import { media } from '../styling/core'
-import Img from 'gatsby-image'
+import Img from 'gatsby-image';
+import styled from 'styled-components';
+import constants from '../styling/constants';
+import { media } from '../styling/core';
 
 export const ContainerDiv = styled.div`
   background-color: ${constants.colors.brand};
@@ -48,4 +48,4 @@ export const LogoImg = styled(Img)`
     min-height: 48px;
     min-width: 48px;
   `}
-`
+`;
