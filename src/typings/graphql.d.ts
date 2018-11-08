@@ -41,6 +41,8 @@ export interface Query {
   allDirectory?: DirectoryConnection | null
   /** Connection to all File nodes */
   allFile?: FileConnection | null
+  /** Connection to all ImageSharp nodes */
+  allImageSharp?: ImageSharpConnection | null
   /** Connection to all MarkdownRemark nodes */
   allMarkdownRemark?: MarkdownRemarkConnection | null
 
@@ -53,6 +55,8 @@ export interface Query {
   directory?: Directory | null
 
   file?: File | null
+
+  imageSharp?: ImageSharp | null
 
   markdownRemark?: MarkdownRemark | null
 }
@@ -110,7 +114,7 @@ export interface SitePage extends Node {
 
   componentPath?: string | null
 
-  internal?: Internal_7 | null
+  internal?: Internal_8 | null
 }
 
 export interface Context {
@@ -141,7 +145,7 @@ export interface SitePlugin extends Node {
 
   packageJson?: PackageJson_2 | null
 
-  internal?: Internal_8 | null
+  internal?: Internal_9 | null
 }
 
 export interface PluginOptions_2 {
@@ -192,7 +196,7 @@ export interface PeerDependencies_2 {
   version?: string | null
 }
 
-export interface Internal_8 {
+export interface Internal_9 {
   contentDigest?: string | null
 
   type?: string | null
@@ -200,7 +204,7 @@ export interface Internal_8 {
   owner?: string | null
 }
 
-export interface Internal_7 {
+export interface Internal_8 {
   type?: string | null
 
   contentDigest?: string | null
@@ -306,7 +310,7 @@ export interface Directory extends Node {
   /** The children of this node. */
   children?: (Node | null)[] | null
 
-  internal?: Internal_9 | null
+  internal?: Internal_10 | null
 
   sourceInstanceName?: string | null
 
@@ -375,7 +379,7 @@ export interface Directory extends Node {
   birthtime?: Date | null
 }
 
-export interface Internal_9 {
+export interface Internal_10 {
   contentDigest?: string | null
 
   type?: string | null
@@ -436,10 +440,12 @@ export interface File extends Node {
   parent?: Node | null
   /** The children of this node. */
   children?: (Node | null)[] | null
+  /** The child of this node of type imageSharp */
+  childImageSharp?: ImageSharp | null
   /** The child of this node of type markdownRemark */
   childMarkdownRemark?: MarkdownRemark | null
 
-  internal?: Internal_10 | null
+  internal?: Internal_11 | null
 
   sourceInstanceName?: string | null
 
@@ -509,6 +515,155 @@ export interface File extends Node {
   /** Copy file to static directory and return public url to it */
   publicURL?: string | null
 }
+/** Node of type ImageSharp */
+export interface ImageSharp extends Node {
+  /** The id of this node. */
+  id: string
+  /** The parent of this node. */
+  parent?: Node | null
+  /** The children of this node. */
+  children?: (Node | null)[] | null
+
+  internal?: Internal_12 | null
+
+  fixed?: ImageSharpFixed | null
+
+  resolutions?: ImageSharpResolutions | null
+
+  fluid?: ImageSharpFluid | null
+
+  sizes?: ImageSharpSizes | null
+
+  original?: ImageSharpOriginal | null
+
+  resize?: ImageSharpResize | null
+}
+
+export interface Internal_12 {
+  contentDigest?: string | null
+
+  type?: string | null
+
+  owner?: string | null
+}
+
+export interface ImageSharpFixed {
+  base64?: string | null
+
+  tracedSVG?: string | null
+
+  aspectRatio?: number | null
+
+  width?: number | null
+
+  height?: number | null
+
+  src?: string | null
+
+  srcSet?: string | null
+
+  srcWebp?: string | null
+
+  srcSetWebp?: string | null
+
+  originalName?: string | null
+}
+
+export interface ImageSharpResolutions {
+  base64?: string | null
+
+  tracedSVG?: string | null
+
+  aspectRatio?: number | null
+
+  width?: number | null
+
+  height?: number | null
+
+  src?: string | null
+
+  srcSet?: string | null
+
+  srcWebp?: string | null
+
+  srcSetWebp?: string | null
+
+  originalName?: string | null
+}
+
+export interface ImageSharpFluid {
+  base64?: string | null
+
+  tracedSVG?: string | null
+
+  aspectRatio?: number | null
+
+  src?: string | null
+
+  srcSet?: string | null
+
+  srcWebp?: string | null
+
+  srcSetWebp?: string | null
+
+  sizes?: string | null
+
+  originalImg?: string | null
+
+  originalName?: string | null
+
+  presentationWidth?: number | null
+
+  presentationHeight?: number | null
+}
+
+export interface ImageSharpSizes {
+  base64?: string | null
+
+  tracedSVG?: string | null
+
+  aspectRatio?: number | null
+
+  src?: string | null
+
+  srcSet?: string | null
+
+  srcWebp?: string | null
+
+  srcSetWebp?: string | null
+
+  sizes?: string | null
+
+  originalImg?: string | null
+
+  originalName?: string | null
+
+  presentationWidth?: number | null
+
+  presentationHeight?: number | null
+}
+
+export interface ImageSharpOriginal {
+  width?: number | null
+
+  height?: number | null
+
+  src?: string | null
+}
+
+export interface ImageSharpResize {
+  src?: string | null
+
+  tracedSVG?: string | null
+
+  width?: number | null
+
+  height?: number | null
+
+  aspectRatio?: number | null
+
+  originalName?: string | null
+}
 /** Node of type MarkdownRemark */
 export interface MarkdownRemark extends Node {
   /** The id of this node. */
@@ -518,7 +673,7 @@ export interface MarkdownRemark extends Node {
   /** The children of this node. */
   children?: (Node | null)[] | null
 
-  internal?: Internal_11 | null
+  internal?: Internal_13 | null
 
   frontmatter?: Frontmatter_2 | null
 
@@ -543,7 +698,7 @@ export interface MarkdownRemark extends Node {
   wordCount?: WordCount | null
 }
 
-export interface Internal_11 {
+export interface Internal_13 {
   content?: string | null
 
   type?: string | null
@@ -561,6 +716,8 @@ export interface FieldOwners_2 {
 
 export interface Frontmatter_2 {
   title?: string | null
+
+  date?: Date | null
 
   _PARENT?: string | null
 }
@@ -583,7 +740,7 @@ export interface WordCount {
   words?: number | null
 }
 
-export interface Internal_10 {
+export interface Internal_11 {
   contentDigest?: string | null
 
   type?: string | null
@@ -615,6 +772,50 @@ export interface FileGroupConnectionEdge {
   next?: File | null
   /** The previous edge in the connection */
   previous?: File | null
+}
+/** A connection to a list of items. */
+export interface ImageSharpConnection {
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo
+  /** A list of edges. */
+  edges?: (ImageSharpEdge | null)[] | null
+
+  totalCount?: number | null
+
+  distinct?: (string | null)[] | null
+
+  group?: (ImageSharpGroupConnectionConnection | null)[] | null
+}
+/** An edge in a connection. */
+export interface ImageSharpEdge {
+  /** The item at the end of the edge */
+  node?: ImageSharp | null
+  /** The next edge in the connection */
+  next?: ImageSharp | null
+  /** The previous edge in the connection */
+  previous?: ImageSharp | null
+}
+/** A connection to a list of items. */
+export interface ImageSharpGroupConnectionConnection {
+  /** Information to aid in pagination. */
+  pageInfo: PageInfo
+  /** A list of edges. */
+  edges?: (ImageSharpGroupConnectionEdge | null)[] | null
+
+  field?: string | null
+
+  fieldValue?: string | null
+
+  totalCount?: number | null
+}
+/** An edge in a connection. */
+export interface ImageSharpGroupConnectionEdge {
+  /** The item at the end of the edge */
+  node?: ImageSharp | null
+  /** The next edge in the connection */
+  next?: ImageSharp | null
+  /** The previous edge in the connection */
+  previous?: ImageSharp | null
 }
 /** A connection to a list of items. */
 export interface MarkdownRemarkConnection {
@@ -681,14 +882,14 @@ export interface Site extends Node {
 
   buildTime?: Date | null
 
-  internal?: Internal_12 | null
+  internal?: Internal_14 | null
 }
 
 export interface SiteMetadata_2 {
   title?: string | null
 }
 
-export interface Internal_12 {
+export interface Internal_14 {
   contentDigest?: string | null
 
   type?: string | null
@@ -3232,6 +3433,1050 @@ export interface PublicUrlQueryString_4 {
   nin?: (string | null)[] | null
 }
 
+export interface DuotoneGradient {
+  highlight?: string | null
+
+  shadow?: string | null
+
+  opacity?: number | null
+}
+
+export interface Potrace {
+  turnPolicy?: PotraceTurnPolicy | null
+
+  turdSize?: number | null
+
+  alphaMax?: number | null
+
+  optCurve?: boolean | null
+
+  optTolerance?: number | null
+
+  threshold?: number | null
+
+  blackOnWhite?: boolean | null
+
+  color?: string | null
+
+  background?: string | null
+}
+
+export interface ImageSharpConnectionSort {
+  fields: (ImageSharpConnectionSortByFieldsEnum | null)[]
+
+  order?: ImageSharpConnectionSortOrderValues | null
+}
+/** Filter connection on its fields */
+export interface FilterImageSharp {
+  id?: ImageSharpConnectionIdQueryString_2 | null
+
+  internal?: ImageSharpConnectionInternalInputObject_2 | null
+
+  fixed?: FixedTypeName_4 | null
+
+  resolutions?: ResolutionsTypeName_4 | null
+
+  fluid?: FluidTypeName_4 | null
+
+  sizes?: SizesTypeName_4 | null
+
+  original?: OriginalTypeName_4 | null
+
+  resize?: ResizeTypeName_4 | null
+}
+
+export interface ImageSharpConnectionIdQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ImageSharpConnectionInternalInputObject_2 {
+  contentDigest?: ImageSharpConnectionInternalContentDigestQueryString_2 | null
+
+  type?: ImageSharpConnectionInternalTypeQueryString_2 | null
+
+  owner?: ImageSharpConnectionInternalOwnerQueryString_2 | null
+}
+
+export interface ImageSharpConnectionInternalContentDigestQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ImageSharpConnectionInternalTypeQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ImageSharpConnectionInternalOwnerQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FixedTypeName_4 {
+  base64?: FixedBase64QueryString_4 | null
+
+  tracedSVG?: FixedTracedSvgQueryString_4 | null
+
+  aspectRatio?: FixedAspectRatioQueryFloat_4 | null
+
+  width?: FixedWidthQueryFloat_4 | null
+
+  height?: FixedHeightQueryFloat_4 | null
+
+  src?: FixedSrcQueryString_4 | null
+
+  srcSet?: FixedSrcSetQueryString_4 | null
+
+  srcWebp?: FixedSrcWebpQueryString_4 | null
+
+  srcSetWebp?: FixedSrcSetWebpQueryString_4 | null
+
+  originalName?: FixedOriginalNameQueryString_4 | null
+}
+
+export interface FixedBase64QueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FixedTracedSvgQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FixedAspectRatioQueryFloat_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface FixedWidthQueryFloat_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface FixedHeightQueryFloat_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface FixedSrcQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FixedSrcSetQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FixedSrcWebpQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FixedSrcSetWebpQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FixedOriginalNameQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResolutionsTypeName_4 {
+  base64?: ResolutionsBase64QueryString_4 | null
+
+  tracedSVG?: ResolutionsTracedSvgQueryString_4 | null
+
+  aspectRatio?: ResolutionsAspectRatioQueryFloat_4 | null
+
+  width?: ResolutionsWidthQueryFloat_4 | null
+
+  height?: ResolutionsHeightQueryFloat_4 | null
+
+  src?: ResolutionsSrcQueryString_4 | null
+
+  srcSet?: ResolutionsSrcSetQueryString_4 | null
+
+  srcWebp?: ResolutionsSrcWebpQueryString_4 | null
+
+  srcSetWebp?: ResolutionsSrcSetWebpQueryString_4 | null
+
+  originalName?: ResolutionsOriginalNameQueryString_4 | null
+}
+
+export interface ResolutionsBase64QueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResolutionsTracedSvgQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResolutionsAspectRatioQueryFloat_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface ResolutionsWidthQueryFloat_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface ResolutionsHeightQueryFloat_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface ResolutionsSrcQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResolutionsSrcSetQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResolutionsSrcWebpQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResolutionsSrcSetWebpQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResolutionsOriginalNameQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidTypeName_4 {
+  base64?: FluidBase64QueryString_4 | null
+
+  tracedSVG?: FluidTracedSvgQueryString_4 | null
+
+  aspectRatio?: FluidAspectRatioQueryFloat_4 | null
+
+  src?: FluidSrcQueryString_4 | null
+
+  srcSet?: FluidSrcSetQueryString_4 | null
+
+  srcWebp?: FluidSrcWebpQueryString_4 | null
+
+  srcSetWebp?: FluidSrcSetWebpQueryString_4 | null
+
+  sizes?: FluidSizesQueryString_4 | null
+
+  originalImg?: FluidOriginalImgQueryString_4 | null
+
+  originalName?: FluidOriginalNameQueryString_4 | null
+
+  presentationWidth?: FluidPresentationWidthQueryInt_4 | null
+
+  presentationHeight?: FluidPresentationHeightQueryInt_4 | null
+}
+
+export interface FluidBase64QueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidTracedSvgQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidAspectRatioQueryFloat_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface FluidSrcQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidSrcSetQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidSrcWebpQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidSrcSetWebpQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidSizesQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidOriginalImgQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidOriginalNameQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidPresentationWidthQueryInt_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface FluidPresentationHeightQueryInt_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface SizesTypeName_4 {
+  base64?: SizesBase64QueryString_4 | null
+
+  tracedSVG?: SizesTracedSvgQueryString_4 | null
+
+  aspectRatio?: SizesAspectRatioQueryFloat_4 | null
+
+  src?: SizesSrcQueryString_4 | null
+
+  srcSet?: SizesSrcSetQueryString_4 | null
+
+  srcWebp?: SizesSrcWebpQueryString_4 | null
+
+  srcSetWebp?: SizesSrcSetWebpQueryString_4 | null
+
+  sizes?: SizesSizesQueryString_4 | null
+
+  originalImg?: SizesOriginalImgQueryString_4 | null
+
+  originalName?: SizesOriginalNameQueryString_4 | null
+
+  presentationWidth?: SizesPresentationWidthQueryInt_4 | null
+
+  presentationHeight?: SizesPresentationHeightQueryInt_4 | null
+}
+
+export interface SizesBase64QueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesTracedSvgQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesAspectRatioQueryFloat_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface SizesSrcQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesSrcSetQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesSrcWebpQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesSrcSetWebpQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesSizesQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesOriginalImgQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesOriginalNameQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesPresentationWidthQueryInt_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface SizesPresentationHeightQueryInt_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface OriginalTypeName_4 {
+  width?: OriginalWidthQueryFloat_4 | null
+
+  height?: OriginalHeightQueryFloat_4 | null
+
+  src?: OriginalSrcQueryString_4 | null
+}
+
+export interface OriginalWidthQueryFloat_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface OriginalHeightQueryFloat_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface OriginalSrcQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResizeTypeName_4 {
+  src?: ResizeSrcQueryString_4 | null
+
+  tracedSVG?: ResizeTracedSvgQueryString_4 | null
+
+  width?: ResizeWidthQueryInt_4 | null
+
+  height?: ResizeHeightQueryInt_4 | null
+
+  aspectRatio?: ResizeAspectRatioQueryFloat_4 | null
+
+  originalName?: ResizeOriginalNameQueryString_4 | null
+}
+
+export interface ResizeSrcQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResizeTracedSvgQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResizeWidthQueryInt_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface ResizeHeightQueryInt_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface ResizeAspectRatioQueryFloat_4 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface ResizeOriginalNameQueryString_4 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
 export interface MarkdownRemarkConnectionSort {
   fields: (MarkdownRemarkConnectionSortByFieldsEnum | null)[]
 
@@ -3367,10 +4612,26 @@ export interface MarkdownRemarkConnectionInternalFieldOwnersSlugQueryString_2 {
 export interface MarkdownRemarkConnectionFrontmatterInputObject_2 {
   title?: MarkdownRemarkConnectionFrontmatterTitleQueryString_2 | null
 
+  date?: MarkdownRemarkConnectionFrontmatterDateQueryString_2 | null
+
   _PARENT?: MarkdownRemarkConnectionFrontmatterParentQueryString_2 | null
 }
 
 export interface MarkdownRemarkConnectionFrontmatterTitleQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface MarkdownRemarkConnectionFrontmatterDateQueryString_2 {
   eq?: string | null
 
   ne?: string | null
@@ -6072,6 +7333,998 @@ export interface PublicUrlQueryString_3 {
   nin?: (string | null)[] | null
 }
 
+export interface ImageSharpIdQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ImageSharpInternalInputObject_2 {
+  contentDigest?: ImageSharpInternalContentDigestQueryString_2 | null
+
+  type?: ImageSharpInternalTypeQueryString_2 | null
+
+  owner?: ImageSharpInternalOwnerQueryString_2 | null
+}
+
+export interface ImageSharpInternalContentDigestQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ImageSharpInternalTypeQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ImageSharpInternalOwnerQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FixedTypeName_3 {
+  base64?: FixedBase64QueryString_3 | null
+
+  tracedSVG?: FixedTracedSvgQueryString_3 | null
+
+  aspectRatio?: FixedAspectRatioQueryFloat_3 | null
+
+  width?: FixedWidthQueryFloat_3 | null
+
+  height?: FixedHeightQueryFloat_3 | null
+
+  src?: FixedSrcQueryString_3 | null
+
+  srcSet?: FixedSrcSetQueryString_3 | null
+
+  srcWebp?: FixedSrcWebpQueryString_3 | null
+
+  srcSetWebp?: FixedSrcSetWebpQueryString_3 | null
+
+  originalName?: FixedOriginalNameQueryString_3 | null
+}
+
+export interface FixedBase64QueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FixedTracedSvgQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FixedAspectRatioQueryFloat_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface FixedWidthQueryFloat_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface FixedHeightQueryFloat_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface FixedSrcQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FixedSrcSetQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FixedSrcWebpQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FixedSrcSetWebpQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FixedOriginalNameQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResolutionsTypeName_3 {
+  base64?: ResolutionsBase64QueryString_3 | null
+
+  tracedSVG?: ResolutionsTracedSvgQueryString_3 | null
+
+  aspectRatio?: ResolutionsAspectRatioQueryFloat_3 | null
+
+  width?: ResolutionsWidthQueryFloat_3 | null
+
+  height?: ResolutionsHeightQueryFloat_3 | null
+
+  src?: ResolutionsSrcQueryString_3 | null
+
+  srcSet?: ResolutionsSrcSetQueryString_3 | null
+
+  srcWebp?: ResolutionsSrcWebpQueryString_3 | null
+
+  srcSetWebp?: ResolutionsSrcSetWebpQueryString_3 | null
+
+  originalName?: ResolutionsOriginalNameQueryString_3 | null
+}
+
+export interface ResolutionsBase64QueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResolutionsTracedSvgQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResolutionsAspectRatioQueryFloat_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface ResolutionsWidthQueryFloat_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface ResolutionsHeightQueryFloat_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface ResolutionsSrcQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResolutionsSrcSetQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResolutionsSrcWebpQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResolutionsSrcSetWebpQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResolutionsOriginalNameQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidTypeName_3 {
+  base64?: FluidBase64QueryString_3 | null
+
+  tracedSVG?: FluidTracedSvgQueryString_3 | null
+
+  aspectRatio?: FluidAspectRatioQueryFloat_3 | null
+
+  src?: FluidSrcQueryString_3 | null
+
+  srcSet?: FluidSrcSetQueryString_3 | null
+
+  srcWebp?: FluidSrcWebpQueryString_3 | null
+
+  srcSetWebp?: FluidSrcSetWebpQueryString_3 | null
+
+  sizes?: FluidSizesQueryString_3 | null
+
+  originalImg?: FluidOriginalImgQueryString_3 | null
+
+  originalName?: FluidOriginalNameQueryString_3 | null
+
+  presentationWidth?: FluidPresentationWidthQueryInt_3 | null
+
+  presentationHeight?: FluidPresentationHeightQueryInt_3 | null
+}
+
+export interface FluidBase64QueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidTracedSvgQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidAspectRatioQueryFloat_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface FluidSrcQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidSrcSetQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidSrcWebpQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidSrcSetWebpQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidSizesQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidOriginalImgQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidOriginalNameQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FluidPresentationWidthQueryInt_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface FluidPresentationHeightQueryInt_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface SizesTypeName_3 {
+  base64?: SizesBase64QueryString_3 | null
+
+  tracedSVG?: SizesTracedSvgQueryString_3 | null
+
+  aspectRatio?: SizesAspectRatioQueryFloat_3 | null
+
+  src?: SizesSrcQueryString_3 | null
+
+  srcSet?: SizesSrcSetQueryString_3 | null
+
+  srcWebp?: SizesSrcWebpQueryString_3 | null
+
+  srcSetWebp?: SizesSrcSetWebpQueryString_3 | null
+
+  sizes?: SizesSizesQueryString_3 | null
+
+  originalImg?: SizesOriginalImgQueryString_3 | null
+
+  originalName?: SizesOriginalNameQueryString_3 | null
+
+  presentationWidth?: SizesPresentationWidthQueryInt_3 | null
+
+  presentationHeight?: SizesPresentationHeightQueryInt_3 | null
+}
+
+export interface SizesBase64QueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesTracedSvgQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesAspectRatioQueryFloat_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface SizesSrcQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesSrcSetQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesSrcWebpQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesSrcSetWebpQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesSizesQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesOriginalImgQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesOriginalNameQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SizesPresentationWidthQueryInt_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface SizesPresentationHeightQueryInt_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface OriginalTypeName_3 {
+  width?: OriginalWidthQueryFloat_3 | null
+
+  height?: OriginalHeightQueryFloat_3 | null
+
+  src?: OriginalSrcQueryString_3 | null
+}
+
+export interface OriginalWidthQueryFloat_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface OriginalHeightQueryFloat_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface OriginalSrcQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResizeTypeName_3 {
+  src?: ResizeSrcQueryString_3 | null
+
+  tracedSVG?: ResizeTracedSvgQueryString_3 | null
+
+  width?: ResizeWidthQueryInt_3 | null
+
+  height?: ResizeHeightQueryInt_3 | null
+
+  aspectRatio?: ResizeAspectRatioQueryFloat_3 | null
+
+  originalName?: ResizeOriginalNameQueryString_3 | null
+}
+
+export interface ResizeSrcQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResizeTracedSvgQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface ResizeWidthQueryInt_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface ResizeHeightQueryInt_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface ResizeAspectRatioQueryFloat_3 {
+  eq?: number | null
+
+  ne?: number | null
+
+  gt?: number | null
+
+  gte?: number | null
+
+  lt?: number | null
+
+  lte?: number | null
+
+  in?: (number | null)[] | null
+
+  nin?: (number | null)[] | null
+}
+
+export interface ResizeOriginalNameQueryString_3 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
 export interface MarkdownRemarkIdQueryString_2 {
   eq?: string | null
 
@@ -6175,10 +8428,26 @@ export interface MarkdownRemarkInternalFieldOwnersSlugQueryString_2 {
 export interface MarkdownRemarkFrontmatterInputObject_2 {
   title?: MarkdownRemarkFrontmatterTitleQueryString_2 | null
 
+  date?: MarkdownRemarkFrontmatterDateQueryString_2 | null
+
   _PARENT?: MarkdownRemarkFrontmatterParentQueryString_2 | null
 }
 
 export interface MarkdownRemarkFrontmatterTitleQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface MarkdownRemarkFrontmatterDateQueryString_2 {
   eq?: string | null
 
   ne?: string | null
@@ -6456,6 +8725,15 @@ export interface AllFileQueryArgs {
 
   filter?: FilterFile | null
 }
+export interface AllImageSharpQueryArgs {
+  skip?: number | null
+
+  limit?: number | null
+
+  sort?: ImageSharpConnectionSort | null
+
+  filter?: FilterImageSharp | null
+}
 export interface AllMarkdownRemarkQueryArgs {
   skip?: number | null
 
@@ -6669,6 +8947,23 @@ export interface FileQueryArgs {
   birthtime?: FileBirthtimeQueryString_2 | null
 
   publicURL?: PublicUrlQueryString_3 | null
+}
+export interface ImageSharpQueryArgs {
+  id?: ImageSharpIdQueryString_2 | null
+
+  internal?: ImageSharpInternalInputObject_2 | null
+
+  fixed?: FixedTypeName_3 | null
+
+  resolutions?: ResolutionsTypeName_3 | null
+
+  fluid?: FluidTypeName_3 | null
+
+  sizes?: SizesTypeName_3 | null
+
+  original?: OriginalTypeName_3 | null
+
+  resize?: ResizeTypeName_3 | null
 }
 export interface MarkdownRemarkQueryArgs {
   id?: MarkdownRemarkIdQueryString_2 | null
@@ -6895,6 +9190,123 @@ export interface BirthtimeFileArgs {
   /** Configures the locale Moment.js will use to format the date. */
   locale?: string | null
 }
+export interface FixedImageSharpArgs {
+  width?: number | null
+
+  height?: number | null
+
+  jpegProgressive?: boolean | null
+
+  grayscale?: boolean | null
+
+  duotone?: DuotoneGradient | null
+
+  traceSVG?: Potrace | null
+
+  quality?: number | null
+
+  toFormat?: ImageFormat | null
+
+  cropFocus?: ImageCropFocus | null
+
+  rotate?: number | null
+}
+export interface ResolutionsImageSharpArgs {
+  width?: number | null
+
+  height?: number | null
+
+  jpegProgressive?: boolean | null
+
+  grayscale?: boolean | null
+
+  duotone?: DuotoneGradient | null
+
+  traceSVG?: Potrace | null
+
+  quality?: number | null
+
+  toFormat?: ImageFormat | null
+
+  cropFocus?: ImageCropFocus | null
+
+  rotate?: number | null
+}
+export interface FluidImageSharpArgs {
+  maxWidth?: number | null
+
+  maxHeight?: number | null
+
+  grayscale?: boolean | null
+
+  jpegProgressive?: boolean | null
+
+  duotone?: DuotoneGradient | null
+
+  traceSVG?: Potrace | null
+
+  quality?: number | null
+
+  toFormat?: ImageFormat | null
+
+  cropFocus?: ImageCropFocus | null
+
+  rotate?: number | null
+
+  sizes?: string | null
+  /** A list of image widths to be generated. Example: [ 200, 340, 520, 890 ] */
+  srcSetBreakpoints?: (number | null)[] | null
+}
+export interface SizesImageSharpArgs {
+  maxWidth?: number | null
+
+  maxHeight?: number | null
+
+  grayscale?: boolean | null
+
+  jpegProgressive?: boolean | null
+
+  duotone?: DuotoneGradient | null
+
+  traceSVG?: Potrace | null
+
+  quality?: number | null
+
+  toFormat?: ImageFormat | null
+
+  cropFocus?: ImageCropFocus | null
+
+  rotate?: number | null
+
+  sizes?: string | null
+  /** A list of image widths to be generated. Example: [ 200, 340, 520, 890 ] */
+  srcSetBreakpoints?: (number | null)[] | null
+}
+export interface ResizeImageSharpArgs {
+  width?: number | null
+
+  height?: number | null
+
+  quality?: number | null
+
+  jpegProgressive?: boolean | null
+
+  pngCompressionLevel?: number | null
+
+  grayscale?: boolean | null
+
+  duotone?: DuotoneGradient | null
+
+  base64?: boolean | null
+
+  traceSVG?: Potrace | null
+
+  toFormat?: ImageFormat | null
+
+  cropFocus?: ImageCropFocus | null
+
+  rotate?: number | null
+}
 export interface ExcerptMarkdownRemarkArgs {
   pruneLength?: number | null
 
@@ -6905,6 +9317,26 @@ export interface HeadingsMarkdownRemarkArgs {
 }
 export interface TableOfContentsMarkdownRemarkArgs {
   pathToSlugField?: string | null
+}
+export interface DateFrontmatter_2Args {
+  /** Format the date using Moment.js' date tokens e.g. "date(formatString: "YYYY MMMM DD)" See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens */
+  formatString?: string | null
+  /** Returns a string generated with Moment.js' fromNow function */
+  fromNow?: boolean | null
+  /** Returns the difference between this date and the current time. Defaults to miliseconds but you can also pass in as the measurement years, months, weeks, days, hours, minutes, and seconds. */
+  difference?: string | null
+  /** Configures the locale Moment.js will use to format the date. */
+  locale?: string | null
+}
+export interface DistinctImageSharpConnectionArgs {
+  field?: ImageSharpDistinctEnum | null
+}
+export interface GroupImageSharpConnectionArgs {
+  skip?: number | null
+
+  limit?: number | null
+
+  field?: ImageSharpGroupEnum | null
 }
 export interface DistinctMarkdownRemarkConnectionArgs {
   field?: MarkdownRemarkDistinctEnum | null
@@ -7267,6 +9699,36 @@ export enum FileConnectionSortOrderValues {
   DESC = 'DESC',
 }
 
+export enum PotraceTurnPolicy {
+  TURNPOLICY_BLACK = 'TURNPOLICY_BLACK',
+  TURNPOLICY_WHITE = 'TURNPOLICY_WHITE',
+  TURNPOLICY_LEFT = 'TURNPOLICY_LEFT',
+  TURNPOLICY_RIGHT = 'TURNPOLICY_RIGHT',
+  TURNPOLICY_MINORITY = 'TURNPOLICY_MINORITY',
+  TURNPOLICY_MAJORITY = 'TURNPOLICY_MAJORITY',
+}
+
+export enum ImageFormat {
+  NO_CHANGE = 'NO_CHANGE',
+  JPG = 'JPG',
+  PNG = 'PNG',
+  WEBP = 'WEBP',
+}
+
+export enum ImageCropFocus {
+  CENTER = 'CENTER',
+  NORTH = 'NORTH',
+  NORTHEAST = 'NORTHEAST',
+  EAST = 'EAST',
+  SOUTHEAST = 'SOUTHEAST',
+  SOUTH = 'SOUTH',
+  SOUTHWEST = 'SOUTHWEST',
+  WEST = 'WEST',
+  NORTHWEST = 'NORTHWEST',
+  ENTROPY = 'ENTROPY',
+  ATTENTION = 'ATTENTION',
+}
+
 export enum HeadingLevels {
   h1 = 'h1',
   h2 = 'h2',
@@ -7364,6 +9826,88 @@ export enum FileGroupEnum {
   birthtime = 'birthtime',
 }
 
+export enum ImageSharpConnectionSortByFieldsEnum {
+  id = 'id',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+  fixed___base64 = 'fixed___base64',
+  fixed___tracedSVG = 'fixed___tracedSVG',
+  fixed___aspectRatio = 'fixed___aspectRatio',
+  fixed___width = 'fixed___width',
+  fixed___height = 'fixed___height',
+  fixed___src = 'fixed___src',
+  fixed___srcSet = 'fixed___srcSet',
+  fixed___srcWebp = 'fixed___srcWebp',
+  fixed___srcSetWebp = 'fixed___srcSetWebp',
+  fixed___originalName = 'fixed___originalName',
+  resolutions___base64 = 'resolutions___base64',
+  resolutions___tracedSVG = 'resolutions___tracedSVG',
+  resolutions___aspectRatio = 'resolutions___aspectRatio',
+  resolutions___width = 'resolutions___width',
+  resolutions___height = 'resolutions___height',
+  resolutions___src = 'resolutions___src',
+  resolutions___srcSet = 'resolutions___srcSet',
+  resolutions___srcWebp = 'resolutions___srcWebp',
+  resolutions___srcSetWebp = 'resolutions___srcSetWebp',
+  resolutions___originalName = 'resolutions___originalName',
+  fluid___base64 = 'fluid___base64',
+  fluid___tracedSVG = 'fluid___tracedSVG',
+  fluid___aspectRatio = 'fluid___aspectRatio',
+  fluid___src = 'fluid___src',
+  fluid___srcSet = 'fluid___srcSet',
+  fluid___srcWebp = 'fluid___srcWebp',
+  fluid___srcSetWebp = 'fluid___srcSetWebp',
+  fluid___sizes = 'fluid___sizes',
+  fluid___originalImg = 'fluid___originalImg',
+  fluid___originalName = 'fluid___originalName',
+  fluid___presentationWidth = 'fluid___presentationWidth',
+  fluid___presentationHeight = 'fluid___presentationHeight',
+  sizes___base64 = 'sizes___base64',
+  sizes___tracedSVG = 'sizes___tracedSVG',
+  sizes___aspectRatio = 'sizes___aspectRatio',
+  sizes___src = 'sizes___src',
+  sizes___srcSet = 'sizes___srcSet',
+  sizes___srcWebp = 'sizes___srcWebp',
+  sizes___srcSetWebp = 'sizes___srcSetWebp',
+  sizes___sizes = 'sizes___sizes',
+  sizes___originalImg = 'sizes___originalImg',
+  sizes___originalName = 'sizes___originalName',
+  sizes___presentationWidth = 'sizes___presentationWidth',
+  sizes___presentationHeight = 'sizes___presentationHeight',
+  original___width = 'original___width',
+  original___height = 'original___height',
+  original___src = 'original___src',
+  resize___src = 'resize___src',
+  resize___tracedSVG = 'resize___tracedSVG',
+  resize___width = 'resize___width',
+  resize___height = 'resize___height',
+  resize___aspectRatio = 'resize___aspectRatio',
+  resize___originalName = 'resize___originalName',
+}
+
+export enum ImageSharpConnectionSortOrderValues {
+  ASC = 'ASC',
+  DESC = 'DESC',
+}
+
+export enum ImageSharpDistinctEnum {
+  id = 'id',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+}
+
+export enum ImageSharpGroupEnum {
+  id = 'id',
+  parent = 'parent',
+  internal___contentDigest = 'internal___contentDigest',
+  internal___type = 'internal___type',
+  internal___owner = 'internal___owner',
+}
+
 export enum MarkdownRemarkConnectionSortByFieldsEnum {
   id = 'id',
   parent = 'parent',
@@ -7373,6 +9917,7 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   internal___owner = 'internal___owner',
   internal___fieldOwners___slug = 'internal___fieldOwners___slug',
   frontmatter___title = 'frontmatter___title',
+  frontmatter___date = 'frontmatter___date',
   frontmatter____PARENT = 'frontmatter____PARENT',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
@@ -7401,6 +9946,7 @@ export enum MarkdownRemarkDistinctEnum {
   internal___owner = 'internal___owner',
   internal___fieldOwners___slug = 'internal___fieldOwners___slug',
   frontmatter___title = 'frontmatter___title',
+  frontmatter___date = 'frontmatter___date',
   frontmatter____PARENT = 'frontmatter____PARENT',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
@@ -7417,6 +9963,7 @@ export enum MarkdownRemarkGroupEnum {
   internal___owner = 'internal___owner',
   internal___fieldOwners___slug = 'internal___fieldOwners___slug',
   frontmatter___title = 'frontmatter___title',
+  frontmatter___date = 'frontmatter___date',
   frontmatter____PARENT = 'frontmatter____PARENT',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
@@ -7431,6 +9978,30 @@ export enum MarkdownRemarkGroupEnum {
 // ====================================================
 // Documents
 // ====================================================
+
+export namespace GetHeaderData {
+  export type Variables = {}
+
+  export type Query = {
+    __typename?: 'Query'
+
+    file?: File | null
+  }
+
+  export type File = {
+    __typename?: 'File'
+
+    childImageSharp?: ChildImageSharp | null
+  }
+
+  export type ChildImageSharp = {
+    __typename?: 'ImageSharp'
+
+    fluid?: Fluid | null
+  }
+
+  export type Fluid = GatsbyImageSharpFixedTracedSvg.Fragment
+}
 
 export namespace SiteTitleQuery {
   export type Variables = {}

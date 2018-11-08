@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import constants from '../styling/constants'
 import { media } from '../styling/core'
+import Img from 'gatsby-image'
 
 export const ContainerDiv = styled.div`
   background-color: ${constants.colors.brand};
@@ -36,5 +37,15 @@ export const TabletNavigationContainerDiv = styled.div`
 export const MobilePageHeaderContainerDiv = styled.div`
   ${media.tablet`
     display: none;
+  `}
+`;
+
+export const LogoImg = styled(Img)`
+  min-height: 32px;
+  min-width: 32px;
+  
+  ${media.tablet`
+    min-height: 48px;
+    min-width: 48px;
   `}
 `

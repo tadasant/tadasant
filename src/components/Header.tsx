@@ -1,18 +1,27 @@
+import { graphql, Link, StaticQuery } from 'gatsby'
+import * as React from 'react'
 import { SFC } from 'react'
-import * as React from 'react';
+import { GetHeaderData } from '../typings/graphql'
 import {
   ContainerDiv,
-  TabletNavigationContainerDiv,
-  MobilePageHeaderContainerDiv,
+  LogoImg,
   MobileNavigationContainerDiv,
+  MobilePageHeaderContainerDiv,
+  TabletNavigationContainerDiv,
 } from './Header.style'
 
-const Header: SFC = () => {
+interface IProps {
+  data: GetHeaderData.Query
+}
+
+const Header: SFC<IProps> = props => {
+  debugger
+  const { data: { file: { childImageSharp } } } = props
   return (
     <ContainerDiv>
-      <div>
-        Logo
-      </div>
+      <Link to='/'>
+        <LogoImg fluid={childImageSharp.fluid}/>
+      </Link>
       <MobilePageHeaderContainerDiv>
         Page name
       </MobilePageHeaderContainerDiv>
@@ -34,4 +43,24 @@ const Header: SFC = () => {
   )
 }
 
-export default Header;
+// TODO look into converting to HOC
+const container: SFC = props => (
+  <StaticQuery
+    query={HEADER_QUERY}
+    render={data => <Header data={data} {...props}/>}
+  />
+)
+
+export default container
+
+export const HEADER_QUERY = graphql`
+    query GetHeaderData {
+        file(relativePath: {eq: "images/logo.png"}) {
+            childImageSharp {
+                fluid(maxHeight: 300) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                }
+            }
+        }
+    }
+`

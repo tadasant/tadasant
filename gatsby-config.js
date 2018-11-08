@@ -1,3 +1,5 @@
+const path = require(`path`);
+
 module.exports = {
   siteMetadata: {
     title: 'Tadas Antanavicius',
@@ -9,11 +11,20 @@ module.exports = {
     'gatsby-plugin-extract-schema',
     'gatsby-plugin-typescript',
     'gatsby-plugin-favicon',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'src',
-        path: `${__dirname}/src/`,
+        name: 'assets',
+        path: `${__dirname}/src/assets`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'blog',
+        path: `${__dirname}/src/pages/blog`,
       },
     },
   ],

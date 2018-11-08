@@ -9,7 +9,7 @@ const constants = {
       'gold': '#D9C477',
     },
     'base': {
-      'lightblue': '#F0F1F2',
+      'grey': '#F0F1F2',
     },
     'shadow': 'rgba(0, 0, 0, 0.5)',
   },
