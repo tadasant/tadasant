@@ -1,22 +1,22 @@
-import { graphql, Link, StaticQuery } from 'gatsby'
-import * as React from 'react'
-import { SFC } from 'react'
-import { GetHeaderData } from '../typings/graphql'
+import { graphql, Link, StaticQuery } from 'gatsby';
+import * as React from 'react';
+import { SFC } from 'react';
+import { GetHeaderData } from '../typings/graphql';
 import {
   ContainerDiv,
   LogoImg,
   MobileNavigationContainerDiv,
   MobilePageHeaderContainerDiv,
   TabletNavigationContainerDiv,
-} from './Header.style'
+} from './Header.style';
 
 interface IProps {
   data: GetHeaderData.Query
 }
 
 const Header: SFC<IProps> = props => {
-  debugger
-  const { data: { file: { childImageSharp } } } = props
+  debugger;
+  const { data: { file: { childImageSharp } } } = props;
   return (
     <ContainerDiv>
       <Link to='/'>
@@ -40,8 +40,8 @@ const Header: SFC<IProps> = props => {
         </div>
       </TabletNavigationContainerDiv>
     </ContainerDiv>
-  )
-}
+  );
+};
 
 // TODO look into converting to HOC
 const container: SFC = props => (
@@ -49,9 +49,9 @@ const container: SFC = props => (
     query={HEADER_QUERY}
     render={data => <Header data={data} {...props}/>}
   />
-)
+);
 
-export default container
+export default container;
 
 export const HEADER_QUERY = graphql`
     query GetHeaderData {
@@ -63,4 +63,4 @@ export const HEADER_QUERY = graphql`
             }
         }
     }
-`
+`;

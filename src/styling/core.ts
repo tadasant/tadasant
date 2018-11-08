@@ -1,5 +1,5 @@
-import {css} from 'styled-components'
-import constants from './constants'
+import { css } from 'styled-components';
+import constants from './constants';
 
 type BreakpointLabels = keyof typeof constants.breakpoints;
 
@@ -11,12 +11,12 @@ type TMedia = {
 export const media: TMedia = Object.keys(constants.breakpoints).reduce((mediaQueries: Partial<TMedia>, label: BreakpointLabels) => (
   {
     ...mediaQueries,
-    [label] (...args: any[]) {
+    [label](...args: any[]) {
       return css`
                 @media (min-width: ${constants.breakpoints[label]}px) {
                     ${css.call(this, ...args)}
                 }
-            `
+            `;
     },
   }
-), {})
+), {});
