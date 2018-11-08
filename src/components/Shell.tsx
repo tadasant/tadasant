@@ -3,6 +3,7 @@ import * as React from 'react'
 import { SFC } from 'react'
 import Helmet from 'react-helmet'
 import { SiteTitleQuery } from '../typings/graphql'
+import Header from './Header'
 
 const SITE_TITLE_QUERY = graphql`
     query SiteTitleQuery {
@@ -28,6 +29,7 @@ const Shell: SFC<IProps> = ({ children, data }) => (
         { name: 'google-site-verification', content: 'l4GtLlU7oAqrgl5VPmt1t8KcE1kWkWgeg4oXTcge5J0' },
       ]}
     />
+    <Header />
     {children}
   </>
 )
