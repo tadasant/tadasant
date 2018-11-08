@@ -1,9 +1,9 @@
 import { graphql, Link, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import { SFC } from 'react';
-import { GetHeaderData } from '../typings/graphql';
+import { GetHeaderData } from '../../typings/graphql';
 import {
-  ContainerDiv,
+  FlexboxContainerDiv,
   LogoImg,
   MobileNavigationContainerDiv,
   MobilePageHeaderContainerDiv,
@@ -14,16 +14,27 @@ interface IProps {
   data: GetHeaderData.Query
 }
 
+const getLocationName = () => {
+  const pathname = window.location.pathname;
+  const directory = pathname.split('/')[0];
+  switch (directory) {
+    case 'contact': return 'Contact';
+    case 'blog': return 'Blog';
+    default: return '';
+  }
+};
+
+// TODO use a CSS grid to isolate the three sections (e.g. 4 col + 4 col + 4 col) otherwise centering is off
+
 const Header: SFC<IProps> = props => {
-  debugger;
   const { data: { file: { childImageSharp } } } = props;
   return (
-    <ContainerDiv>
+    <FlexboxContainerDiv>
       <Link to='/'>
         <LogoImg fluid={childImageSharp.fluid}/>
       </Link>
       <MobilePageHeaderContainerDiv>
-        Page name
+        {getLocationName()}
       </MobilePageHeaderContainerDiv>
       <MobileNavigationContainerDiv>
         Menu bar
@@ -39,7 +50,7 @@ const Header: SFC<IProps> = props => {
           Nav3
         </div>
       </TabletNavigationContainerDiv>
-    </ContainerDiv>
+    </FlexboxContainerDiv>
   );
 };
 
