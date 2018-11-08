@@ -1,8 +1,12 @@
+import { SFC } from 'react'
 import * as React from 'react';
+import { Container } from './Header.style'
 
-const Header = () => {
+const Header: SFC = () => {
   return (
-    <div />
+    <Container>
+      Stuff
+    </Container>
   )
 }
 
