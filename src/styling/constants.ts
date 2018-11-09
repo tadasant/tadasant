@@ -15,6 +15,7 @@ const constants = {
   },
   'typography': {
     'fontFamily': 'Open Sans',
+    'fontStyle': 'italic',
     'header': {
       'mobile': {
         'fontSize': '32px',

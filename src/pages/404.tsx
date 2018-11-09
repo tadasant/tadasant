@@ -1,6 +1,6 @@
 import { SFC } from 'react'
 import * as React from 'react'
-import Shell from '../components/Shell'
+import Shell from '../components/shell/Shell'
 
 const NotFoundPage: SFC = () => (
   <Shell>

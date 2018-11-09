@@ -4,18 +4,22 @@ import constants from '../../styling/constants';
 import { media } from '../../styling/core';
 import { Button } from '../lib/styled-lib';
 
+export const navbarHeight = '32px';
+export const navbarVPadding = '8px';
+export const navbarVPaddingTablet = '16px';
+
 export const NavbarContainerDiv = styled.div`
   background-color: ${constants.colors.brand};
   box-shadow: 0px 2px 4px 0 ${constants.colors.shadow};
-  height: 32px;
+  height: ${navbarHeight};
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100%;
   
-  padding: 8px;
+  padding: ${navbarVPadding};
   
   ${media.tablet`
-    padding: 16px;
+    padding: ${navbarVPaddingTablet};
   `}
 `;
 

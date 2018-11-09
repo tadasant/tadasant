@@ -1,10 +1,12 @@
 import { graphql, StaticQuery } from 'gatsby';
+import 'npm-font-open-sans';
 import * as React from 'react';
 import { SFC } from 'react';
 import Helmet from 'react-helmet';
-import { SiteTitleQuery } from '../typings/graphql';
-import Header from './navbar/Navbar';
-import 'npm-font-open-sans';
+import { SiteTitleQuery } from '../../typings/graphql';
+import Footer from '../footer/Footer';
+import Header from '../navbar/Navbar';
+import { BodyContainerDiv } from './Shell.style';
 
 const SITE_TITLE_QUERY = graphql`
     query SiteTitleQuery {
@@ -34,7 +36,10 @@ const Shell: SFC<IProps> = ({ children, data }) => (
       ]}
     />
     <Header/>
-    {children}
+    <BodyContainerDiv>
+      {children}
+    </BodyContainerDiv>
+    <Footer/>
   </>
 );
 
