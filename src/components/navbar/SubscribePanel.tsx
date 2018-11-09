@@ -1,12 +1,11 @@
-import { TextField } from '@material-ui/core';
 import * as React from 'react';
 import { SFC } from 'react';
 import { compose, withState } from 'recompose';
-import { Body2, Header3 } from '../../styling/Typography';
-import { ContentDiv, ModalDiv, SubmitButton } from './SubscribePanel.style';
+import { Body2, Header } from '../../styling/Typography';
+import { ContentDiv, ModalDiv, StyledTextField, SubmitButton } from './SubscribePanel.style';
 
 // TODO could turn this into a public mailchimp component
-const postToMailchimp = (email: string, firstName: string) => {
+const postToMailchimp = (email: string, firstName: string, lastName?: string) => {
   const path = 'https://tadasant.us19.list-manage.com/subscribe/post?u=35763864ff52517433180ce28&amp;id=f97ea6014c';
   const method = 'post';
 
@@ -21,11 +20,19 @@ const postToMailchimp = (email: string, firstName: string) => {
   emailField.setAttribute('value', email);
   form.appendChild(emailField);
 
-  const nameField = document.createElement('input');
-  nameField.setAttribute('type', 'hidden');
-  nameField.setAttribute('name', 'FNAME');
-  nameField.setAttribute('value', firstName);
-  form.appendChild(nameField);
+  const firstNameField = document.createElement('input');
+  firstNameField.setAttribute('type', 'hidden');
+  firstNameField.setAttribute('name', 'FNAME');
+  firstNameField.setAttribute('value', firstName);
+  form.appendChild(firstNameField);
+
+  if (lastName) {
+    const lastNameField = document.createElement('input');
+    lastNameField.setAttribute('type', 'hidden');
+    lastNameField.setAttribute('name', 'LNAME');
+    lastNameField.setAttribute('value', firstName);
+    form.appendChild(lastNameField);
+  }
 
   document.body.appendChild(form);
   form.submit();
@@ -36,35 +43,59 @@ interface IStateProps {
   setEmailAddress: (s: string) => string
   firstName: string
   setFirstName: (s: string) => string
+  lastName: string
+  setLastName: (s: string) => string
 }
 
 // TODO last name optional, actually submit
 
 const SubscribePanel: SFC<IStateProps> = props => {
-  const { emailAddress, setEmailAddress, firstName, setFirstName } = props;
+  const { emailAddress, setEmailAddress, firstName, setFirstName, lastName, setLastName } = props;
+
+  // TODO something wrong with TypeScript
+  const EmailField = (
+    // @ts-ignore
+    <StyledTextField
+      value={emailAddress}
+      placeholder='Email address'
+      inputProps={{ type: 'email' }}
+      onChange={event => setEmailAddress(event.target.value === undefined ? '' : event.target.value)}
+    />
+  );
+  const FirstNameField = (
+    // @ts-ignore
+    <StyledTextField
+      value={firstName}
+      placeholder='First name'
+      inputProps={{ type: 'text' }}
+      onChange={event => setFirstName(event.target.value === undefined ? '' : event.target.value)}
+    />
+  );
+  const LastNameField = (
+    // @ts-ignore
+    <StyledTextField
+      value={lastName}
+      placeholder='Last name'
+      inputProps={{ type: 'text' }}
+      onChange={event => setLastName(event.target.value === undefined ? '' : event.target.value)}
+    />
+  );
+
   return (
-    <ModalDiv>
+    <ModalDiv tabIndex={-1}>
       <ContentDiv>
-        <Header3>Subscribe to my emails</Header3>
-        <br/><br/>
+        <Header>Subscribe</Header>
+        <br/>
         <Body2>You'll receive an occasional email from me when I've published a blog post or have some
           announcement.</Body2>
-        <br/><br/>
-        <TextField
-          value={emailAddress}
-          placeholder='Email address'
-          inputProps={{type: 'email'}}
-          onChange={event => setEmailAddress(event.target.value === undefined ? '' : event.target.value)}
-        />
-        <br/><br/>
-        <TextField
-          value={firstName}
-          placeholder='First name'
-          inputProps={{type: 'text'}}
-          onChange={event => setFirstName(event.target.value === undefined ? '' : event.target.value)}
-        />
-        <br/><br/>
-        <SubmitButton disabled={firstName !== '' && emailAddress !== ''}>Submit</SubmitButton>
+        <br/>
+        {EmailField}
+        <br/>
+        {FirstNameField}
+        <br/>
+        {LastNameField}
+        <br/>
+        <SubmitButton disabled={firstName === '' || emailAddress === ''}>Submit</SubmitButton>
       </ContentDiv>
     </ModalDiv>
   );
@@ -79,6 +110,11 @@ const enhance = compose(
   withState<{}, string, 'firstName', 'setFirstName'>(
     'firstName',
     'setFirstName',
+    '',
+  ),
+  withState<{}, string, 'lastName', 'setLastName'>(
+    'lastName',
+    'setLastName',
     '',
   ),
 );

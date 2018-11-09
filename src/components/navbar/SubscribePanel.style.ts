@@ -1,3 +1,4 @@
+import { TextField } from '@material-ui/core';
 import styled from 'styled-components';
 import constants from '../../styling/constants';
 import { media } from '../../styling/core';
@@ -12,7 +13,7 @@ export const ModalDiv = styled.div`
   top: 12.5vh;
   left: 12.5vw;
   width: 75vw;
-  height: 75vw;
+  height: 75vh;
   
   ${media.tablet`
     top: 25vh;
@@ -24,11 +25,28 @@ export const ModalDiv = styled.div`
 
 export const ContentDiv = styled.div`
   padding: 1vh 1vw 1vh 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+`;
+
+export const StyledTextField = styled(TextField)`
+  width: 50%;
 `;
 
 export const SubmitButton = styled(Button).attrs({
   shadow: true,
 })`
-  color: ${constants.colors.base.grey};
-  background-color: ${constants.colors.brand};
+  && {
+    width: 25%;
+    color: ${constants.colors.base.grey};
+    background-color: ${constants.colors.brand};
+    
+    :disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+      pointer-events: all;
+    }
+  }
 `;
