@@ -8,5 +8,5 @@ export const FooterContainerDiv = styled.div`
   background-color: ${constants.colors.brand};
   box-shadow: 0px -2px 4px 0 ${constants.colors.shadow};
   text-align: center;
-  padding: 1vh 0 1vh 0;
+  padding: 0.5vh 0 0.5vh 0;
 `;

@@ -1,10 +1,15 @@
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import { media } from '../../styling/core';
 import { UndecoratedAnchor } from '../lib/styled-lib';
 
 export const HomeContainerDiv = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr 4fr 3fr 1fr;
+  
+  ${media.desktop`
+    grid-template-columns: 1fr 3fr 1.5fr 1fr 1.5fr 3fr 1fr;
+  `}
 `;
 
 export const HeadshotContainerDiv = styled.div`
@@ -14,6 +19,10 @@ export const HeadshotContainerDiv = styled.div`
   align-items: center;
   
   padding-top: 2vh;
+  
+  ${media.desktop`
+    grid-column-start: 4;
+  `}
 `;
 
 export const HeadshotImg = styled(Img)`
@@ -28,6 +37,10 @@ export const ExternalIconsContainerDiv = styled.div`
   justify-content: space-between;
   
   padding-top: 1vh;
+  
+  ${media.desktop`
+    grid-column-start: 4;
+  `}
 `;
 
 export const ExternalIconAnchor = styled(UndecoratedAnchor)`
@@ -48,4 +61,8 @@ export const MessageContainerDiv = styled.div`
   
   padding: 2vh 0 2vh 0;
   text-align: center;
+  
+  ${media.desktop`
+    grid-column-end: 7;
+  `}
 `;

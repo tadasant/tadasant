@@ -6,7 +6,7 @@ import { FooterContainerDiv } from './Footer.style';
 const Footer: SFC = () => {
   return (
     <FooterContainerDiv>
-      <Caption white>© Vita.G, LLC 2018</Caption>
+      <Caption white>© Tadas Antanavicius 2018</Caption>
     </FooterContainerDiv>
   );
 };
