@@ -41,3 +41,11 @@ export const ExternalIconAnchor = styled(UndecoratedAnchor)`
 export const ExternalIconImg = styled(Img)`
   width: 100%;
 `;
+
+export const MessageContainerDiv = styled.div`
+  grid-column-start: 2;
+  grid-column-end: 5;
+  
+  padding: 2vh 0 2vh 0;
+  text-align: center;
+`;

@@ -30,6 +30,17 @@ const constants = {
       'fontSize': '21px',
       'fontWeight': 'bold',
     },
+    'body1': {
+      'textAlign': 'center',
+      'mobile': {
+        'fontSize': '21px',
+        'fontWeight': 'normal',
+      },
+      'tablet': {
+        'fontSize': '36px',
+        'fontWeight': 'normal',
+      }
+    },
     'button': {
       'textAlign': 'center',
       'mobile': {

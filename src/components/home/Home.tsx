@@ -1,6 +1,7 @@
 import { graphql, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import { SFC } from 'react';
+import { Body1 } from '../../styling/Typography';
 import { GetHomeData } from '../../typings/graphql';
 import {
   ExternalIconAnchor,
@@ -8,7 +9,7 @@ import {
   ExternalIconsContainerDiv,
   HeadshotContainerDiv,
   HeadshotImg,
-  HomeContainerDiv,
+  HomeContainerDiv, MessageContainerDiv,
 } from './Home.style';
 
 interface IQueryProps {
@@ -50,6 +51,15 @@ const Home: SFC<TProps> = (props) => {
           <ExternalIconImg fluid={stackoverflow.childImageSharp.fluid} alt='Tadas Antanavicius StackOverflow'/>
         </ExternalIconAnchor>
       </ExternalIconsContainerDiv>
+      <MessageContainerDiv>
+        <Body1>
+          Hey! I’m Tadas, an entrepreneur and software developer. I build products on the web to make people’s lives better.
+        </Body1>
+        <br /><br /><br />
+        <Body1>
+          I write about what I’ve learned along the way about <b>software</b>, <b>business</b>, and <b>life</b>: check out my blog.
+        </Body1>
+      </MessageContainerDiv>
     </HomeContainerDiv>
   );
 };

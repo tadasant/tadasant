@@ -27,3 +27,17 @@ export const Header3 = styled.span`
   font-size: ${constants.typography.header3.fontSize};
   font-weight: ${constants.typography.header3.fontWeight};
 `;
+
+export const Body1 = styled.span`
+  color: ${(props: ITypographyProps) => props.white ? constants.colors.base.grey : constants.colors.brand};
+  font-family: ${constants.typography.fontFamily};
+  text-align: ${constants.typography.body1.textAlign};
+  
+  font-size: ${constants.typography.body1.mobile.fontSize};
+  font-weight: ${constants.typography.body1.mobile.fontWeight};
+  
+  ${media.tablet`
+    font-size: ${constants.typography.body1.tablet.fontSize};
+    font-weight: ${constants.typography.body1.tablet.fontWeight};
+  `}
+`;
