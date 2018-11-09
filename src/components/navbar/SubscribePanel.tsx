@@ -47,8 +47,6 @@ interface IStateProps {
   setLastName: (s: string) => string
 }
 
-// TODO last name optional, actually submit
-
 const SubscribePanel: SFC<IStateProps> = props => {
   const { emailAddress, setEmailAddress, firstName, setFirstName, lastName, setLastName } = props;
 
