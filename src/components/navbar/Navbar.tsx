@@ -40,9 +40,9 @@ interface IStateProps {
   setAnchorEl: (el: HTMLElement | null) => HTMLElement | null;
 }
 
-type IProps = IStateProps & IQueryProps;
+type TProps = IStateProps & IQueryProps;
 
-const NavbarPure: SFC<IProps> = props => {
+const NavbarPure: SFC<TProps> = props => {
   const { data, anchorEl, setAnchorEl } = props;
   return (
     <NavbarContainerDiv>

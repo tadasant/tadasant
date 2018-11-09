@@ -174,8 +174,6 @@ export interface PackageJson_2 {
   devDependencies?: (DevDependencies_2 | null)[] | null
 
   peerDependencies?: (PeerDependencies_2 | null)[] | null
-
-  keywords?: (string | null)[] | null
 }
 
 export interface Dependencies_2 {
@@ -1205,8 +1203,6 @@ export interface SitePageConnectionPluginCreatorPackageJsonInputObject {
   devDependencies?: SitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList | null
 
   peerDependencies?: SitePageConnectionPluginCreatorPackageJsonPeerDependenciesQueryList | null
-
-  keywords?: SitePageConnectionPluginCreatorPackageJsonKeywordsQueryList | null
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonNameQueryString {
@@ -1394,20 +1390,6 @@ export interface SitePageConnectionPluginCreatorPackageJsonPeerDependenciesNameQ
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonPeerDependenciesVersionQueryString {
-  eq?: string | null
-
-  ne?: string | null
-
-  regex?: string | null
-
-  glob?: string | null
-
-  in?: (string | null)[] | null
-
-  nin?: (string | null)[] | null
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonKeywordsQueryList {
   eq?: string | null
 
   ne?: string | null
@@ -1783,8 +1765,6 @@ export interface SitePluginConnectionPackageJsonInputObject_2 {
   devDependencies?: SitePluginConnectionPackageJsonDevDependenciesQueryList_2 | null
 
   peerDependencies?: SitePluginConnectionPackageJsonPeerDependenciesQueryList_2 | null
-
-  keywords?: SitePluginConnectionPackageJsonKeywordsQueryList_2 | null
 }
 
 export interface SitePluginConnectionPackageJsonNameQueryString_2 {
@@ -1972,20 +1952,6 @@ export interface SitePluginConnectionPackageJsonPeerDependenciesNameQueryString_
 }
 
 export interface SitePluginConnectionPackageJsonPeerDependenciesVersionQueryString_2 {
-  eq?: string | null
-
-  ne?: string | null
-
-  regex?: string | null
-
-  glob?: string | null
-
-  in?: (string | null)[] | null
-
-  nin?: (string | null)[] | null
-}
-
-export interface SitePluginConnectionPackageJsonKeywordsQueryList_2 {
   eq?: string | null
 
   ne?: string | null
@@ -5143,8 +5109,6 @@ export interface SitePagePluginCreatorPackageJsonInputObject {
   devDependencies?: SitePagePluginCreatorPackageJsonDevDependenciesQueryList | null
 
   peerDependencies?: SitePagePluginCreatorPackageJsonPeerDependenciesQueryList | null
-
-  keywords?: SitePagePluginCreatorPackageJsonKeywordsQueryList | null
 }
 
 export interface SitePagePluginCreatorPackageJsonNameQueryString {
@@ -5332,20 +5296,6 @@ export interface SitePagePluginCreatorPackageJsonPeerDependenciesNameQueryString
 }
 
 export interface SitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryString {
-  eq?: string | null
-
-  ne?: string | null
-
-  regex?: string | null
-
-  glob?: string | null
-
-  in?: (string | null)[] | null
-
-  nin?: (string | null)[] | null
-}
-
-export interface SitePagePluginCreatorPackageJsonKeywordsQueryList {
   eq?: string | null
 
   ne?: string | null
@@ -5693,8 +5643,6 @@ export interface SitePluginPackageJsonInputObject_2 {
   devDependencies?: SitePluginPackageJsonDevDependenciesQueryList_2 | null
 
   peerDependencies?: SitePluginPackageJsonPeerDependenciesQueryList_2 | null
-
-  keywords?: SitePluginPackageJsonKeywordsQueryList_2 | null
 }
 
 export interface SitePluginPackageJsonNameQueryString_2 {
@@ -5882,20 +5830,6 @@ export interface SitePluginPackageJsonPeerDependenciesNameQueryString_2 {
 }
 
 export interface SitePluginPackageJsonPeerDependenciesVersionQueryString_2 {
-  eq?: string | null
-
-  ne?: string | null
-
-  regex?: string | null
-
-  glob?: string | null
-
-  in?: (string | null)[] | null
-
-  nin?: (string | null)[] | null
-}
-
-export interface SitePluginPackageJsonKeywordsQueryList_2 {
   eq?: string | null
 
   ne?: string | null
@@ -9978,6 +9912,30 @@ export enum MarkdownRemarkGroupEnum {
 // ====================================================
 // Documents
 // ====================================================
+
+export namespace GetHomeData {
+  export type Variables = {}
+
+  export type Query = {
+    __typename?: 'Query'
+
+    headshot?: Headshot | null
+  }
+
+  export type Headshot = {
+    __typename?: 'File'
+
+    childImageSharp?: ChildImageSharp | null
+  }
+
+  export type ChildImageSharp = {
+    __typename?: 'ImageSharp'
+
+    fluid?: Fluid | null
+  }
+
+  export type Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
+}
 
 export namespace GetNavbarData {
   export type Variables = {}
