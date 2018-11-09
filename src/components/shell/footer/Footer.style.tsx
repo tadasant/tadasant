@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import constants from '../../styling/constants';
+import constants from '../../../styling/constants';
 
 export const FooterContainerDiv = styled.div`
   display: flex;

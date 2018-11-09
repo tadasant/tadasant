@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { SFC } from 'react';
 import { compose, withState } from 'recompose';
-import { Body2, Header } from '../../styling/Typography';
+import { Body2, Header } from '../../../styling/Typography';
 import { ContentDiv, ModalDiv, StyledTextField, SubmitButton } from './SubscribePanel.style';
 
 // TODO could turn this into a public mailchimp component

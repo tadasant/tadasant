@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { media } from '../../styling/core';
-import { navbarHeight, navbarVPadding, navbarVPaddingTablet } from '../navbar/Navbar.style';
+import { navbarHeight, navbarVPadding, navbarVPaddingTablet } from './navbar/Navbar.style';
 
 export const BodyContainerDiv = styled.div`
   padding: 1vh 0 1vh 0;

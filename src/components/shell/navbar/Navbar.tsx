@@ -3,9 +3,9 @@ import { graphql, Link, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import { SFC } from 'react';
 import { compose, withState } from 'recompose';
-import { Header, Header3 } from '../../styling/Typography';
-import { GetNavbarData } from '../../typings/graphql';
-import { UndecoratedLink } from '../lib/styled-lib';
+import { Header, Header3 } from '../../../styling/Typography';
+import { GetNavbarData } from '../../../typings/graphql';
+import { UndecoratedLink } from '../../lib/styled-lib';
 import {
   LogoContainerDiv,
   LogoImg,

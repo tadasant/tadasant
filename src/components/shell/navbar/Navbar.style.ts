@@ -1,8 +1,8 @@
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-import constants from '../../styling/constants';
-import { media } from '../../styling/core';
-import { Button } from '../lib/styled-lib';
+import constants from '../../../styling/constants';
+import { media } from '../../../styling/core';
+import { Button } from '../../lib/styled-lib';
 
 export const navbarHeight = '32px';
 export const navbarVPadding = '8px';

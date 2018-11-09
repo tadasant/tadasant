@@ -4,8 +4,8 @@ import * as React from 'react';
 import { SFC } from 'react';
 import Helmet from 'react-helmet';
 import { SiteTitleQuery } from '../../typings/graphql';
-import Footer from '../footer/Footer';
-import Navbar from '../navbar/Navbar';
+import Footer from './footer/Footer';
+import Navbar from './navbar/Navbar';
 import { BodyContainerDiv, NavbarContainerDiv } from './Shell.style';
 
 const SITE_TITLE_QUERY = graphql`

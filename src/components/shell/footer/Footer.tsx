@@ -1,6 +1,6 @@
 import { SFC } from 'react';
 import * as React from 'react';
-import { Caption } from '../../styling/Typography';
+import { Caption } from '../../../styling/Typography';
 import { FooterContainerDiv } from './Footer.style';
 
 const Footer: SFC = () => {
