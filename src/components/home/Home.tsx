@@ -74,7 +74,7 @@ const container: SFC = props => (
 
 export default container;
 
-export const HOME_QUERY = graphql`
+const HOME_QUERY = graphql`
     query GetHomeData {
         headshot: file(relativePath: {eq: "images/headshot-circle.png"}) {
             childImageSharp {

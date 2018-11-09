@@ -132,7 +132,7 @@ const enhance = compose<IStateProps, {}>(
 
 export default enhance(container);
 
-export const NAVBAR_QUERY = graphql`
+const NAVBAR_QUERY = graphql`
     query GetNavbarData {
         logo: file(relativePath: {eq: "images/logo.png"}) {
             childImageSharp {
