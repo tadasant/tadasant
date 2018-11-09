@@ -3,11 +3,12 @@ import * as React from 'react';
 import { SFC } from 'react';
 import { GetHeaderData } from '../../typings/graphql';
 import {
-  FlexboxContainerDiv,
+  HeaderContainerDiv,
   LogoImg,
   MobileNavigationContainerDiv,
   MobilePageHeaderContainerDiv,
   TabletNavigationContainerDiv,
+  LogoContainerDiv,
 } from './Header.style';
 
 interface IProps {
@@ -18,9 +19,12 @@ const getLocationName = () => {
   const pathname = window.location.pathname;
   const directory = pathname.split('/')[0];
   switch (directory) {
-    case 'contact': return 'Contact';
-    case 'blog': return 'Blog';
-    default: return '';
+    case 'contact':
+      return 'Contact';
+    case 'blog':
+      return 'Blog';
+    default:
+      return '';
   }
 };
 
@@ -29,10 +33,12 @@ const getLocationName = () => {
 const Header: SFC<IProps> = props => {
   const { data: { file: { childImageSharp } } } = props;
   return (
-    <FlexboxContainerDiv>
-      <Link to='/'>
-        <LogoImg fluid={childImageSharp.fluid}/>
-      </Link>
+    <HeaderContainerDiv>
+      <LogoContainerDiv>
+        <Link to='/'>
+          <LogoImg fluid={childImageSharp.fluid} alt='Tadasant logo'/>
+        </Link>
+      </LogoContainerDiv>
       <MobilePageHeaderContainerDiv>
         {getLocationName()}
       </MobilePageHeaderContainerDiv>
@@ -50,7 +56,7 @@ const Header: SFC<IProps> = props => {
           Nav3
         </div>
       </TabletNavigationContainerDiv>
-    </FlexboxContainerDiv>
+    </HeaderContainerDiv>
   );
 };
 

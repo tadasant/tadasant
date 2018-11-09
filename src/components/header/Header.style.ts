@@ -3,13 +3,13 @@ import styled from 'styled-components';
 import constants from '../../styling/constants';
 import { media } from '../../styling/core';
 
-export const FlexboxContainerDiv = styled.div`
+export const HeaderContainerDiv = styled.div`
   background-color: ${constants.colors.brand};
   box-shadow: 0px 2px 4px 0 ${constants.colors.shadow};
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   height: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100%;
   
   padding: 8px;
   
@@ -18,7 +18,29 @@ export const FlexboxContainerDiv = styled.div`
   `}
 `;
 
+export const LogoContainerDiv = styled.div`
+  display: flex;
+  align-items: center;
+  grid-column-start: 1;
+`;
+
+export const MobilePageHeaderContainerDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column-start: 2;
+  
+  ${media.tablet`
+    display: none;
+  `}
+`;
+
 export const MobileNavigationContainerDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  grid-column-start: 3;
+  
   ${media.tablet`
     display: none;
   `}
@@ -26,17 +48,12 @@ export const MobileNavigationContainerDiv = styled.div`
 
 export const TabletNavigationContainerDiv = styled.div`
   display: none;
+  grid-column-start: 3;
   
   ${media.tablet`
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-  `}
-`;
-
-export const MobilePageHeaderContainerDiv = styled.div`
-  ${media.tablet`
-    display: none;
+    justify-content: flex-end;
   `}
 `;
 
