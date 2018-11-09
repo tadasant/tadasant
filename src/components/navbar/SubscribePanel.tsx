@@ -52,6 +52,8 @@ interface IStateProps {
 const SubscribePanel: SFC<IStateProps> = props => {
   const { emailAddress, setEmailAddress, firstName, setFirstName, lastName, setLastName } = props;
 
+  const handleSubmit = () => postToMailchimp(emailAddress, firstName, lastName);
+
   // TODO something wrong with TypeScript
   const EmailField = (
     // @ts-ignore
@@ -78,6 +80,7 @@ const SubscribePanel: SFC<IStateProps> = props => {
       placeholder='Last name'
       inputProps={{ type: 'text' }}
       onChange={event => setLastName(event.target.value === undefined ? '' : event.target.value)}
+      onKeyPress={event => event.key === 'Enter' ? handleSubmit() : undefined}
     />
   );
 
@@ -95,7 +98,11 @@ const SubscribePanel: SFC<IStateProps> = props => {
         <br/>
         {LastNameField}
         <br/>
-        <SubmitButton disabled={firstName === '' || emailAddress === ''}>Submit</SubmitButton>
+        <SubmitButton
+          disabled={firstName === '' || emailAddress === ''}
+          onClick={handleSubmit}>
+          Submit
+        </SubmitButton>
       </ContentDiv>
     </ModalDiv>
   );
