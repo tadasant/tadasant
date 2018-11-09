@@ -1,6 +1,5 @@
-import styled from 'styled-components';
 import Img from 'gatsby-image';
-import { media } from '../../styling/core';
+import styled from 'styled-components';
 import { UndecoratedAnchor } from '../lib/styled-lib';
 
 export const HomeContainerDiv = styled.div`
@@ -13,9 +12,8 @@ export const HeadshotContainerDiv = styled.div`
   
   display: flex;
   align-items: center;
-  justify-content: center;
   
-  padding-top: 16px;
+  padding-top: 2vh;
 `;
 
 export const HeadshotImg = styled(Img)`
@@ -29,28 +27,15 @@ export const ExternalIconsContainerDiv = styled.div`
   align-items: center;
   justify-content: space-between;
   
-  padding-top: 16px;
+  padding-top: 1vh;
 `;
 
 export const ExternalIconAnchor = styled(UndecoratedAnchor)`
   display: flex;
   align-items: center;
   
-  padding: 0px 4px 0px 4px;
-  
-  min-height: 24px;
-  max-height: 32px;
-  min-width: 24px;
-  max-width: 32px;
-  
-  ${media.tablet`
-    padding: 0px 8px 0px 8px;
-    
-    min-height: 48px;
-    max-height: 64px;
-    min-width: 48px;
-    max-width: 64px;
-  `}
+  padding: 0 1vw 0 1vw;
+  width: 5vw;
 `;
 
 export const ExternalIconImg = styled(Img)`

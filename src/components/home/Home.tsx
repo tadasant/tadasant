@@ -18,7 +18,6 @@ interface IQueryProps {
 type TProps = IQueryProps;
 
 const Home: SFC<TProps> = (props) => {
-  debugger;
   const { data: { headshot, linkedin, github, mail, stackoverflow } } = props;
   return (
     <HomeContainerDiv>
