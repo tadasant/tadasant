@@ -10,3 +10,9 @@ export const BodyContainerDiv = styled.div`
     min-height: calc(100vh - ${navbarHeight} - ${navbarVPadding} - ${navbarVPaddingTablet} - 2vh);
   `}
 `;
+
+export const NavbarContainerDiv = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 5;
+`;

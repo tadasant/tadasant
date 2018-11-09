@@ -12,7 +12,7 @@ import {
   MenuImg,
   MobileNavigationContainerDiv,
   MobilePageHeaderContainerDiv,
-  NavbarContainerDiv,
+  ContentContainerDiv,
   SubscribeButton,
   TabletNavigationContainerDiv,
   TabletNavItem,
@@ -56,7 +56,7 @@ const NavbarPure: SFC<TProps> = props => {
       >
         <SubscribePanel/>
       </Modal>
-      <NavbarContainerDiv>
+      <ContentContainerDiv>
         <LogoContainerDiv>
           <Link to='/'>
             <LogoImg fluid={data.logo.childImageSharp.fluid} alt='Tadasant logo'/>
@@ -104,7 +104,7 @@ const NavbarPure: SFC<TProps> = props => {
             <SubscribeButton onClick={() => setSubscribeModalOpen(true)}>Subscribe</SubscribeButton>
           </TabletNavItem>
         </TabletNavigationContainerDiv>
-      </NavbarContainerDiv>
+      </ContentContainerDiv>
     </>
   );
 };

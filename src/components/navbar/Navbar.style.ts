@@ -8,7 +8,7 @@ export const navbarHeight = '32px';
 export const navbarVPadding = '8px';
 export const navbarVPaddingTablet = '16px';
 
-export const NavbarContainerDiv = styled.div`
+export const ContentContainerDiv = styled.div`
   background-color: ${constants.colors.brand};
   box-shadow: 0px 2px 4px 0 ${constants.colors.shadow};
   height: ${navbarHeight};

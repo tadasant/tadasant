@@ -5,8 +5,8 @@ import { SFC } from 'react';
 import Helmet from 'react-helmet';
 import { SiteTitleQuery } from '../../typings/graphql';
 import Footer from '../footer/Footer';
-import Header from '../navbar/Navbar';
-import { BodyContainerDiv } from './Shell.style';
+import Navbar from '../navbar/Navbar';
+import { BodyContainerDiv, NavbarContainerDiv } from './Shell.style';
 
 const SITE_TITLE_QUERY = graphql`
     query SiteTitleQuery {
@@ -35,7 +35,9 @@ const Shell: SFC<IProps> = ({ children, data }) => (
         { name: 'google-site-verification', content: 'l4GtLlU7oAqrgl5VPmt1t8KcE1kWkWgeg4oXTcge5J0' },
       ]}
     />
-    <Header/>
+    <NavbarContainerDiv>
+      <Navbar/>
+    </NavbarContainerDiv>
     <BodyContainerDiv>
       {children}
     </BodyContainerDiv>
