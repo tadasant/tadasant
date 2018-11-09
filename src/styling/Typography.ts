@@ -9,7 +9,6 @@ interface ITypographyProps {
 export const Header = styled.span`
   color: ${(props: ITypographyProps) => props.white ? constants.colors.base.grey : constants.colors.brand};
   font-family: ${constants.typography.fontFamily};
-  text-align: ${constants.typography.header.textAlign};
   
   font-size: ${constants.typography.header.mobile.fontSize};
   font-weight: ${constants.typography.header.mobile.fontWeight};
@@ -31,7 +30,6 @@ export const Header3 = styled.span`
 export const Body1 = styled.span`
   color: ${(props: ITypographyProps) => props.white ? constants.colors.base.grey : constants.colors.brand};
   font-family: ${constants.typography.fontFamily};
-  text-align: ${constants.typography.body1.textAlign};
   
   font-size: ${constants.typography.body1.mobile.fontSize};
   font-weight: ${constants.typography.body1.mobile.fontWeight};
@@ -40,4 +38,12 @@ export const Body1 = styled.span`
     font-size: ${constants.typography.body1.tablet.fontSize};
     font-weight: ${constants.typography.body1.tablet.fontWeight};
   `}
+`;
+
+export const Caption = styled.span`
+  color: ${(props: ITypographyProps) => props.white ? constants.colors.base.grey : constants.colors.brand};
+  font-family: ${constants.typography.fontFamily};
+  
+  font-size: ${constants.typography.caption.fontSize};
+  font-weight: ${constants.typography.caption.fontWeight};
 `;

@@ -16,7 +16,6 @@ const constants = {
   'typography': {
     'fontFamily': 'Open Sans',
     'header': {
-      'textAlign': 'center',
       'mobile': {
         'fontSize': '32px',
         'fontWeight': 'bold',
@@ -31,7 +30,6 @@ const constants = {
       'fontWeight': 'bold',
     },
     'body1': {
-      'textAlign': 'center',
       'mobile': {
         'fontSize': '21px',
         'fontWeight': 'normal',
@@ -42,7 +40,6 @@ const constants = {
       }
     },
     'button': {
-      'textAlign': 'center',
       'mobile': {
         'fontSize': '18px',
         'fontWeight': 'bold',
@@ -51,6 +48,10 @@ const constants = {
         'fontSize': '18px',
         'fontWeight': 'bold',
       }
+    },
+    'caption': {
+      'fontSize': '14px',
+      'fontWeight': 300,
     }
   },
   // in pixels
