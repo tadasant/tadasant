@@ -8,7 +8,7 @@ export const HomeContainerDiv = styled.div`
   grid-template-columns: 1fr 3fr 4fr 3fr 1fr;
   
   ${media.desktop`
-    grid-template-columns: 1fr 3fr 1.5fr 1fr 1.5fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr 2fr 1fr 2fr 3fr 1fr;
   `}
 `;
 
@@ -49,6 +49,10 @@ export const ExternalIconAnchor = styled(UndecoratedAnchor)`
   
   padding: 0 1vw 0 1vw;
   width: 5vw;
+  
+  ${media.desktop`
+    width: 3vw;
+  `}
 `;
 
 export const ExternalIconImg = styled(Img)`
