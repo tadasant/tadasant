@@ -5,6 +5,7 @@ import { SFC } from 'react';
 import { compose, withState } from 'recompose';
 import { Header } from '../../styling/Typography';
 import { GetNavbarData } from '../../typings/graphql';
+import { UndecoratedLink } from '../lib/styled-lib';
 import {
   LogoContainerDiv,
   LogoImg,
@@ -66,8 +67,13 @@ const NavbarPure: SFC<IProps> = props => {
             horizontal: 'right',
           }}
         >
-          <MenuItem>Blog</MenuItem>
-          <MenuItem>Contact</MenuItem>
+          <UndecoratedLink to='/blog'>
+            <MenuItem>Blog</MenuItem>
+          </UndecoratedLink>
+          <UndecoratedLink to='/contact'>
+            <MenuItem>Contact</MenuItem>
+          </UndecoratedLink>
+          {/* TODO add popup on this click */}
           <MenuItem>Subscribe</MenuItem>
         </Menu>
       </MobileNavigationContainerDiv>
