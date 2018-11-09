@@ -1,5 +1,7 @@
 import { ButtonBase } from '@material-ui/core';
+import { ButtonBaseProps } from '@material-ui/core/ButtonBase';
 import { Link } from 'gatsby';
+import { SFC } from 'react';
 import * as React from 'react';
 import styled from 'styled-components';
 import constants from '../../styling/constants';
@@ -24,14 +26,28 @@ export const UndecoratedAnchor = styled.a`
 `;
 
 interface IButtonProps {
-  contained?: boolean
+  shadow?: boolean
 }
 
-export const Button = styled(ButtonBase)`
+// TODO make more elegant, typesafe prop filterer
+const ButtonBaseWithoutExtraProps: SFC<ButtonBaseProps & IButtonProps> = props => {
+  const allowedProps: any = {};
+  Object.keys(props).forEach(prop => {
+    if (prop !== 'shadow') {
+      // @ts-ignore
+      allowedProps[prop] = props[prop];
+    }
+  });
+  return (
+    <ButtonBase {...allowedProps}/>
+  )
+};
+
+export const Button = styled(ButtonBaseWithoutExtraProps)`
   && {
     padding: 8px;
     border-radius: 8px;
-    ${(props: IButtonProps) => `${props.contained ? `box-shadow: 0px 4px 4px 0px ${constants.colors.shadow};` : ''}`}
+    ${(props: IButtonProps) => `${props.shadow ? `box-shadow: 0px 4px 4px 0px ${constants.colors.shadow};` : ''}`}
     
     font-family: ${constants.typography.fontFamily};
     

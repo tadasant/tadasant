@@ -19,6 +19,19 @@ export const Header = styled.span`
   `}
 `;
 
+export const Header2 = styled.span`
+  color: ${(props: ITypographyProps) => props.white ? constants.colors.base.grey : constants.colors.brand};
+  font-family: ${constants.typography.fontFamily};
+  
+  font-size: ${constants.typography.header2.mobile.fontSize};
+  font-weight: ${constants.typography.header2.mobile.fontWeight};
+  
+  ${media.tablet`
+    font-size: ${constants.typography.header2.tablet.fontSize};
+    font-weight: ${constants.typography.header2.tablet.fontWeight};
+  `}
+`;
+
 export const Header3 = styled.span`
   color: ${(props: ITypographyProps) => props.white ? constants.colors.base.grey : constants.colors.brand};
   font-family: ${constants.typography.fontFamily};
@@ -37,6 +50,19 @@ export const Body1 = styled.span`
   ${media.tablet`
     font-size: ${constants.typography.body1.tablet.fontSize};
     font-weight: ${constants.typography.body1.tablet.fontWeight};
+  `}
+`;
+
+export const Body2 = styled.span`
+  color: ${(props: ITypographyProps) => props.white ? constants.colors.base.grey : constants.colors.brand};
+  font-family: ${constants.typography.fontFamily};
+  
+  font-size: ${constants.typography.body2.mobile.fontSize};
+  font-weight: ${constants.typography.body2.mobile.fontWeight};
+  
+  ${media.tablet`
+    font-size: ${constants.typography.body2.tablet.fontSize};
+    font-weight: ${constants.typography.body2.tablet.fontWeight};
   `}
 `;
 

@@ -83,10 +83,10 @@ export const MenuImg = styled(Img)`
 `;
 
 export const SubscribeButton = styled(Button).attrs({
-  contained: true,
+  shadow: true,
 })`
   && {
-    color: ${constants.colors.base};
+    color: ${constants.colors.brand};
     background-color: ${constants.colors.highlight.gold};
     font-size: ${constants.typography.header3.fontSize};
   }

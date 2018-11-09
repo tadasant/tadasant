@@ -26,6 +26,16 @@ const constants = {
         'fontWeight': 800,
       },
     },
+    'header2': {
+      'mobile': {
+        'fontSize': '21px',
+        'fontWeight': 'bold',
+      },
+      'tablet': {
+        'fontSize': '36px',
+        'fontWeight': 'bold',
+      },
+    },
     'header3': {
       'fontSize': '21px',
       'fontWeight': 'bold',
@@ -37,6 +47,16 @@ const constants = {
       },
       'tablet': {
         'fontSize': '36px',
+        'fontWeight': 'normal',
+      }
+    },
+    'body2': {
+      'mobile': {
+        'fontSize': '18px',
+        'fontWeight': 'normal',
+      },
+      'tablet': {
+        'fontSize': '21px',
         'fontWeight': 'normal',
       }
     },
