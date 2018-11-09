@@ -126,7 +126,7 @@ export const NAVBAR_QUERY = graphql`
                 }
             }
         }
-        hamburger: file(relativePath: {eq: "images/hamburger.png"}) {
+        hamburger: file(relativePath: {eq: "images/icons/hamburger.png"}) {
             childImageSharp {
                 fluid(maxHeight: 48) {
                     ...GatsbyImageSharpFluid_tracedSVG
