@@ -1,4 +1,4 @@
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, Link, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import { SFC } from 'react';
 import { Body1 } from '../../styling/Typography';
@@ -57,7 +57,7 @@ const Home: SFC<TProps> = (props) => {
         </Body1>
         <br /><br /><br />
         <Body1>
-          I write about what I’ve learned along the way about <b>software</b>, <b>business</b>, and <b>life</b>: check out my blog.
+          I write about what I’ve learned along the way about <b>software</b>, <b>business</b>, and <b>life</b>: check out my <Link to='/blog'>blog</Link>.
         </Body1>
       </MessageContainerDiv>
     </HomeContainerDiv>
