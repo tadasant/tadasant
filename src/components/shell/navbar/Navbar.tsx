@@ -24,15 +24,17 @@ interface IQueryProps {
 }
 
 const getLocationName = () => {
-  const pathname = window.location.pathname;
-  const directory = pathname.split('/')[1];
-  switch (directory) {
-    case 'contact':
-      return 'Contact';
-    case 'blog':
-      return 'Blog';
-    default:
-      return '';
+  if (typeof window !== `undefined`) {
+    const pathname = window.location.pathname;
+    const directory = pathname.split('/')[1];
+    switch (directory) {
+      case 'contact':
+        return 'Contact';
+      case 'blog':
+        return 'Blog';
+      default:
+        return '';
+    }
   }
 };
 
