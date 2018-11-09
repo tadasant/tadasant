@@ -26,6 +26,21 @@ const constants = {
         'fontWeight': 800,
       },
     },
+    'header3': {
+      'fontSize': '21px',
+      'fontWeight': 'bold',
+    },
+    'button': {
+      'textAlign': 'center',
+      'mobile': {
+        'fontSize': '18px',
+        'fontWeight': 'bold',
+      },
+      'tablet': {
+        'fontSize': '18px',
+        'fontWeight': 'bold',
+      }
+    }
   },
   // in pixels
   'breakpoints': {

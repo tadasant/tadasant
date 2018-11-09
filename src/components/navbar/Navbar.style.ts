@@ -2,6 +2,7 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 import constants from '../../styling/constants';
 import { media } from '../../styling/core';
+import { Button } from '../lib/styled-lib';
 
 export const NavbarContainerDiv = styled.div`
   background-color: ${constants.colors.brand};
@@ -57,6 +58,10 @@ export const TabletNavigationContainerDiv = styled.div`
   `}
 `;
 
+export const TabletNavItem = styled.div`
+  padding-left: 32px;
+`;
+
 export const LogoImg = styled(Img)`
   min-height: 32px;
   min-width: 32px;
@@ -71,4 +76,14 @@ export const MenuImg = styled(Img)`
   height: 24px;
   width: 24px;
   cursor: pointer;
+`;
+
+export const SubscribeButton = styled(Button).attrs({
+  contained: true,
+})`
+  && {
+    color: ${constants.colors.base};
+    background-color: ${constants.colors.highlight.gold};
+    font-size: ${constants.typography.header3.fontSize};
+  }
 `;

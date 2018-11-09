@@ -3,7 +3,7 @@ import { graphql, Link, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import { SFC } from 'react';
 import { compose, withState } from 'recompose';
-import { Header } from '../../styling/Typography';
+import { Header, Header3 } from '../../styling/Typography';
 import { GetNavbarData } from '../../typings/graphql';
 import { UndecoratedLink } from '../lib/styled-lib';
 import {
@@ -13,7 +13,9 @@ import {
   MobileNavigationContainerDiv,
   MobilePageHeaderContainerDiv,
   NavbarContainerDiv,
+  SubscribeButton,
   TabletNavigationContainerDiv,
+  TabletNavItem,
 } from './Navbar.style';
 
 interface IQueryProps {
@@ -78,15 +80,20 @@ const NavbarPure: SFC<IProps> = props => {
         </Menu>
       </MobileNavigationContainerDiv>
       <TabletNavigationContainerDiv>
-        <div>
-          Nav1
-        </div>
-        <div>
-          Nav2
-        </div>
-        <div>
-          Nav3
-        </div>
+        <TabletNavItem>
+          <UndecoratedLink to='/blog'>
+            <Header3 white>Blog</Header3>
+          </UndecoratedLink>
+        </TabletNavItem>
+        <TabletNavItem>
+          <UndecoratedLink to='/contact'>
+            <Header3 white>Contact</Header3>
+          </UndecoratedLink>
+        </TabletNavItem>
+        <TabletNavItem>
+          {/* TODO add popup on this click */}
+          <SubscribeButton>Subscribe</SubscribeButton>
+        </TabletNavItem>
       </TabletNavigationContainerDiv>
     </NavbarContainerDiv>
   );

@@ -19,3 +19,11 @@ export const Header = styled.span`
     font-weight: ${constants.typography.header.tablet.fontWeight};
   `}
 `;
+
+export const Header3 = styled.span`
+  color: ${(props: ITypographyProps) => props.white ? constants.colors.base.grey : constants.colors.brand};
+  font-family: ${constants.typography.fontFamily};
+  
+  font-size: ${constants.typography.header3.fontSize};
+  font-weight: ${constants.typography.header3.fontWeight};
+`;
