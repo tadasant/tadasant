@@ -7,7 +7,7 @@ import { Button } from '../../lib/styled-lib';
 export const ModalDiv = styled.div`
   position: absolute;
   background-color: ${constants.colors.base.grey};
-  box-shadow: 0px 2px 4px 0 ${constants.colors.shadow};
+  box-shadow: 0px 0px 4px 4px ${constants.colors.shadow};
   outline: 0;
   
   top: 12.5vh;

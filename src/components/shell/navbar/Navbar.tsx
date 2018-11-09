@@ -25,7 +25,7 @@ interface IQueryProps {
 
 const getLocationName = () => {
   const pathname = window.location.pathname;
-  const directory = pathname.split('/')[0];
+  const directory = pathname.split('/')[1];
   switch (directory) {
     case 'contact':
       return 'Contact';
