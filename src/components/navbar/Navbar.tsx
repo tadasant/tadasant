@@ -1,18 +1,21 @@
+import { Menu, MenuItem } from '@material-ui/core';
 import { graphql, Link, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import { SFC } from 'react';
+import { compose, withState } from 'recompose';
 import { Header } from '../../styling/Typography';
 import { GetNavbarData } from '../../typings/graphql';
 import {
   LogoContainerDiv,
-  LogoImg, MenuImg,
+  LogoImg,
+  MenuImg,
   MobileNavigationContainerDiv,
   MobilePageHeaderContainerDiv,
   NavbarContainerDiv,
   TabletNavigationContainerDiv,
 } from './Navbar.style';
 
-interface IProps {
+interface IQueryProps {
   data: GetNavbarData.Query
 }
 
@@ -29,8 +32,15 @@ const getLocationName = () => {
   }
 };
 
-const Navbar: SFC<IProps> = props => {
-  const { data } = props;
+interface IStateProps {
+  anchorEl: HTMLElement | null;
+  setAnchorEl: (el: HTMLElement | null) => HTMLElement | null;
+}
+
+type IProps = IStateProps & IQueryProps;
+
+const NavbarPure: SFC<IProps> = props => {
+  const { data, anchorEl, setAnchorEl } = props;
   return (
     <NavbarContainerDiv>
       <LogoContainerDiv>
@@ -42,7 +52,24 @@ const Navbar: SFC<IProps> = props => {
         <Header white>{getLocationName()}</Header>
       </MobilePageHeaderContainerDiv>
       <MobileNavigationContainerDiv>
-        <MenuImg fluid={data.hamburger.childImageSharp.fluid} alt='Menu icon'/>
+        <div onClick={event => setAnchorEl(event.currentTarget)}>
+          <MenuImg
+            fluid={data.hamburger.childImageSharp.fluid}
+            alt='Menu icon'/>
+        </div>
+        <Menu
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={() => setAnchorEl(null)}
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+        >
+          <MenuItem>Blog</MenuItem>
+          <MenuItem>Contact</MenuItem>
+          <MenuItem>Subscribe</MenuItem>
+        </Menu>
       </MobileNavigationContainerDiv>
       <TabletNavigationContainerDiv>
         <div>
@@ -60,14 +87,22 @@ const Navbar: SFC<IProps> = props => {
 };
 
 // TODO look into converting to HOC
-const container: SFC = props => (
+const container: SFC<IStateProps> = props => (
   <StaticQuery
     query={NAVBAR_QUERY}
-    render={data => <Navbar data={data} {...props}/>}
+    render={data => <NavbarPure data={data} {...props}/>}
   />
 );
 
-export default container;
+const enhance = compose<IStateProps, {}>(
+  withState<{}, HTMLElement | null, 'anchorEl', 'setAnchorEl'>(
+    'anchorEl',
+    'setAnchorEl',
+    null,
+  ),
+);
+
+export default enhance(container);
 
 export const NAVBAR_QUERY = graphql`
     query GetNavbarData {
