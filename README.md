@@ -19,10 +19,6 @@ Technology used:
 * GraphQL
 * `styled-components`
 
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/tadasant/tadasant)
-
 ## Commands
 
 Use graphql-code-generator to generate TypeScript types for GraphQL queries:

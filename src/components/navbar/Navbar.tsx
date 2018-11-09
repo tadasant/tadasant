@@ -2,10 +2,10 @@ import { graphql, Link, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import { SFC } from 'react';
 import { Header } from '../../styling/Typography';
-import { GetHeaderData } from '../../typings/graphql';
+import { GetNavbarData } from '../../typings/graphql';
 import {
   LogoContainerDiv,
-  LogoImg,
+  LogoImg, MenuImg,
   MobileNavigationContainerDiv,
   MobilePageHeaderContainerDiv,
   NavbarContainerDiv,
@@ -13,7 +13,7 @@ import {
 } from './Navbar.style';
 
 interface IProps {
-  data: GetHeaderData.Query
+  data: GetNavbarData.Query
 }
 
 const getLocationName = () => {
@@ -30,19 +30,19 @@ const getLocationName = () => {
 };
 
 const Navbar: SFC<IProps> = props => {
-  const { data: { file: { childImageSharp } } } = props;
+  const { data } = props;
   return (
     <NavbarContainerDiv>
       <LogoContainerDiv>
         <Link to='/'>
-          <LogoImg fluid={childImageSharp.fluid} alt='Tadasant logo'/>
+          <LogoImg fluid={data.logo.childImageSharp.fluid} alt='Tadasant logo'/>
         </Link>
       </LogoContainerDiv>
       <MobilePageHeaderContainerDiv>
         <Header white>{getLocationName()}</Header>
       </MobilePageHeaderContainerDiv>
       <MobileNavigationContainerDiv>
-        Menu bar
+        <MenuImg fluid={data.hamburger.childImageSharp.fluid} alt='Menu icon'/>
       </MobileNavigationContainerDiv>
       <TabletNavigationContainerDiv>
         <div>
@@ -62,18 +62,25 @@ const Navbar: SFC<IProps> = props => {
 // TODO look into converting to HOC
 const container: SFC = props => (
   <StaticQuery
-    query={HEADER_QUERY}
+    query={NAVBAR_QUERY}
     render={data => <Navbar data={data} {...props}/>}
   />
 );
 
 export default container;
 
-export const HEADER_QUERY = graphql`
-    query GetHeaderData {
-        file(relativePath: {eq: "images/logo.png"}) {
+export const NAVBAR_QUERY = graphql`
+    query GetNavbarData {
+        logo: file(relativePath: {eq: "images/logo.png"}) {
             childImageSharp {
                 fluid(maxHeight: 300) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                }
+            }
+        }
+        hamburger: file(relativePath: {eq: "images/hamburger.png"}) {
+            childImageSharp {
+                fluid(maxHeight: 48) {
                     ...GatsbyImageSharpFluid_tracedSVG
                 }
             }

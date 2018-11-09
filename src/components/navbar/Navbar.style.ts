@@ -66,3 +66,9 @@ export const LogoImg = styled(Img)`
     min-width: 48px;
   `}
 `;
+
+export const MenuImg = styled(Img)`
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+`;

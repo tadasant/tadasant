@@ -9979,16 +9979,18 @@ export enum MarkdownRemarkGroupEnum {
 // Documents
 // ====================================================
 
-export namespace GetHeaderData {
+export namespace GetNavbarData {
   export type Variables = {}
 
   export type Query = {
     __typename?: 'Query'
 
-    file?: File | null
+    logo?: Logo | null
+
+    hamburger?: Hamburger | null
   }
 
-  export type File = {
+  export type Logo = {
     __typename?: 'File'
 
     childImageSharp?: ChildImageSharp | null
@@ -10000,7 +10002,21 @@ export namespace GetHeaderData {
     fluid?: Fluid | null
   }
 
-  export type Fluid = GatsbyImageSharpFixedTracedSvg.Fragment
+  export type Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
+
+  export type Hamburger = {
+    __typename?: 'File'
+
+    childImageSharp?: _ChildImageSharp | null
+  }
+
+  export type _ChildImageSharp = {
+    __typename?: 'ImageSharp'
+
+    fluid?: _Fluid | null
+  }
+
+  export type _Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
 }
 
 export namespace SiteTitleQuery {
