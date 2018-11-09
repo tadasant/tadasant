@@ -4,7 +4,7 @@ import constants from './constants';
 type BreakpointLabels = keyof typeof constants.breakpoints;
 
 type TMedia = {
-  [key in BreakpointLabels]: (input: TemplateStringsArray) => Array<TemplateStringsArray>;
+  [key in BreakpointLabels]: (...input: Array<TemplateStringsArray | string | number>) => Array<TemplateStringsArray>;
 };
 
 // @ts-ignore TODO it won't read the reduce; any way around that?

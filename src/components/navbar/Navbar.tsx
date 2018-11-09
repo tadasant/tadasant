@@ -1,15 +1,16 @@
 import { graphql, Link, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import { SFC } from 'react';
+import { Header } from '../../styling/Typography';
 import { GetHeaderData } from '../../typings/graphql';
 import {
-  HeaderContainerDiv,
+  LogoContainerDiv,
   LogoImg,
   MobileNavigationContainerDiv,
   MobilePageHeaderContainerDiv,
+  NavbarContainerDiv,
   TabletNavigationContainerDiv,
-  LogoContainerDiv,
-} from './Header.style';
+} from './Navbar.style';
 
 interface IProps {
   data: GetHeaderData.Query
@@ -28,19 +29,17 @@ const getLocationName = () => {
   }
 };
 
-// TODO use a CSS grid to isolate the three sections (e.g. 4 col + 4 col + 4 col) otherwise centering is off
-
-const Header: SFC<IProps> = props => {
+const Navbar: SFC<IProps> = props => {
   const { data: { file: { childImageSharp } } } = props;
   return (
-    <HeaderContainerDiv>
+    <NavbarContainerDiv>
       <LogoContainerDiv>
         <Link to='/'>
           <LogoImg fluid={childImageSharp.fluid} alt='Tadasant logo'/>
         </Link>
       </LogoContainerDiv>
       <MobilePageHeaderContainerDiv>
-        {getLocationName()}
+        <Header white>{getLocationName()}</Header>
       </MobilePageHeaderContainerDiv>
       <MobileNavigationContainerDiv>
         Menu bar
@@ -56,7 +55,7 @@ const Header: SFC<IProps> = props => {
           Nav3
         </div>
       </TabletNavigationContainerDiv>
-    </HeaderContainerDiv>
+    </NavbarContainerDiv>
   );
 };
 
@@ -64,7 +63,7 @@ const Header: SFC<IProps> = props => {
 const container: SFC = props => (
   <StaticQuery
     query={HEADER_QUERY}
-    render={data => <Header data={data} {...props}/>}
+    render={data => <Navbar data={data} {...props}/>}
   />
 );
 

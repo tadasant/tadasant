@@ -3,7 +3,8 @@ import * as React from 'react';
 import { SFC } from 'react';
 import Helmet from 'react-helmet';
 import { SiteTitleQuery } from '../typings/graphql';
-import Header from './header/Header';
+import Header from './navbar/Navbar';
+import 'npm-font-open-sans';
 
 const SITE_TITLE_QUERY = graphql`
     query SiteTitleQuery {

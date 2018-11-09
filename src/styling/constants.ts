@@ -13,6 +13,20 @@ const constants = {
     },
     'shadow': 'rgba(0, 0, 0, 0.5)',
   },
+  'typography': {
+    'fontFamily': 'Open Sans',
+    'header': {
+      'textAlign': 'center',
+      'mobile': {
+        'fontSize': '32px',
+        'fontWeight': 'bold',
+      },
+      'tablet': {
+        'fontSize': '48px',
+        'fontWeight': 800,
+      },
+    },
+  },
   // in pixels
   'breakpoints': {
     'desktop': 1119,
