@@ -16,6 +16,13 @@ export const UndecoratedLink = styled(Link)`
   }
 `;
 
+export const UndecoratedAnchor = styled.a`
+  && {
+    text-decoration: unset;
+    color: inherit;
+  }
+`;
+
 interface IButtonProps {
   contained?: boolean
 }
