@@ -9913,6 +9913,94 @@ export enum MarkdownRemarkGroupEnum {
 // Documents
 // ====================================================
 
+export namespace GetContactData {
+  export type Variables = {}
+
+  export type Query = {
+    __typename?: 'Query'
+
+    headshot?: Headshot | null
+
+    linkedin?: Linkedin | null
+
+    github?: Github | null
+
+    mail?: Mail | null
+
+    stackoverflow?: Stackoverflow | null
+  }
+
+  export type Headshot = {
+    __typename?: 'File'
+
+    childImageSharp?: ChildImageSharp | null
+  }
+
+  export type ChildImageSharp = {
+    __typename?: 'ImageSharp'
+
+    fluid?: Fluid | null
+  }
+
+  export type Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
+
+  export type Linkedin = {
+    __typename?: 'File'
+
+    childImageSharp?: _ChildImageSharp | null
+  }
+
+  export type _ChildImageSharp = {
+    __typename?: 'ImageSharp'
+
+    fluid?: _Fluid | null
+  }
+
+  export type _Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
+
+  export type Github = {
+    __typename?: 'File'
+
+    childImageSharp?: __ChildImageSharp | null
+  }
+
+  export type __ChildImageSharp = {
+    __typename?: 'ImageSharp'
+
+    fluid?: __Fluid | null
+  }
+
+  export type __Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
+
+  export type Mail = {
+    __typename?: 'File'
+
+    childImageSharp?: ___ChildImageSharp | null
+  }
+
+  export type ___ChildImageSharp = {
+    __typename?: 'ImageSharp'
+
+    fluid?: ___Fluid | null
+  }
+
+  export type ___Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
+
+  export type Stackoverflow = {
+    __typename?: 'File'
+
+    childImageSharp?: ____ChildImageSharp | null
+  }
+
+  export type ____ChildImageSharp = {
+    __typename?: 'ImageSharp'
+
+    fluid?: ____Fluid | null
+  }
+
+  export type ____Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
+}
+
 export namespace GetHomeData {
   export type Variables = {}
 

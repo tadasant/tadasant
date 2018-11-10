@@ -85,28 +85,28 @@ const HOME_QUERY = graphql`
         }
         linkedin: file(relativePath: {eq: "images/icons/linkedin.png"}) {
             childImageSharp {
-                fluid(maxWidth: 48) {
+                fluid(maxWidth: 100) {
                     ...GatsbyImageSharpFluid_tracedSVG
                 }
             }
         }
         github: file(relativePath: {eq: "images/icons/github.png"}) {
             childImageSharp {
-                fluid(maxWidth: 48) {
+                fluid(maxWidth: 100) {
                     ...GatsbyImageSharpFluid_tracedSVG
                 }
             }
         }
         mail: file(relativePath: {eq: "images/icons/envelope.png"}) {
             childImageSharp {
-                fluid(maxWidth: 48) {
+                fluid(maxWidth: 100) {
                     ...GatsbyImageSharpFluid_tracedSVG
                 }
             }
         }
         stackoverflow: file(relativePath: {eq: "images/icons/stackoverflow.png"}) {
             childImageSharp {
-                fluid(maxWidth: 48) {
+                fluid(maxWidth: 100) {
                     ...GatsbyImageSharpFluid_tracedSVG
                 }
             }
