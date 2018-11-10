@@ -4,7 +4,7 @@ import { SFC } from 'react';
 import { Body2 } from '../../styling/Typography';
 import { GetContactData } from '../../typings/graphql';
 import { UndecoratedAnchor } from '../lib/styled-lib';
-import { ContactContainerDiv, ContentContainerDiv, InlineIconImage } from './Contact.style';
+import { ContactContainerDiv, ContentContainerDiv, InlineIconImage, SocialMediaContainerDiv } from './Contact.style';
 
 interface IQueryProps {
   data: GetContactData.Query
@@ -46,6 +46,11 @@ const Contact: SFC<TProps> = props => {
           LinkedIn</a>.
         </Body2>
       </ContentContainerDiv>
+      <SocialMediaContainerDiv>
+        <div>first</div>
+        <div>second</div>
+
+      </SocialMediaContainerDiv>
     </ContactContainerDiv>
   );
 };
