@@ -1,10 +1,10 @@
-import { StaticQuery } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import { SFC } from 'react';
 import { Body2 } from '../../styling/Typography';
 import { GetContactData } from '../../typings/graphql';
 import { UndecoratedAnchor } from '../lib/styled-lib';
-import { InlineIconImage } from './Contact.style';
+import { ContactContainerDiv, ContentContainerDiv, InlineIconImage } from './Contact.style';
 
 interface IQueryProps {
   data: GetContactData.Query
@@ -13,10 +13,10 @@ interface IQueryProps {
 type TProps = IQueryProps;
 
 const Contact: SFC<TProps> = props => {
-  const { data: { mail } } = props;
+  const { data: { mail, linkedin } } = props;
   return (
-    <div>
-      <div>
+    <ContactContainerDiv>
+      <ContentContainerDiv>
         <UndecoratedAnchor
           href='mailto:tadas@tadasant.com'
           rel='noopener nofollower norefer'>
@@ -24,18 +24,29 @@ const Contact: SFC<TProps> = props => {
         </UndecoratedAnchor>
         <Body2>
           The best way to get in touch with me is via email, at <a href='mailto:tadas@tadasant.com' rel='noopener nofollower norefer'>
-          tadas@tadasant.com</a>. Among other things, I love hearing
+          tadas@tadasant.com</a>. <br/><br/>Among other things, I love hearing
           about:
           <ul>
             <li><b>Founders</b> working on interesting products</li>
             <li><b>Feedback</b> on things I’ve written or opinions I’ve expressed</li>
-            <li>Outreach regarding <b>freelance</b> or <b>consulting</b> work, including e.g. speaking engagements,
+            <li>
+              Outreach regarding <b>freelance</b> or <b>consulting</b> work, including e.g. speaking engagements,
               writing
             </li>
           </ul>
         </Body2>
-      </div>
-    </div>
+        <UndecoratedAnchor
+          target='__blank'
+          href='https://linkedin.com/in/antanavicius'
+          rel='noopener nofollower norefer'>
+          <InlineIconImage fluid={linkedin.childImageSharp.fluid} alt='Tadas Antanavicius LinkedIn'/>
+        </UndecoratedAnchor>
+        <Body2>
+          If we've met, I'd love to stay connected on <a target='_blank' href='https://linkedin.com/in/antanavicius' rel='noopener nofollower norefer'>
+          LinkedIn</a>.
+        </Body2>
+      </ContentContainerDiv>
+    </ContactContainerDiv>
   );
 };
 
