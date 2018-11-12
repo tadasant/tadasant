@@ -6,3 +6,4 @@ export const EMAIL = 'tadas@tadasant.com';
 export const INSTAGRAM_URL = 'https://www.instagram.com/tadasant/';
 export const MEDIUM_URL = 'https://medium.com/@tadasant';
 export const FACEBOOK_URL = 'https://www.facebook.com/tadas.anta';
+export const TWITTER_URL = 'https://twitter.com/tadasayy';

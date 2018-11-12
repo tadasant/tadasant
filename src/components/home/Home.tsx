@@ -54,7 +54,7 @@ const Home: SFC<TProps> = (props) => {
       </ExternalIconsContainerDiv>
       <MessageContainerDiv>
         <Body1>
-          Hey! I’m Tadas, an entrepreneur and software developer. I build products on the web to make people’s lives better.
+          Hey! I’m Tadas, an entrepreneur and software engineer. I build products on the web to make people’s lives better.
         </Body1>
         <br /><br /><br />
         <Body1>

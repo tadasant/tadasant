@@ -10,6 +10,7 @@ import {
   INSTAGRAM_URL,
   MEDIUM_URL,
   STACKOVERFLOW_URL,
+  TWITTER_URL,
 } from '../lib/constants';
 import { UndecoratedAnchor } from '../lib/styled-lib';
 import {
@@ -27,7 +28,7 @@ interface IQueryProps {
 type TProps = IQueryProps;
 
 const Contact: SFC<TProps> = props => {
-  const { data: { mail, linkedin, github, stackoverflow, facebook, goodreads, instagram, medium } } = props;
+  const { data: { mail, linkedin, github, stackoverflow, facebook, goodreads, instagram, medium, twitter } } = props;
   return (
     <ContactContainerDiv>
       <ContentContainerDiv>
@@ -99,6 +100,12 @@ const Contact: SFC<TProps> = props => {
           rel='noopener nofollower norefer'>
           <BottomIconImage fluid={medium.childImageSharp.fluid} alt='Tadas Antanavicius Medium'/>
         </UndecoratedAnchor>
+        <UndecoratedAnchor
+          href={TWITTER_URL}
+          target='__blank'
+          rel='noopener nofollower norefer'>
+          <BottomIconImage fluid={twitter.childImageSharp.fluid} alt='Tadas Antanavicius Twitter'/>
+        </UndecoratedAnchor>
       </SocialMediaContainerDiv>
     </ContactContainerDiv>
   );
@@ -166,6 +173,13 @@ const CONTACT_QUERY = graphql`
             }
         }
         medium: file(relativePath: {eq: "images/icons/medium.png"}) {
+            childImageSharp {
+                fluid(maxWidth: 100) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                }
+            }
+        }
+        twitter: file(relativePath: {eq: "images/icons/twitter.png"}) {
             childImageSharp {
                 fluid(maxWidth: 100) {
                     ...GatsbyImageSharpFluid_tracedSVG

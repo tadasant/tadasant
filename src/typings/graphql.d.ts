@@ -10074,6 +10074,8 @@ export namespace GetContactData {
     instagram?: Instagram | null
 
     medium?: Medium | null
+
+    twitter?: Twitter | null
   }
 
   export type Linkedin = {
@@ -10187,6 +10189,20 @@ export namespace GetContactData {
   }
 
   export type _______Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
+
+  export type Twitter = {
+    __typename?: 'File'
+
+    childImageSharp?: ________ChildImageSharp | null
+  }
+
+  export type ________ChildImageSharp = {
+    __typename?: 'ImageSharp'
+
+    fluid?: ________Fluid | null
+  }
+
+  export type ________Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
 }
 
 export namespace GetHomeData {
