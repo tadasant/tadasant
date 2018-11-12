@@ -174,6 +174,8 @@ export interface PackageJson_2 {
   devDependencies?: (DevDependencies_2 | null)[] | null
 
   peerDependencies?: (PeerDependencies_2 | null)[] | null
+
+  keywords?: (string | null)[] | null
 }
 
 export interface Dependencies_2 {
@@ -710,6 +712,8 @@ export interface Internal_13 {
 
 export interface FieldOwners_2 {
   slug?: string | null
+
+  type?: string | null
 }
 
 export interface Frontmatter_2 {
@@ -722,6 +726,8 @@ export interface Frontmatter_2 {
 
 export interface Fields_2 {
   slug?: string | null
+
+  type?: string | null
 }
 
 export interface MarkdownHeading {
@@ -1203,6 +1209,8 @@ export interface SitePageConnectionPluginCreatorPackageJsonInputObject {
   devDependencies?: SitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList | null
 
   peerDependencies?: SitePageConnectionPluginCreatorPackageJsonPeerDependenciesQueryList | null
+
+  keywords?: SitePageConnectionPluginCreatorPackageJsonKeywordsQueryList | null
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonNameQueryString {
@@ -1390,6 +1398,20 @@ export interface SitePageConnectionPluginCreatorPackageJsonPeerDependenciesNameQ
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonPeerDependenciesVersionQueryString {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SitePageConnectionPluginCreatorPackageJsonKeywordsQueryList {
   eq?: string | null
 
   ne?: string | null
@@ -1765,6 +1787,8 @@ export interface SitePluginConnectionPackageJsonInputObject_2 {
   devDependencies?: SitePluginConnectionPackageJsonDevDependenciesQueryList_2 | null
 
   peerDependencies?: SitePluginConnectionPackageJsonPeerDependenciesQueryList_2 | null
+
+  keywords?: SitePluginConnectionPackageJsonKeywordsQueryList_2 | null
 }
 
 export interface SitePluginConnectionPackageJsonNameQueryString_2 {
@@ -1952,6 +1976,20 @@ export interface SitePluginConnectionPackageJsonPeerDependenciesNameQueryString_
 }
 
 export interface SitePluginConnectionPackageJsonPeerDependenciesVersionQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginConnectionPackageJsonKeywordsQueryList_2 {
   eq?: string | null
 
   ne?: string | null
@@ -4559,9 +4597,25 @@ export interface MarkdownRemarkConnectionInternalOwnerQueryString_2 {
 
 export interface MarkdownRemarkConnectionInternalFieldOwnersInputObject_2 {
   slug?: MarkdownRemarkConnectionInternalFieldOwnersSlugQueryString_2 | null
+
+  type?: MarkdownRemarkConnectionInternalFieldOwnersTypeQueryString_2 | null
 }
 
 export interface MarkdownRemarkConnectionInternalFieldOwnersSlugQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface MarkdownRemarkConnectionInternalFieldOwnersTypeQueryString_2 {
   eq?: string | null
 
   ne?: string | null
@@ -4669,9 +4723,25 @@ export interface MarkdownRemarkConnectionFileAbsolutePathQueryString_2 {
 
 export interface MarkdownRemarkConnectionFieldsInputObject_2 {
   slug?: MarkdownRemarkConnectionFieldsSlugQueryString_2 | null
+
+  type?: MarkdownRemarkConnectionFieldsTypeQueryString_2 | null
 }
 
 export interface MarkdownRemarkConnectionFieldsSlugQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface MarkdownRemarkConnectionFieldsTypeQueryString_2 {
   eq?: string | null
 
   ne?: string | null
@@ -5109,6 +5179,8 @@ export interface SitePagePluginCreatorPackageJsonInputObject {
   devDependencies?: SitePagePluginCreatorPackageJsonDevDependenciesQueryList | null
 
   peerDependencies?: SitePagePluginCreatorPackageJsonPeerDependenciesQueryList | null
+
+  keywords?: SitePagePluginCreatorPackageJsonKeywordsQueryList | null
 }
 
 export interface SitePagePluginCreatorPackageJsonNameQueryString {
@@ -5296,6 +5368,20 @@ export interface SitePagePluginCreatorPackageJsonPeerDependenciesNameQueryString
 }
 
 export interface SitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryString {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SitePagePluginCreatorPackageJsonKeywordsQueryList {
   eq?: string | null
 
   ne?: string | null
@@ -5643,6 +5729,8 @@ export interface SitePluginPackageJsonInputObject_2 {
   devDependencies?: SitePluginPackageJsonDevDependenciesQueryList_2 | null
 
   peerDependencies?: SitePluginPackageJsonPeerDependenciesQueryList_2 | null
+
+  keywords?: SitePluginPackageJsonKeywordsQueryList_2 | null
 }
 
 export interface SitePluginPackageJsonNameQueryString_2 {
@@ -5830,6 +5918,20 @@ export interface SitePluginPackageJsonPeerDependenciesNameQueryString_2 {
 }
 
 export interface SitePluginPackageJsonPeerDependenciesVersionQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface SitePluginPackageJsonKeywordsQueryList_2 {
   eq?: string | null
 
   ne?: string | null
@@ -8343,9 +8445,25 @@ export interface MarkdownRemarkInternalOwnerQueryString_2 {
 
 export interface MarkdownRemarkInternalFieldOwnersInputObject_2 {
   slug?: MarkdownRemarkInternalFieldOwnersSlugQueryString_2 | null
+
+  type?: MarkdownRemarkInternalFieldOwnersTypeQueryString_2 | null
 }
 
 export interface MarkdownRemarkInternalFieldOwnersSlugQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface MarkdownRemarkInternalFieldOwnersTypeQueryString_2 {
   eq?: string | null
 
   ne?: string | null
@@ -8453,9 +8571,25 @@ export interface MarkdownRemarkFileAbsolutePathQueryString_2 {
 
 export interface MarkdownRemarkFieldsInputObject_2 {
   slug?: MarkdownRemarkFieldsSlugQueryString_2 | null
+
+  type?: MarkdownRemarkFieldsTypeQueryString_2 | null
 }
 
 export interface MarkdownRemarkFieldsSlugQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface MarkdownRemarkFieldsTypeQueryString_2 {
   eq?: string | null
 
   ne?: string | null
@@ -9850,6 +9984,7 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   internal___contentDigest = 'internal___contentDigest',
   internal___owner = 'internal___owner',
   internal___fieldOwners___slug = 'internal___fieldOwners___slug',
+  internal___fieldOwners___type = 'internal___fieldOwners___type',
   frontmatter___title = 'frontmatter___title',
   frontmatter___date = 'frontmatter___date',
   frontmatter____PARENT = 'frontmatter____PARENT',
@@ -9857,6 +9992,7 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   rawMarkdownBody = 'rawMarkdownBody',
   fileAbsolutePath = 'fileAbsolutePath',
   fields___slug = 'fields___slug',
+  fields___type = 'fields___type',
   html = 'html',
   headings = 'headings',
   timeToRead = 'timeToRead',
@@ -9879,6 +10015,7 @@ export enum MarkdownRemarkDistinctEnum {
   internal___contentDigest = 'internal___contentDigest',
   internal___owner = 'internal___owner',
   internal___fieldOwners___slug = 'internal___fieldOwners___slug',
+  internal___fieldOwners___type = 'internal___fieldOwners___type',
   frontmatter___title = 'frontmatter___title',
   frontmatter___date = 'frontmatter___date',
   frontmatter____PARENT = 'frontmatter____PARENT',
@@ -9886,6 +10023,7 @@ export enum MarkdownRemarkDistinctEnum {
   rawMarkdownBody = 'rawMarkdownBody',
   fileAbsolutePath = 'fileAbsolutePath',
   fields___slug = 'fields___slug',
+  fields___type = 'fields___type',
 }
 
 export enum MarkdownRemarkGroupEnum {
@@ -9896,6 +10034,7 @@ export enum MarkdownRemarkGroupEnum {
   internal___contentDigest = 'internal___contentDigest',
   internal___owner = 'internal___owner',
   internal___fieldOwners___slug = 'internal___fieldOwners___slug',
+  internal___fieldOwners___type = 'internal___fieldOwners___type',
   frontmatter___title = 'frontmatter___title',
   frontmatter___date = 'frontmatter___date',
   frontmatter____PARENT = 'frontmatter____PARENT',
@@ -9903,6 +10042,7 @@ export enum MarkdownRemarkGroupEnum {
   rawMarkdownBody = 'rawMarkdownBody',
   fileAbsolutePath = 'fileAbsolutePath',
   fields___slug = 'fields___slug',
+  fields___type = 'fields___type',
 }
 
 // ====================================================
