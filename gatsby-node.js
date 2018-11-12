@@ -8,11 +8,17 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   if (node.internal.type === `MarkdownRemark`) {
     // returns e.g. /theres-a-human-on-the-other-side-of-your-code-review/markdown/
     const slugPath = createFilePath({ node, getNode, basePath: `pages` });
-    const slug = `/${slugPath.split('/')[1]}`;
+    const relativeDirectory = slugPath.split('/')[1];
+    const slug = `/${relativeDirectory}`;
     createNodeField({
       node,
       name: `slug`,
       value: slug,
+    });
+    createNodeField({
+      node,
+      name: `relativeDirectory`,
+      value: relativeDirectory,
     });
     createNodeField({
       node,
