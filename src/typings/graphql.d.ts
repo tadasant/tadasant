@@ -721,6 +721,12 @@ export interface Frontmatter_2 {
 
   date?: Date | null
 
+  subtitle?: string | null
+
+  description?: string | null
+
+  medium?: string | null
+
   _PARENT?: string | null
 }
 
@@ -4634,6 +4640,12 @@ export interface MarkdownRemarkConnectionFrontmatterInputObject_2 {
 
   date?: MarkdownRemarkConnectionFrontmatterDateQueryString_2 | null
 
+  subtitle?: MarkdownRemarkConnectionFrontmatterSubtitleQueryString_2 | null
+
+  description?: MarkdownRemarkConnectionFrontmatterDescriptionQueryString_2 | null
+
+  medium?: MarkdownRemarkConnectionFrontmatterMediumQueryString_2 | null
+
   _PARENT?: MarkdownRemarkConnectionFrontmatterParentQueryString_2 | null
 }
 
@@ -4652,6 +4664,48 @@ export interface MarkdownRemarkConnectionFrontmatterTitleQueryString_2 {
 }
 
 export interface MarkdownRemarkConnectionFrontmatterDateQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface MarkdownRemarkConnectionFrontmatterSubtitleQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface MarkdownRemarkConnectionFrontmatterDescriptionQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface MarkdownRemarkConnectionFrontmatterMediumQueryString_2 {
   eq?: string | null
 
   ne?: string | null
@@ -8482,6 +8536,12 @@ export interface MarkdownRemarkFrontmatterInputObject_2 {
 
   date?: MarkdownRemarkFrontmatterDateQueryString_2 | null
 
+  subtitle?: MarkdownRemarkFrontmatterSubtitleQueryString_2 | null
+
+  description?: MarkdownRemarkFrontmatterDescriptionQueryString_2 | null
+
+  medium?: MarkdownRemarkFrontmatterMediumQueryString_2 | null
+
   _PARENT?: MarkdownRemarkFrontmatterParentQueryString_2 | null
 }
 
@@ -8500,6 +8560,48 @@ export interface MarkdownRemarkFrontmatterTitleQueryString_2 {
 }
 
 export interface MarkdownRemarkFrontmatterDateQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface MarkdownRemarkFrontmatterSubtitleQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface MarkdownRemarkFrontmatterDescriptionQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface MarkdownRemarkFrontmatterMediumQueryString_2 {
   eq?: string | null
 
   ne?: string | null
@@ -9987,6 +10089,9 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   internal___fieldOwners___type = 'internal___fieldOwners___type',
   frontmatter___title = 'frontmatter___title',
   frontmatter___date = 'frontmatter___date',
+  frontmatter___subtitle = 'frontmatter___subtitle',
+  frontmatter___description = 'frontmatter___description',
+  frontmatter___medium = 'frontmatter___medium',
   frontmatter____PARENT = 'frontmatter____PARENT',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
@@ -10018,6 +10123,9 @@ export enum MarkdownRemarkDistinctEnum {
   internal___fieldOwners___type = 'internal___fieldOwners___type',
   frontmatter___title = 'frontmatter___title',
   frontmatter___date = 'frontmatter___date',
+  frontmatter___subtitle = 'frontmatter___subtitle',
+  frontmatter___description = 'frontmatter___description',
+  frontmatter___medium = 'frontmatter___medium',
   frontmatter____PARENT = 'frontmatter____PARENT',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
@@ -10037,6 +10145,9 @@ export enum MarkdownRemarkGroupEnum {
   internal___fieldOwners___type = 'internal___fieldOwners___type',
   frontmatter___title = 'frontmatter___title',
   frontmatter___date = 'frontmatter___date',
+  frontmatter___subtitle = 'frontmatter___subtitle',
+  frontmatter___description = 'frontmatter___description',
+  frontmatter___medium = 'frontmatter___medium',
   frontmatter____PARENT = 'frontmatter____PARENT',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
@@ -10052,6 +10163,40 @@ export enum MarkdownRemarkGroupEnum {
 // ====================================================
 // Documents
 // ====================================================
+
+export namespace GetBlogData {
+  export type Variables = {}
+
+  export type Query = {
+    __typename?: 'Query'
+
+    allMarkdownRemark?: AllMarkdownRemark | null
+  }
+
+  export type AllMarkdownRemark = {
+    __typename?: 'MarkdownRemarkConnection'
+
+    edges?: (Edges | null)[] | null
+  }
+
+  export type Edges = {
+    __typename?: 'MarkdownRemarkEdge'
+
+    node?: Node | null
+  }
+
+  export type Node = {
+    __typename?: 'MarkdownRemark'
+
+    fields?: Fields | null
+  }
+
+  export type Fields = {
+    __typename?: 'fields_2'
+
+    slug?: string | null
+  }
+}
 
 export namespace GetContactData {
   export type Variables = {}
@@ -10355,7 +10500,7 @@ export namespace SiteTitleQuery {
   }
 }
 
-export namespace GetBlogData {
+export namespace GetPostData {
   export type Variables = {
     slug: string
   }

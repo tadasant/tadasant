@@ -1,14 +1,14 @@
 import { graphql } from 'gatsby'
 import * as React from 'react'
 import { SFC } from 'react'
-import { GetBlogData } from '../typings/graphql'
+import { GetPostData } from '../typings/graphql'
 
 interface IProps {
-  data: GetBlogData.Query
+  data: GetPostData.Query
 }
 
 export const BLOG_QUERY = graphql`
-    query GetBlogData($slug: String!) {
+    query GetPostData($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
             html
             frontmatter {
@@ -18,7 +18,7 @@ export const BLOG_QUERY = graphql`
     }
 `
 
-const BlogPost: SFC<IProps> = ({ data }) => {
+const PostPage: SFC<IProps> = ({ data }) => {
   const post = data.markdownRemark
   return (
     <div>
@@ -30,4 +30,4 @@ const BlogPost: SFC<IProps> = ({ data }) => {
   )
 }
 
-export default BlogPost;
+export default PostPage;
