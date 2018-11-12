@@ -3,6 +3,14 @@ import * as React from 'react';
 import { SFC } from 'react';
 import { Body2 } from '../../styling/Typography';
 import { GetContactData } from '../../typings/graphql';
+import {
+  FACEBOOK_URL,
+  GITHUB_URL,
+  GOODREADS_URL,
+  INSTAGRAM_URL,
+  MEDIUM_URL,
+  STACKOVERFLOW_URL,
+} from '../lib/constants';
 import { UndecoratedAnchor } from '../lib/styled-lib';
 import {
   BottomIconImage,
@@ -29,7 +37,8 @@ const Contact: SFC<TProps> = props => {
           <InlineIconImage fluid={mail.childImageSharp.fluid} alt='Tadas Antanavicius Email'/>
         </UndecoratedAnchor>
         <Body2>
-          The best way to get in touch with me is via email, at <a href='mailto:tadas@tadasant.com' rel='noopener nofollower norefer'>
+          The best way to get in touch with me is via email, at <a href='mailto:tadas@tadasant.com'
+                                                                   rel='noopener nofollower norefer'>
           tadas@tadasant.com</a>. <br/><br/>Among other things, I love hearing
           about:
           <ul>
@@ -48,17 +57,48 @@ const Contact: SFC<TProps> = props => {
           <InlineIconImage fluid={linkedin.childImageSharp.fluid} alt='Tadas Antanavicius LinkedIn'/>
         </UndecoratedAnchor>
         <Body2>
-          If we've met, I'd love to stay connected on <a target='_blank' href='https://linkedin.com/in/antanavicius' rel='noopener nofollower norefer'>
+          If we've met, I'd love to stay connected on <a target='_blank' href='https://linkedin.com/in/antanavicius'
+                                                         rel='noopener nofollower norefer'>
           LinkedIn</a>.
         </Body2>
       </ContentContainerDiv>
       <SocialMediaContainerDiv>
-        <BottomIconImage fluid={facebook.childImageSharp.fluid} alt='Tadas Antanavicius Facebook'/>
-        <BottomIconImage fluid={goodreads.childImageSharp.fluid} alt='Tadas Antanavicius GoodReads'/>
-        <BottomIconImage fluid={instagram.childImageSharp.fluid} alt='Tadas Antanavicius Instagram'/>
-        <BottomIconImage fluid={github.childImageSharp.fluid} alt='Tadas Antanavicius GitHub'/>
-        <BottomIconImage fluid={stackoverflow.childImageSharp.fluid} alt='Tadas Antanavicius StackOverflow'/>
-        <BottomIconImage fluid={medium.childImageSharp.fluid} alt='Tadas Antanavicius Medium'/>
+        <UndecoratedAnchor
+          href={FACEBOOK_URL}
+          target='__blank'
+          rel='noopener nofollower norefer'>
+          <BottomIconImage fluid={facebook.childImageSharp.fluid} alt='Tadas Antanavicius Facebook'/>
+        </UndecoratedAnchor>
+        <UndecoratedAnchor
+          href={GOODREADS_URL}
+          target='__blank'
+          rel='noopener nofollower norefer'>
+          <BottomIconImage fluid={goodreads.childImageSharp.fluid} alt='Tadas Antanavicius GoodReads'/>
+        </UndecoratedAnchor>
+        <UndecoratedAnchor
+          href={INSTAGRAM_URL}
+          target='__blank'
+          rel='noopener nofollower norefer'>
+          <BottomIconImage fluid={instagram.childImageSharp.fluid} alt='Tadas Antanavicius Instagram'/>
+        </UndecoratedAnchor>
+        <UndecoratedAnchor
+          href={GITHUB_URL}
+          target='__blank'
+          rel='noopener nofollower norefer'>
+          <BottomIconImage fluid={github.childImageSharp.fluid} alt='Tadas Antanavicius GitHub'/>
+        </UndecoratedAnchor>
+        <UndecoratedAnchor
+          href={STACKOVERFLOW_URL}
+          target='__blank'
+          rel='noopener nofollower norefer'>
+          <BottomIconImage fluid={stackoverflow.childImageSharp.fluid} alt='Tadas Antanavicius StackOverflow'/>
+        </UndecoratedAnchor>
+        <UndecoratedAnchor
+          href={MEDIUM_URL}
+          target='__blank'
+          rel='noopener nofollower norefer'>
+          <BottomIconImage fluid={medium.childImageSharp.fluid} alt='Tadas Antanavicius Medium'/>
+        </UndecoratedAnchor>
       </SocialMediaContainerDiv>
     </ContactContainerDiv>
   );

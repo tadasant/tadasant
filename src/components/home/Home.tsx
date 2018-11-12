@@ -3,6 +3,7 @@ import * as React from 'react';
 import { SFC } from 'react';
 import { Body1 } from '../../styling/Typography';
 import { GetHomeData } from '../../typings/graphql';
+import { EMAIL, GITHUB_URL, LINKED_IN_URL, STACKOVERFLOW_URL } from '../lib/constants';
 import {
   ExternalIconAnchor,
   ExternalIconImg,
@@ -27,25 +28,25 @@ const Home: SFC<TProps> = (props) => {
       </HeadshotContainerDiv>
       <ExternalIconsContainerDiv>
         <ExternalIconAnchor
-          href='https://linkedin.com/in/antanavicius'
+          href={LINKED_IN_URL}
           target='__blank'
           rel='noopener nofollower norefer'>
           <ExternalIconImg fluid={linkedin.childImageSharp.fluid} alt='Tadas Antanavicius LinkedIn'/>
         </ExternalIconAnchor>
         <ExternalIconAnchor
-          href='https://github.com/tadasant'
+          href={GITHUB_URL}
           target='__blank'
           rel='noopener nofollower norefer'>
           <ExternalIconImg fluid={github.childImageSharp.fluid} alt='Tadas Antanavicius GitHub'/>
         </ExternalIconAnchor>
         <ExternalIconAnchor
-          href='mailto:antanaviciust@gmail.com'
+          href={`mailto:${EMAIL}`}
           target='__blank'
           rel='noopener nofollower norefer'>
           <ExternalIconImg fluid={mail.childImageSharp.fluid} alt='Tadas Antanavicius Mail'/>
         </ExternalIconAnchor>
         <ExternalIconAnchor
-          href='https://stackoverflow.com/users/4443483/tadas-antanavicius'
+          href={STACKOVERFLOW_URL}
           target='__blank'
           rel='noopener nofollower norefer'>
           <ExternalIconImg fluid={stackoverflow.childImageSharp.fluid} alt='Tadas Antanavicius StackOverflow'/>
