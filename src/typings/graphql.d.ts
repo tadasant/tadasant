@@ -9919,8 +9919,6 @@ export namespace GetContactData {
   export type Query = {
     __typename?: 'Query'
 
-    headshot?: Headshot | null
-
     linkedin?: Linkedin | null
 
     github?: Github | null
@@ -9928,9 +9926,17 @@ export namespace GetContactData {
     mail?: Mail | null
 
     stackoverflow?: Stackoverflow | null
+
+    facebook?: Facebook | null
+
+    goodreads?: Goodreads | null
+
+    instagram?: Instagram | null
+
+    medium?: Medium | null
   }
 
-  export type Headshot = {
+  export type Linkedin = {
     __typename?: 'File'
 
     childImageSharp?: ChildImageSharp | null
@@ -9944,7 +9950,7 @@ export namespace GetContactData {
 
   export type Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
 
-  export type Linkedin = {
+  export type Github = {
     __typename?: 'File'
 
     childImageSharp?: _ChildImageSharp | null
@@ -9958,7 +9964,7 @@ export namespace GetContactData {
 
   export type _Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
 
-  export type Github = {
+  export type Mail = {
     __typename?: 'File'
 
     childImageSharp?: __ChildImageSharp | null
@@ -9972,7 +9978,7 @@ export namespace GetContactData {
 
   export type __Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
 
-  export type Mail = {
+  export type Stackoverflow = {
     __typename?: 'File'
 
     childImageSharp?: ___ChildImageSharp | null
@@ -9986,7 +9992,7 @@ export namespace GetContactData {
 
   export type ___Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
 
-  export type Stackoverflow = {
+  export type Facebook = {
     __typename?: 'File'
 
     childImageSharp?: ____ChildImageSharp | null
@@ -9999,6 +10005,48 @@ export namespace GetContactData {
   }
 
   export type ____Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
+
+  export type Goodreads = {
+    __typename?: 'File'
+
+    childImageSharp?: _____ChildImageSharp | null
+  }
+
+  export type _____ChildImageSharp = {
+    __typename?: 'ImageSharp'
+
+    fluid?: _____Fluid | null
+  }
+
+  export type _____Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
+
+  export type Instagram = {
+    __typename?: 'File'
+
+    childImageSharp?: ______ChildImageSharp | null
+  }
+
+  export type ______ChildImageSharp = {
+    __typename?: 'ImageSharp'
+
+    fluid?: ______Fluid | null
+  }
+
+  export type ______Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
+
+  export type Medium = {
+    __typename?: 'File'
+
+    childImageSharp?: _______ChildImageSharp | null
+  }
+
+  export type _______ChildImageSharp = {
+    __typename?: 'ImageSharp'
+
+    fluid?: _______Fluid | null
+  }
+
+  export type _______Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
 }
 
 export namespace GetHomeData {

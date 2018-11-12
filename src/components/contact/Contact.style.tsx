@@ -41,7 +41,7 @@ export const SocialMediaContainerDiv = styled.div`
   height: 100%;
   
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
 `;
 
@@ -57,4 +57,8 @@ export const InlineIconImage = styled(Img)`
     margin-right: 16px;
     width: calc(${constants.typography.body2.tablet.fontSize} * 2 + 10px);
   `}
+`;
+
+export const BottomIconImage = styled(Img)`
+  width: 48px;
 `;

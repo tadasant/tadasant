@@ -4,7 +4,13 @@ import { SFC } from 'react';
 import { Body2 } from '../../styling/Typography';
 import { GetContactData } from '../../typings/graphql';
 import { UndecoratedAnchor } from '../lib/styled-lib';
-import { ContactContainerDiv, ContentContainerDiv, InlineIconImage, SocialMediaContainerDiv } from './Contact.style';
+import {
+  BottomIconImage,
+  ContactContainerDiv,
+  ContentContainerDiv,
+  InlineIconImage,
+  SocialMediaContainerDiv,
+} from './Contact.style';
 
 interface IQueryProps {
   data: GetContactData.Query
@@ -13,7 +19,7 @@ interface IQueryProps {
 type TProps = IQueryProps;
 
 const Contact: SFC<TProps> = props => {
-  const { data: { mail, linkedin } } = props;
+  const { data: { mail, linkedin, github, stackoverflow, facebook, goodreads, instagram, medium } } = props;
   return (
     <ContactContainerDiv>
       <ContentContainerDiv>
@@ -30,7 +36,7 @@ const Contact: SFC<TProps> = props => {
             <li><b>Founders</b> working on interesting products</li>
             <li><b>Feedback</b> on things I’ve written or opinions I’ve expressed</li>
             <li>
-              Outreach regarding <b>freelance</b> or <b>consulting</b> work, including e.g. speaking engagements,
+              Outreach regarding <b>consulting</b> or <b>freelance</b> work, including e.g. speaking engagements,
               writing
             </li>
           </ul>
@@ -47,9 +53,12 @@ const Contact: SFC<TProps> = props => {
         </Body2>
       </ContentContainerDiv>
       <SocialMediaContainerDiv>
-        <div>first</div>
-        <div>second</div>
-
+        <BottomIconImage fluid={facebook.childImageSharp.fluid} alt='Tadas Antanavicius Facebook'/>
+        <BottomIconImage fluid={goodreads.childImageSharp.fluid} alt='Tadas Antanavicius GoodReads'/>
+        <BottomIconImage fluid={instagram.childImageSharp.fluid} alt='Tadas Antanavicius Instagram'/>
+        <BottomIconImage fluid={github.childImageSharp.fluid} alt='Tadas Antanavicius GitHub'/>
+        <BottomIconImage fluid={stackoverflow.childImageSharp.fluid} alt='Tadas Antanavicius StackOverflow'/>
+        <BottomIconImage fluid={medium.childImageSharp.fluid} alt='Tadas Antanavicius Medium'/>
       </SocialMediaContainerDiv>
     </ContactContainerDiv>
   );
@@ -69,28 +78,56 @@ const CONTACT_QUERY = graphql`
     query GetContactData {
         linkedin: file(relativePath: {eq: "images/icons/linkedin.png"}) {
             childImageSharp {
-                fluid(maxWidth: 48) {
+                fluid(maxWidth: 100) {
                     ...GatsbyImageSharpFluid_tracedSVG
                 }
             }
         }
         github: file(relativePath: {eq: "images/icons/github.png"}) {
             childImageSharp {
-                fluid(maxWidth: 48) {
+                fluid(maxWidth: 100) {
                     ...GatsbyImageSharpFluid_tracedSVG
                 }
             }
         }
         mail: file(relativePath: {eq: "images/icons/envelope.png"}) {
             childImageSharp {
-                fluid(maxWidth: 48) {
+                fluid(maxWidth: 100) {
                     ...GatsbyImageSharpFluid_tracedSVG
                 }
             }
         }
         stackoverflow: file(relativePath: {eq: "images/icons/stackoverflow.png"}) {
             childImageSharp {
-                fluid(maxWidth: 48) {
+                fluid(maxWidth: 100) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                }
+            }
+        }
+        facebook: file(relativePath: {eq: "images/icons/facebook.png"}) {
+            childImageSharp {
+                fluid(maxWidth: 100) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                }
+            }
+        }
+        goodreads: file(relativePath: {eq: "images/icons/goodreads.png"}) {
+            childImageSharp {
+                fluid(maxWidth: 100) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                }
+            }
+        }
+        instagram: file(relativePath: {eq: "images/icons/instagram.png"}) {
+            childImageSharp {
+                fluid(maxWidth: 100) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                }
+            }
+        }
+        medium: file(relativePath: {eq: "images/icons/medium.png"}) {
+            childImageSharp {
+                fluid(maxWidth: 100) {
                     ...GatsbyImageSharpFluid_tracedSVG
                 }
             }
