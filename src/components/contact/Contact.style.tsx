@@ -60,5 +60,9 @@ export const InlineIconImage = styled(Img)`
 `;
 
 export const BottomIconImage = styled(Img)`
-  width: 48px;
+  width: 32px;
+  
+  ${media.tablet`
+    width: 48px;
+  `}
 `;
