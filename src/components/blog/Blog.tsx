@@ -1,7 +1,9 @@
 import { graphql, StaticQuery } from 'gatsby';
 import { SFC } from 'react';
 import * as React from 'react';
+import { Header } from '../../styling/Typography';
 import { GetBlogData } from '../../typings/graphql';
+import { BlogContainerDiv, ContentContainerDiv, HeaderDiv, PostDiv } from './Blog.style';
 
 interface IQueryProps {
   data: GetBlogData.Query
@@ -12,7 +14,18 @@ type TProps = IQueryProps;
 const Blog: SFC<TProps> = props => {
   const {data: {allMarkdownRemark: {edges}}} = props;
   return (
-    <div />
+    <BlogContainerDiv>
+      <ContentContainerDiv>
+        <HeaderDiv>
+          <Header>Latest Posts</Header>
+        </HeaderDiv>
+        {edges.map(edge => (
+          <PostDiv>
+            {edge.node.fields.slug}
+          </PostDiv>
+        ))}
+      </ContentContainerDiv>
+    </BlogContainerDiv>
   );
 };
 
