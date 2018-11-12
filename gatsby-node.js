@@ -6,7 +6,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
   // Generate slugs for markdown files in src
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` });
+    // returns e.g. /theres-a-human-on-the-other-side-of-your-code-review/markdown/
+    const slugPath = createFilePath({ node, getNode, basePath: `pages` });
+    const slug = `/${slugPath.split('/')[1]}`;
     createNodeField({
       node,
       name: `slug`,
