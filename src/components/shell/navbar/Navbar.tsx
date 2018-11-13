@@ -51,7 +51,7 @@ type TProps = IStateProps & IQueryProps;
 const NavbarPure: SFC<TProps> = props => {
   const { data, anchorEl, setAnchorEl, subscribeModalOpen, setSubscribeModalOpen } = props;
   if (!data || !data.logo || !data.logo.childImageSharp || !data.hamburger || !data.hamburger.childImageSharp) {
-    console.warn(`${this.displayName}: GraphQL returned a null on build. This probably shouldn\'t happen. `);
+    console.warn(`NavbarPure: GraphQL returned a null on build. This probably shouldn\'t happen. `);
     return null;
   }
   return (

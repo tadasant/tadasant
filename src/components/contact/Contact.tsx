@@ -33,7 +33,7 @@ const Contact: SFC<TProps> = props => {
     || !github.childImageSharp || !mail || !mail.childImageSharp || !stackoverflow || !stackoverflow.childImageSharp ||
     !goodreads || !goodreads.childImageSharp || !instagram || !instagram.childImageSharp || !medium ||
     !medium.childImageSharp || !twitter || !twitter.childImageSharp) {
-    console.warn(`${this.displayName}: GraphQL returned a null on build. This probably shouldn\'t happen. `);
+    console.warn(`Contact: GraphQL returned a null on build. This probably shouldn\'t happen. `);
     return null;
   }
   return (

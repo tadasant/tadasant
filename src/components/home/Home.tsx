@@ -24,7 +24,7 @@ const Home: SFC<TProps> = (props) => {
   const { data: { headshot, linkedin, github, mail, stackoverflow } } = props;
   if (!headshot || !headshot.childImageSharp || !linkedin || !linkedin.childImageSharp || !github
     || !github.childImageSharp || !mail || !mail.childImageSharp || !stackoverflow || !stackoverflow.childImageSharp) {
-    console.warn(`${this.displayName}: GraphQL returned a null on build. This probably shouldn\'t happen. `);
+    console.warn(`Home: GraphQL returned a null on build. This probably shouldn\'t happen. `);
     return null;
   }
   return (

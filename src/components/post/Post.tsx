@@ -11,8 +11,8 @@ type TProps = IProps;
 
 const Post: SFC<TProps> = props => {
   const { post } = props;
-  if (!post || !post.frontmatter || !post.frontmatter.coverphoto || !post.fields || !post.fields.slug) {
-    console.warn(`${this.displayName}: GraphQL returned a null on build. This probably shouldn\'t happen. `);
+  if (!post || !post.frontmatter || !post.fields || !post.fields.slug) {
+    console.warn(`Post: GraphQL returned a null on build. This probably shouldn\'t happen. `);
     return null;
   }
   return (

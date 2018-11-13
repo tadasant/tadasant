@@ -24,7 +24,7 @@ interface IProps {
 
 const Shell: SFC<IProps> = ({ children, data }) => {
   if (!data || !data.site || !data.site.siteMetadata || !data.site.siteMetadata.title) {
-    console.warn(`${this.displayName}: GraphQL returned a null on build. This probably shouldn\'t happen. `);
+    console.warn(`Shell: GraphQL returned a null on build. This probably shouldn\'t happen. `);
     return null;
   }
   return (
