@@ -3,7 +3,7 @@ import { SFC } from 'react';
 import * as React from 'react';
 import { Header } from '../../styling/Typography';
 import { GetBlogData } from '../../typings/graphql';
-import { BlogContainerDiv, ContentContainerDiv, HeaderDiv, PostDiv } from './Blog.style';
+import { BlogContainerDiv, ContentContainerDiv, HeaderDiv, PostComponent } from './Blog.style';
 
 interface IQueryProps {
   data: GetBlogData.Query
@@ -20,9 +20,7 @@ const Blog: SFC<TProps> = props => {
           <Header>Latest Posts</Header>
         </HeaderDiv>
         {edges.map(edge => (
-          <PostDiv>
-            {edge.node.fields.slug}
-          </PostDiv>
+          <PostComponent post={edge} />
         ))}
       </ContentContainerDiv>
     </BlogContainerDiv>
@@ -47,27 +45,17 @@ const BLOG_QUERY = graphql`
                     fields {
                         slug
                     }
+                    frontmatter {
+                        coverphoto {
+                            childImageSharp {
+                                fluid(maxWidth: 500) {
+                                    ...GatsbyImageSharpFluid_tracedSVG
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
     }
 `;
-
-
-
-// Get cover-photos within each sub-blog component
-//
-// graphql`
-//   query {
-//       allFile(filter: {
-//           relativeDirectory: {eq: "theres-a-human-on-the-other-side-of-your-code-review"},
-//           name: {eq: "_cover-photo"}
-//       }) {
-//           edges {
-//               node {
-//                   name
-//               }
-//           }
-//       }
-//   }
-// `

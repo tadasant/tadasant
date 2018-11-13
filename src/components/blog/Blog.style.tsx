@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { media } from '../../styling/core';
+import Post from '../post/Post';
+
 
 export const BlogContainerDiv = styled.div`
   display: grid;
@@ -24,6 +26,6 @@ export const HeaderDiv = styled.div`
   padding: 0 0 1vh 0;
 `;
 
-export const PostDiv = styled.div`
+export const PostComponent = styled(Post)`
   padding: 1vh 0 0 0;
 `;

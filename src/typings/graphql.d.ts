@@ -174,8 +174,6 @@ export interface PackageJson_2 {
   devDependencies?: (DevDependencies_2 | null)[] | null
 
   peerDependencies?: (PeerDependencies_2 | null)[] | null
-
-  keywords?: (string | null)[] | null
 }
 
 export interface Dependencies_2 {
@@ -512,6 +510,8 @@ export interface File extends Node {
   ctime?: Date | null
 
   birthtime?: Date | null
+
+  fields?: Fields_3 | null
   /** Copy file to static directory and return public url to it */
   publicURL?: string | null
 }
@@ -681,7 +681,7 @@ export interface MarkdownRemark extends Node {
 
   fileAbsolutePath?: string | null
 
-  fields?: Fields_2 | null
+  fields?: Fields_4 | null
 
   html?: string | null
 
@@ -707,10 +707,10 @@ export interface Internal_13 {
 
   owner?: string | null
 
-  fieldOwners?: FieldOwners_2 | null
+  fieldOwners?: FieldOwners_4 | null
 }
 
-export interface FieldOwners_2 {
+export interface FieldOwners_4 {
   slug?: string | null
 
   type?: string | null
@@ -728,9 +728,11 @@ export interface Frontmatter_2 {
   medium?: string | null
 
   _PARENT?: string | null
+
+  coverphoto?: File | null
 }
 
-export interface Fields_2 {
+export interface Fields_4 {
   slug?: string | null
 
   type?: string | null
@@ -760,6 +762,20 @@ export interface Internal_11 {
   description?: string | null
 
   owner?: string | null
+
+  fieldOwners?: FieldOwners_3 | null
+}
+
+export interface FieldOwners_3 {
+  slug?: string | null
+
+  type?: string | null
+}
+
+export interface Fields_3 {
+  slug?: string | null
+
+  type?: string | null
 }
 /** A connection to a list of items. */
 export interface FileGroupConnectionConnection {
@@ -1215,8 +1231,6 @@ export interface SitePageConnectionPluginCreatorPackageJsonInputObject {
   devDependencies?: SitePageConnectionPluginCreatorPackageJsonDevDependenciesQueryList | null
 
   peerDependencies?: SitePageConnectionPluginCreatorPackageJsonPeerDependenciesQueryList | null
-
-  keywords?: SitePageConnectionPluginCreatorPackageJsonKeywordsQueryList | null
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonNameQueryString {
@@ -1404,20 +1418,6 @@ export interface SitePageConnectionPluginCreatorPackageJsonPeerDependenciesNameQ
 }
 
 export interface SitePageConnectionPluginCreatorPackageJsonPeerDependenciesVersionQueryString {
-  eq?: string | null
-
-  ne?: string | null
-
-  regex?: string | null
-
-  glob?: string | null
-
-  in?: (string | null)[] | null
-
-  nin?: (string | null)[] | null
-}
-
-export interface SitePageConnectionPluginCreatorPackageJsonKeywordsQueryList {
   eq?: string | null
 
   ne?: string | null
@@ -1793,8 +1793,6 @@ export interface SitePluginConnectionPackageJsonInputObject_2 {
   devDependencies?: SitePluginConnectionPackageJsonDevDependenciesQueryList_2 | null
 
   peerDependencies?: SitePluginConnectionPackageJsonPeerDependenciesQueryList_2 | null
-
-  keywords?: SitePluginConnectionPackageJsonKeywordsQueryList_2 | null
 }
 
 export interface SitePluginConnectionPackageJsonNameQueryString_2 {
@@ -1982,20 +1980,6 @@ export interface SitePluginConnectionPackageJsonPeerDependenciesNameQueryString_
 }
 
 export interface SitePluginConnectionPackageJsonPeerDependenciesVersionQueryString_2 {
-  eq?: string | null
-
-  ne?: string | null
-
-  regex?: string | null
-
-  glob?: string | null
-
-  in?: (string | null)[] | null
-
-  nin?: (string | null)[] | null
-}
-
-export interface SitePluginConnectionPackageJsonKeywordsQueryList_2 {
   eq?: string | null
 
   ne?: string | null
@@ -2812,6 +2796,8 @@ export interface FilterFile {
 
   birthtime?: FileConnectionBirthtimeQueryString_2 | null
 
+  fields?: FileConnectionFieldsInputObject_2 | null
+
   publicURL?: PublicUrlQueryString_4 | null
 }
 
@@ -2839,6 +2825,8 @@ export interface FileConnectionInternalInputObject_2 {
   description?: FileConnectionInternalDescriptionQueryString_2 | null
 
   owner?: FileConnectionInternalOwnerQueryString_2 | null
+
+  fieldOwners?: FileConnectionInternalFieldOwnersInputObject_2 | null
 }
 
 export interface FileConnectionInternalContentDigestQueryString_2 {
@@ -2898,6 +2886,40 @@ export interface FileConnectionInternalDescriptionQueryString_2 {
 }
 
 export interface FileConnectionInternalOwnerQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FileConnectionInternalFieldOwnersInputObject_2 {
+  slug?: FileConnectionInternalFieldOwnersSlugQueryString_2 | null
+
+  type?: FileConnectionInternalFieldOwnersTypeQueryString_2 | null
+}
+
+export interface FileConnectionInternalFieldOwnersSlugQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FileConnectionInternalFieldOwnersTypeQueryString_2 {
   eq?: string | null
 
   ne?: string | null
@@ -3416,6 +3438,40 @@ export interface FileConnectionCtimeQueryString_2 {
 }
 
 export interface FileConnectionBirthtimeQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FileConnectionFieldsInputObject_2 {
+  slug?: FileConnectionFieldsSlugQueryString_2 | null
+
+  type?: FileConnectionFieldsTypeQueryString_2 | null
+}
+
+export interface FileConnectionFieldsSlugQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FileConnectionFieldsTypeQueryString_2 {
   eq?: string | null
 
   ne?: string | null
@@ -4647,6 +4703,8 @@ export interface MarkdownRemarkConnectionFrontmatterInputObject_2 {
   medium?: MarkdownRemarkConnectionFrontmatterMediumQueryString_2 | null
 
   _PARENT?: MarkdownRemarkConnectionFrontmatterParentQueryString_2 | null
+
+  coverphoto?: MarkdownRemarkConnectionFrontmatterCoverphotoQueryString_2 | null
 }
 
 export interface MarkdownRemarkConnectionFrontmatterTitleQueryString_2 {
@@ -4720,6 +4778,20 @@ export interface MarkdownRemarkConnectionFrontmatterMediumQueryString_2 {
 }
 
 export interface MarkdownRemarkConnectionFrontmatterParentQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface MarkdownRemarkConnectionFrontmatterCoverphotoQueryString_2 {
   eq?: string | null
 
   ne?: string | null
@@ -5233,8 +5305,6 @@ export interface SitePagePluginCreatorPackageJsonInputObject {
   devDependencies?: SitePagePluginCreatorPackageJsonDevDependenciesQueryList | null
 
   peerDependencies?: SitePagePluginCreatorPackageJsonPeerDependenciesQueryList | null
-
-  keywords?: SitePagePluginCreatorPackageJsonKeywordsQueryList | null
 }
 
 export interface SitePagePluginCreatorPackageJsonNameQueryString {
@@ -5422,20 +5492,6 @@ export interface SitePagePluginCreatorPackageJsonPeerDependenciesNameQueryString
 }
 
 export interface SitePagePluginCreatorPackageJsonPeerDependenciesVersionQueryString {
-  eq?: string | null
-
-  ne?: string | null
-
-  regex?: string | null
-
-  glob?: string | null
-
-  in?: (string | null)[] | null
-
-  nin?: (string | null)[] | null
-}
-
-export interface SitePagePluginCreatorPackageJsonKeywordsQueryList {
   eq?: string | null
 
   ne?: string | null
@@ -5783,8 +5839,6 @@ export interface SitePluginPackageJsonInputObject_2 {
   devDependencies?: SitePluginPackageJsonDevDependenciesQueryList_2 | null
 
   peerDependencies?: SitePluginPackageJsonPeerDependenciesQueryList_2 | null
-
-  keywords?: SitePluginPackageJsonKeywordsQueryList_2 | null
 }
 
 export interface SitePluginPackageJsonNameQueryString_2 {
@@ -5972,20 +6026,6 @@ export interface SitePluginPackageJsonPeerDependenciesNameQueryString_2 {
 }
 
 export interface SitePluginPackageJsonPeerDependenciesVersionQueryString_2 {
-  eq?: string | null
-
-  ne?: string | null
-
-  regex?: string | null
-
-  glob?: string | null
-
-  in?: (string | null)[] | null
-
-  nin?: (string | null)[] | null
-}
-
-export interface SitePluginPackageJsonKeywordsQueryList_2 {
   eq?: string | null
 
   ne?: string | null
@@ -6819,6 +6859,8 @@ export interface FileInternalInputObject_2 {
   description?: FileInternalDescriptionQueryString_2 | null
 
   owner?: FileInternalOwnerQueryString_2 | null
+
+  fieldOwners?: FileInternalFieldOwnersInputObject_2 | null
 }
 
 export interface FileInternalContentDigestQueryString_2 {
@@ -6878,6 +6920,40 @@ export interface FileInternalDescriptionQueryString_2 {
 }
 
 export interface FileInternalOwnerQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FileInternalFieldOwnersInputObject_2 {
+  slug?: FileInternalFieldOwnersSlugQueryString_2 | null
+
+  type?: FileInternalFieldOwnersTypeQueryString_2 | null
+}
+
+export interface FileInternalFieldOwnersSlugQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FileInternalFieldOwnersTypeQueryString_2 {
   eq?: string | null
 
   ne?: string | null
@@ -7396,6 +7472,40 @@ export interface FileCtimeQueryString_2 {
 }
 
 export interface FileBirthtimeQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FileFieldsInputObject_2 {
+  slug?: FileFieldsSlugQueryString_2 | null
+
+  type?: FileFieldsTypeQueryString_2 | null
+}
+
+export interface FileFieldsSlugQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface FileFieldsTypeQueryString_2 {
   eq?: string | null
 
   ne?: string | null
@@ -8543,6 +8653,8 @@ export interface MarkdownRemarkFrontmatterInputObject_2 {
   medium?: MarkdownRemarkFrontmatterMediumQueryString_2 | null
 
   _PARENT?: MarkdownRemarkFrontmatterParentQueryString_2 | null
+
+  coverphoto?: MarkdownRemarkFrontmatterCoverphotoQueryString_2 | null
 }
 
 export interface MarkdownRemarkFrontmatterTitleQueryString_2 {
@@ -8616,6 +8728,20 @@ export interface MarkdownRemarkFrontmatterMediumQueryString_2 {
 }
 
 export interface MarkdownRemarkFrontmatterParentQueryString_2 {
+  eq?: string | null
+
+  ne?: string | null
+
+  regex?: string | null
+
+  glob?: string | null
+
+  in?: (string | null)[] | null
+
+  nin?: (string | null)[] | null
+}
+
+export interface MarkdownRemarkFrontmatterCoverphotoQueryString_2 {
   eq?: string | null
 
   ne?: string | null
@@ -9115,6 +9241,8 @@ export interface FileQueryArgs {
   ctime?: FileCtimeQueryString_2 | null
 
   birthtime?: FileBirthtimeQueryString_2 | null
+
+  fields?: FileFieldsInputObject_2 | null
 
   publicURL?: PublicUrlQueryString_3 | null
 }
@@ -9828,6 +9956,8 @@ export enum FileConnectionSortByFieldsEnum {
   internal___mediaType = 'internal___mediaType',
   internal___description = 'internal___description',
   internal___owner = 'internal___owner',
+  internal___fieldOwners___slug = 'internal___fieldOwners___slug',
+  internal___fieldOwners___type = 'internal___fieldOwners___type',
   sourceInstanceName = 'sourceInstanceName',
   absolutePath = 'absolutePath',
   relativePath = 'relativePath',
@@ -9861,6 +9991,8 @@ export enum FileConnectionSortByFieldsEnum {
   mtime = 'mtime',
   ctime = 'ctime',
   birthtime = 'birthtime',
+  fields___slug = 'fields___slug',
+  fields___type = 'fields___type',
   publicURL = 'publicURL',
 }
 
@@ -9917,6 +10049,8 @@ export enum FileDistinctEnum {
   internal___mediaType = 'internal___mediaType',
   internal___description = 'internal___description',
   internal___owner = 'internal___owner',
+  internal___fieldOwners___slug = 'internal___fieldOwners___slug',
+  internal___fieldOwners___type = 'internal___fieldOwners___type',
   sourceInstanceName = 'sourceInstanceName',
   absolutePath = 'absolutePath',
   relativePath = 'relativePath',
@@ -9950,6 +10084,8 @@ export enum FileDistinctEnum {
   mtime = 'mtime',
   ctime = 'ctime',
   birthtime = 'birthtime',
+  fields___slug = 'fields___slug',
+  fields___type = 'fields___type',
 }
 
 export enum FileGroupEnum {
@@ -9961,6 +10097,8 @@ export enum FileGroupEnum {
   internal___mediaType = 'internal___mediaType',
   internal___description = 'internal___description',
   internal___owner = 'internal___owner',
+  internal___fieldOwners___slug = 'internal___fieldOwners___slug',
+  internal___fieldOwners___type = 'internal___fieldOwners___type',
   sourceInstanceName = 'sourceInstanceName',
   absolutePath = 'absolutePath',
   relativePath = 'relativePath',
@@ -9994,6 +10132,8 @@ export enum FileGroupEnum {
   mtime = 'mtime',
   ctime = 'ctime',
   birthtime = 'birthtime',
+  fields___slug = 'fields___slug',
+  fields___type = 'fields___type',
 }
 
 export enum ImageSharpConnectionSortByFieldsEnum {
@@ -10093,6 +10233,7 @@ export enum MarkdownRemarkConnectionSortByFieldsEnum {
   frontmatter___description = 'frontmatter___description',
   frontmatter___medium = 'frontmatter___medium',
   frontmatter____PARENT = 'frontmatter____PARENT',
+  frontmatter___coverphoto = 'frontmatter___coverphoto',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
   fileAbsolutePath = 'fileAbsolutePath',
@@ -10127,6 +10268,7 @@ export enum MarkdownRemarkDistinctEnum {
   frontmatter___description = 'frontmatter___description',
   frontmatter___medium = 'frontmatter___medium',
   frontmatter____PARENT = 'frontmatter____PARENT',
+  frontmatter___coverphoto = 'frontmatter___coverphoto',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
   fileAbsolutePath = 'fileAbsolutePath',
@@ -10149,6 +10291,7 @@ export enum MarkdownRemarkGroupEnum {
   frontmatter___description = 'frontmatter___description',
   frontmatter___medium = 'frontmatter___medium',
   frontmatter____PARENT = 'frontmatter____PARENT',
+  frontmatter___coverphoto = 'frontmatter___coverphoto',
   excerpt = 'excerpt',
   rawMarkdownBody = 'rawMarkdownBody',
   fileAbsolutePath = 'fileAbsolutePath',
@@ -10189,13 +10332,35 @@ export namespace GetBlogData {
     __typename?: 'MarkdownRemark'
 
     fields?: Fields | null
+
+    frontmatter?: Frontmatter | null
   }
 
   export type Fields = {
-    __typename?: 'fields_2'
+    __typename?: 'fields_4'
 
     slug?: string | null
   }
+
+  export type Frontmatter = {
+    __typename?: 'frontmatter_2'
+
+    coverphoto?: Coverphoto | null
+  }
+
+  export type Coverphoto = {
+    __typename?: 'File'
+
+    childImageSharp?: ChildImageSharp | null
+  }
+
+  export type ChildImageSharp = {
+    __typename?: 'ImageSharp'
+
+    fluid?: Fluid | null
+  }
+
+  export type Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
 }
 
 export namespace GetContactData {

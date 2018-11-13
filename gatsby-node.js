@@ -1,24 +1,23 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+const createSlug = (node, getNode) => {
+  // returns e.g. /theres-a-human-on-the-other-side-of-your-code-review/markdown/
+  const slugPath = createFilePath({ node, getNode, basePath: `pages` });
+  const relativeDirectory = slugPath.split('/')[1];
+  return `/${relativeDirectory}`;
+};
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
 
   // Generate slugs for markdown files in src
   if (node.internal.type === `MarkdownRemark`) {
-    // returns e.g. /theres-a-human-on-the-other-side-of-your-code-review/markdown/
-    const slugPath = createFilePath({ node, getNode, basePath: `pages` });
-    const relativeDirectory = slugPath.split('/')[1];
-    const slug = `/${relativeDirectory}`;
+    const slug = createSlug(node, getNode);
     createNodeField({
       node,
       name: `slug`,
       value: slug,
-    });
-    createNodeField({
-      node,
-      name: `relativeDirectory`,
-      value: relativeDirectory,
     });
     createNodeField({
       node,
