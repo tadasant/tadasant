@@ -10345,6 +10345,12 @@ export namespace GetBlogData {
   export type Frontmatter = {
     __typename?: 'frontmatter_2'
 
+    title?: string | null
+
+    subtitle?: string | null
+
+    description?: string | null
+
     coverphoto?: Coverphoto | null
   }
 

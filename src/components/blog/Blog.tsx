@@ -51,6 +51,9 @@ const BLOG_QUERY = graphql`
                         slug
                     }
                     frontmatter {
+                        title
+                        subtitle
+                        description
                         coverphoto {
                             childImageSharp {
                                 fluid(maxWidth: 500) {
