@@ -3,6 +3,7 @@ title: "Learn more by doing less"
 date: "2018-02-25"
 subtitle: "What if we software engineers spent an hour of our 9–5 reading a book or a series of blog posts?"
 description: "Why it's compelling for a software engineer to sacrifice some time \"doing,\" producing output for his or her company, in exchange for time spent learning for personal career and skillset development."
+coverphoto: _cover-photo.jpeg
 medium: "https://medium.com/@tadasant/learn-more-by-doing-less-c9fbfbf1d2d9"
 ---
 

@@ -19,12 +19,11 @@ export const BLOG_QUERY = graphql`
 `
 
 const PostPage: SFC<IProps> = ({ data }) => {
-  const post = data.markdownRemark
+  const post = data.markdownRemark;
   return (
     <div>
       <div>
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }}/>
+        <h1>{post ? post.frontmatter ? post.frontmatter.title : null : null}</h1>
       </div>
     </div>
   )

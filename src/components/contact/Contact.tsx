@@ -29,6 +29,13 @@ type TProps = IQueryProps;
 
 const Contact: SFC<TProps> = props => {
   const { data: { mail, linkedin, github, stackoverflow, facebook, goodreads, instagram, medium, twitter } } = props;
+  if (!facebook || !facebook.childImageSharp || !linkedin || !linkedin.childImageSharp || !github
+    || !github.childImageSharp || !mail || !mail.childImageSharp || !stackoverflow || !stackoverflow.childImageSharp ||
+    !goodreads || !goodreads.childImageSharp || !instagram || !instagram.childImageSharp || !medium ||
+    !medium.childImageSharp || !twitter || !twitter.childImageSharp) {
+    console.warn(`${this.displayName}: GraphQL returned a null on build. This probably shouldn\'t happen. `);
+    return null;
+  }
   return (
     <ContactContainerDiv>
       <ContentContainerDiv>

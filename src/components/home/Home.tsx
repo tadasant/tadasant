@@ -10,7 +10,8 @@ import {
   ExternalIconsContainerDiv,
   HeadshotContainerDiv,
   HeadshotImg,
-  HomeContainerDiv, MessageContainerDiv,
+  HomeContainerDiv,
+  MessageContainerDiv,
 } from './Home.style';
 
 interface IQueryProps {
@@ -21,6 +22,11 @@ type TProps = IQueryProps;
 
 const Home: SFC<TProps> = (props) => {
   const { data: { headshot, linkedin, github, mail, stackoverflow } } = props;
+  if (!headshot || !headshot.childImageSharp || !linkedin || !linkedin.childImageSharp || !github
+    || !github.childImageSharp || !mail || !mail.childImageSharp || !stackoverflow || !stackoverflow.childImageSharp) {
+    console.warn(`${this.displayName}: GraphQL returned a null on build. This probably shouldn\'t happen. `);
+    return null;
+  }
   return (
     <HomeContainerDiv>
       <HeadshotContainerDiv>
@@ -54,11 +60,13 @@ const Home: SFC<TProps> = (props) => {
       </ExternalIconsContainerDiv>
       <MessageContainerDiv>
         <Body1>
-          Hey! I’m Tadas, an entrepreneur and software engineer. I build products on the web to make people’s lives better.
+          Hey! I’m Tadas, an entrepreneur and software engineer. I build products on the web to make people’s lives
+          better.
         </Body1>
-        <br /><br /><br />
+        <br/><br/><br/>
         <Body1>
-          I write about what I’ve learned along the way about <b>software</b>, <b>business</b>, and <b>life</b>: check out my <Link to='/blog'>blog</Link>.
+          I write about what I’ve learned along the way about <b>software</b>, <b>business</b>, and <b>life</b>: check
+          out my <Link to='/blog'>blog</Link>.
         </Body1>
       </MessageContainerDiv>
     </HomeContainerDiv>

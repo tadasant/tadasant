@@ -22,28 +22,34 @@ interface IProps {
   data: SiteTitleQuery.Query
 }
 
-const Shell: SFC<IProps> = ({ children, data }) => (
-  <>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        {
-          name: 'description',
-          content: 'Tadas Antanavicius\' personal website. Tadas is a software engineer, entrepreneur, and blogger based in the United States. Here you\'ll find basic information about him, his blog, and links to his other profiles around the web.',
-        },
-        { name: 'keywords', content: 'tadas antanavicius, antanavicius, tadas antanavicius, tadasant' },
-        { name: 'google-site-verification', content: 'l4GtLlU7oAqrgl5VPmt1t8KcE1kWkWgeg4oXTcge5J0' },
-      ]}
-    />
-    <NavbarContainerDiv>
-      <Navbar/>
-    </NavbarContainerDiv>
-    <BodyContainerDiv>
-      {children}
-    </BodyContainerDiv>
-    <Footer/>
-  </>
-);
+const Shell: SFC<IProps> = ({ children, data }) => {
+  if (!data || !data.site || !data.site.siteMetadata || !data.site.siteMetadata.title) {
+    console.warn(`${this.displayName}: GraphQL returned a null on build. This probably shouldn\'t happen. `);
+    return null;
+  }
+  return (
+    <>
+      <Helmet
+        title={data.site.siteMetadata.title}
+        meta={[
+          {
+            name: 'description',
+            content: 'Tadas Antanavicius\' personal website. Tadas is a software engineer, entrepreneur, and blogger based in the United States. Here you\'ll find basic information about him, his blog, and links to his other profiles around the web.',
+          },
+          { name: 'keywords', content: 'tadas antanavicius, antanavicius, tadas antanavicius, tadasant' },
+          { name: 'google-site-verification', content: 'l4GtLlU7oAqrgl5VPmt1t8KcE1kWkWgeg4oXTcge5J0' },
+        ]}
+      />
+      <NavbarContainerDiv>
+        <Navbar/>
+      </NavbarContainerDiv>
+      <BodyContainerDiv>
+        {children}
+      </BodyContainerDiv>
+      <Footer/>
+    </>
+  );
+};
 
 // TODO look into converting to HOC
 const container: SFC = props => (
