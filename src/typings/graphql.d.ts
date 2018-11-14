@@ -10351,8 +10351,6 @@ export namespace GetBlogData {
 
     title?: string | null
 
-    subtitle?: string | null
-
     description?: string | null
 
     coverphoto?: Coverphoto | null

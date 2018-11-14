@@ -54,7 +54,6 @@ const BLOG_QUERY = graphql`
                     frontmatter {
                         date
                         title
-                        subtitle
                         description
                         coverphoto {
                             childImageSharp {
