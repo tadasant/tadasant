@@ -14,11 +14,11 @@ export const ContentContainerDiv = styled.div`
   padding: 1vh 2vw 1vh 2vw;
   
   grid-column-start: 1;
-  grid-column-end: 3;
+  grid-column-end: 4;
   
   ${media.tablet`
     grid-column-start: 2;
-    grid-column-end: 2;
+    grid-column-end: 3;
   `}
 `;
 

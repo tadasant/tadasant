@@ -82,12 +82,29 @@ export const MenuImg = styled(Img)`
   cursor: pointer;
 `;
 
+export const NavigationButtonSpan = styled.span`
+  font-family: ${constants.typography.fontFamily};
+  color: ${constants.colors.base.grey};
+
+  font-size: ${constants.typography.button.mobile.fontSize};
+  font-weight: ${constants.typography.button.mobile.fontWeight};
+
+  ${media.tablet`
+    font-size: ${constants.typography.button.tablet.fontSize};
+    font-weight: ${constants.typography.button.tablet.fontWeight};
+  `}
+`;
+
 export const SubscribeButton = styled(Button).attrs({
   shadow: true,
 })`
   && {
     color: ${constants.colors.brand};
     background-color: ${constants.colors.highlight.gold};
-    font-size: ${constants.typography.header3.fontSize};
+    font-size: ${constants.typography.button.mobile.fontSize};
+    
+    ${media.tablet`
+      font-size: ${constants.typography.button.tablet.fontSize}; 
+    `
   }
 `;

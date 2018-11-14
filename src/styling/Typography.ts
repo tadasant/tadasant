@@ -36,8 +36,13 @@ export const Header3 = styled.span`
   color: ${(props: ITypographyProps) => props.white ? constants.colors.base.grey : constants.colors.brand};
   font-family: ${constants.typography.fontFamily};
   
-  font-size: ${constants.typography.header3.fontSize};
-  font-weight: ${constants.typography.header3.fontWeight};
+  font-size: ${constants.typography.header3.mobile.fontSize};
+  font-weight: ${constants.typography.header3.mobile.fontWeight};
+  
+  ${media.tablet`
+    font-size: ${constants.typography.header3.tablet.fontSize};
+    font-weight: ${constants.typography.header3.tablet.fontWeight};
+  `}
 `;
 
 export const Body1 = styled.span`

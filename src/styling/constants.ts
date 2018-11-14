@@ -28,7 +28,7 @@ const constants = {
     },
     'header2': {
       'mobile': {
-        'fontSize': '21px',
+        'fontSize': '24px',
         'fontWeight': 'bold',
       },
       'tablet': {
@@ -37,8 +37,14 @@ const constants = {
       },
     },
     'header3': {
-      'fontSize': '21px',
-      'fontWeight': 'bold',
+      'mobile': {
+        'fontSize': '21px',
+        'fontWeight': 'bold',
+      },
+      'tablet': {
+        'fontSize': '24px',
+        'fontWeight': 'bold',
+      },
     },
     'body1': {
       'mobile': {

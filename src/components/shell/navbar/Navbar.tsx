@@ -3,16 +3,17 @@ import { graphql, Link, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import { SFC } from 'react';
 import { compose, withState } from 'recompose';
-import { Header, Header3 } from '../../../styling/Typography';
+import { Header } from '../../../styling/Typography';
 import { GetNavbarData } from '../../../typings/graphql';
 import { UndecoratedLink } from '../../lib/styled-lib';
 import {
+  ContentContainerDiv,
   LogoContainerDiv,
   LogoImg,
   MenuImg,
   MobileNavigationContainerDiv,
   MobilePageHeaderContainerDiv,
-  ContentContainerDiv,
+  NavigationButtonSpan,
   SubscribeButton,
   TabletNavigationContainerDiv,
   TabletNavItem,
@@ -98,12 +99,12 @@ const NavbarPure: SFC<TProps> = props => {
         <TabletNavigationContainerDiv>
           <TabletNavItem>
             <UndecoratedLink to='/blog'>
-              <Header3 white>Blog</Header3>
+              <NavigationButtonSpan>Blog</NavigationButtonSpan>
             </UndecoratedLink>
           </TabletNavItem>
           <TabletNavItem>
             <UndecoratedLink to='/contact'>
-              <Header3 white>Contact</Header3>
+              <NavigationButtonSpan>Contact</NavigationButtonSpan>
             </UndecoratedLink>
           </TabletNavItem>
           <TabletNavItem>
