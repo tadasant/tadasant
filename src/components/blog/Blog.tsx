@@ -47,6 +47,7 @@ const BLOG_QUERY = graphql`
         allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
             edges {
                 node {
+                    timeToRead
                     fields {
                         slug
                     }

@@ -3,6 +3,7 @@ title: "Your variables are going through an identity crisis"
 date: "2017-11-19"
 subtitle: "How much time do you spend reading code?"
 description: "When writing the next line of code, you’re reading what you wrote two minutes ago. You’re reading the other file your teammate wrote two weeks ago. You’re diving into understanding a library written..."
+coverphoto: _cover-photo.jpeg
 medium: "https://medium.com/@tadasant/your-variables-are-going-through-an-identity-crisis-5d135936febf"
 ---
 

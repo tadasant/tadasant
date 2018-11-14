@@ -10331,6 +10331,8 @@ export namespace GetBlogData {
   export type Node = {
     __typename?: 'MarkdownRemark'
 
+    timeToRead?: number | null
+
     fields?: Fields | null
 
     frontmatter?: Frontmatter | null

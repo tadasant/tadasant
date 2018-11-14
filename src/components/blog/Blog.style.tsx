@@ -28,8 +28,4 @@ export const HeaderDiv = styled.div`
 
 export const PostComponent = styled(Post)`
   padding: 3vh 0 0 0;
-  
-  ${media.desktop`
-    padding: 1vh 0 0 0;
-  `}
 `;
