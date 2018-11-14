@@ -12,8 +12,6 @@ interface IProps {
 
 type TProps = IProps;
 
-// TODO: show date, show subtitle
-
 const monthToName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
 
 const Post: SFC<TProps> = props => {
@@ -25,24 +23,24 @@ const Post: SFC<TProps> = props => {
 
   const date = new Date(post.frontmatter.date);
   return (
-    <PostContainerDiv className={props.className}>
-      <CoverPhotoDiv>
-        {post.frontmatter.coverphoto && post.frontmatter.coverphoto.childImageSharp
-          ? (
-            <CoverImg fluid={post.frontmatter.coverphoto.childImageSharp.fluid}
-                      alt={`${post.fields.slug} cover photo`}/>
-          ) : null}
-      </CoverPhotoDiv>
-      <TextDiv>
-        <UndecoratedLink to={`blog/${post.fields.slug}`}>
+    <UndecoratedLink to={`blog/${post.fields.slug}`}>
+      <PostContainerDiv className={props.className}>
+        <CoverPhotoDiv>
+          {post.frontmatter.coverphoto && post.frontmatter.coverphoto.childImageSharp
+            ? (
+              <CoverImg fluid={post.frontmatter.coverphoto.childImageSharp.fluid}
+                        alt={`${post.fields.slug} cover photo`}/>
+            ) : null}
+        </CoverPhotoDiv>
+        <TextDiv>
           <Header3>{post.frontmatter.title}</Header3>
-        </UndecoratedLink>
-        <br/><br/>
-        <Body2>{post.frontmatter.description}</Body2>
-        <br/><br/>
-        <Caption>{`${monthToName[date.getMonth()]} ${date.getFullYear()}`} · {post.timeToRead} min read</Caption>
-      </TextDiv>
-    </PostContainerDiv>
+          <br/><br/>
+          <Body2>{post.frontmatter.description}</Body2>
+          <br/><br/>
+          <Caption>{`${monthToName[date.getMonth()]} ${date.getFullYear()}`} · {post.timeToRead} min read</Caption>
+        </TextDiv>
+      </PostContainerDiv>
+    </UndecoratedLink>
   );
 };
 

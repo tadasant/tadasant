@@ -6,8 +6,9 @@ import Img from 'gatsby-image';
 export const PostContainerDiv = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  box-shadow: 0 4px 2px 0 ${constants.colors.shadow};
+  box-shadow: 0 2px 6px 0px ${constants.colors.shadow};
   padding: 1vh 0 1vh 0;
+  cursor: pointer;
   
   ${media.desktop`
     grid-template-columns: 4fr 8fr;
@@ -16,8 +17,17 @@ export const PostContainerDiv = styled.div`
 
 export const CoverPhotoDiv = styled.div`
   padding: 1vh 2vw 1vh 2vw;
-  height: 200px;
   width: calc(100% - 4vw);
+  
+  height: 200px;
+  
+  ${media.tablet`
+    height: 250px;
+  `}
+  
+  ${media.desktop`
+    height: 200px;
+  `}
 `;
 
 export const TextDiv = styled.div`
