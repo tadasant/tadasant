@@ -11,7 +11,7 @@ export const BlogContainerDiv = styled.div`
 export const ContentContainerDiv = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1vh 2vw 1vh 2vw;
+  padding: 1vh 4vw 5vh 4vw;
   
   grid-column-start: 1;
   grid-column-end: 4;
@@ -27,5 +27,5 @@ export const HeaderDiv = styled.div`
 `;
 
 export const PostComponent = styled(Post)`
-  padding: 3vh 0 0 0;
+  margin: 3vh 0 0 0;
 `;
