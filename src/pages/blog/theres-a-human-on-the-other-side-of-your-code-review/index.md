@@ -1,8 +1,7 @@
 ---
 title: "There’s a human on the other side of your code review"
 date: "2017-10-28"
-subtitle: "\"Don’t take review comments personally, it’s just a busy engineer’s way of communicating.\""
-description: "I remember reading that line littered amongst some advice for junior developers. I didn’t think much of it at the time — makes sense, I thought. As I went about code reviewing and being code reviewed..."
+description: "Some tips for the process of code reviewing and how to give code reviews the human touch they deserve."
 coverphoto: _cover-photo.jpeg
 medium: "https://medium.com/@tadasant/theres-a-human-on-the-other-side-of-your-code-review-9732cc15bfee"
 ---

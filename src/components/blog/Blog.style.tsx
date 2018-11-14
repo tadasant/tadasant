@@ -23,7 +23,6 @@ export const ContentContainerDiv = styled.div`
 `;
 
 export const HeaderDiv = styled.div`
-  padding: 0 0 1vh 0;
 `;
 
 export const PostComponent = styled(Post)`

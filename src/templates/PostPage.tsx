@@ -7,6 +7,8 @@ interface IProps {
   data: GetPostData.Query
 }
 
+// TODO don't forget to make header non-sticky for reading (probably do the same on anything that's /blog)
+
 export const BLOG_QUERY = graphql`
     query GetPostData($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
