@@ -44,13 +44,14 @@ export default container;
 
 const BLOG_QUERY = graphql`
     query GetBlogData {
-        allMarkdownRemark {
+        allMarkdownRemark(sort: {order: DESC, fields: frontmatter___date}) {
             edges {
                 node {
                     fields {
                         slug
                     }
                     frontmatter {
+                        date
                         title
                         subtitle
                         description
