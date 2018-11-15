@@ -21,9 +21,9 @@ const MarkdownFigure = styled.figure`
   text-align: center;
 `;
 
-const MarkdownCaption = styled(Caption)``;
+export const MarkdownCaption = styled(Caption)``;
 
-const MarkdownHr = styled.hr`
+export const MarkdownHr = styled.hr`
   margin: 5vh 0 5vh 0;
 `;
 

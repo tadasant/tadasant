@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import constants from '../../styling/constants';
 import { media } from '../../styling/core';
-import { Body2 } from '../../styling/Typography';
 
 export const PostContainerDiv = styled.div`
   display: grid;
@@ -21,6 +19,7 @@ export const PostContentDiv = styled.div`
   grid-column-start: 2;
 `;
 
-export const SerifBody2 = styled(Body2)`
-  font-family: ${constants.typography.serifFontFamily};
+export const EndBlogCTADiv = styled.div`
+  margin: 5vh 0 2vh 0;
+  text-align: center;
 `;

@@ -1,9 +1,10 @@
+import { Link } from 'gatsby';
 import * as React from 'react';
 import { SFC } from 'react';
 import { Caption, Header2 } from '../../styling/Typography';
 import { GetPostData } from '../../typings/graphql';
-import { renderAst } from './MarkdownRenderers';
-import { PostContainerDiv, PostContentDiv } from './Post.style';
+import { MarkdownCaption, MarkdownHr, renderAst } from './MarkdownRenderers';
+import { EndBlogCTADiv, PostContainerDiv, PostContentDiv } from './Post.style';
 
 interface IProps {
   data: GetPostData.Query
@@ -29,6 +30,11 @@ const Post: SFC<IProps> = props => {
         <Caption>{`${monthToName[date.getMonth()]} ${date.getDay()}, ${date.getFullYear()}`} · {timeToRead} min
           read</Caption><br/><br/>
         {renderAst(htmlAst)}
+        <EndBlogCTADiv>
+          <MarkdownCaption>
+            Like what you just read? <Link to='/contact'>Contact me</Link> and/or consider subscribing to my (very occasional email) list.
+          </MarkdownCaption>
+        </EndBlogCTADiv>
       </PostContentDiv>
     </PostContainerDiv>
   );
