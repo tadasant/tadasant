@@ -44,6 +44,7 @@ const Shell: SFC<TProps> = ({ children, data, unstickyNavbar }) => {
           },
           { name: 'keywords', content: 'tadas antanavicius, antanavicius, tadas antanavicius, tadasant' },
           { name: 'google-site-verification', content: 'l4GtLlU7oAqrgl5VPmt1t8KcE1kWkWgeg4oXTcge5J0' },
+          { name: 'google-site-verification', content: 'yjc_SinQZJRCEJyKtRcN8xmwD3vxxtJx7mhQ42kDaE4' }
         ]}
       />
       <NavbarContainerDiv unstickyNavbar={unstickyNavbar}>
