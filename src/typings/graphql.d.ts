@@ -10687,7 +10687,7 @@ export namespace GetPostData {
   export type MarkdownRemark = {
     __typename?: 'MarkdownRemark'
 
-    rawMarkdownBody?: string | null
+    htmlAst?: Json | null
 
     frontmatter?: Frontmatter | null
 

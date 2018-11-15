@@ -12,7 +12,7 @@ interface IQueryProps {
 export const BLOG_QUERY = graphql`
     query GetPostData($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
-            rawMarkdownBody
+            htmlAst
             frontmatter {
                 title
                 date
