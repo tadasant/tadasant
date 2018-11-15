@@ -1,8 +1,8 @@
 {
   "name": "tadasant",
   "description": "Tadas Antanavicius' Personal Site",
-  "version": "0.0.1",
-  "author": "Tadas Antanavicius <antanaviciust@gmail.com>",
+  "version": "1.0.0",
+  "author": "Tadas Antanavicius <tadas@tadasant.com>",
   "dependencies": {
     "@material-ui/core": "^3.4.0",
     "babel-plugin-styled-components": "^1.8.0",

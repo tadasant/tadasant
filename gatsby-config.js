@@ -2,7 +2,7 @@ const path = require(`path`);
 
 module.exports = {
   siteMetadata: {
-    title: 'Tadas Antanavicius',
+    title: 'Tadas Antanavicius | Personal Site',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
