@@ -6,11 +6,7 @@ coverphoto: _cover-photo.jpeg
 medium: "https://medium.com/@tadasant/your-variables-are-going-through-an-identity-crisis-5d135936febf"
 ---
 
-* * *
-
 ![](https://cdn-images-1.medium.com/max/2000/1*cCdSJ0mOqjQkm-soL5hlIw.jpeg)
-
-# Your variables are going through an identity crisis
 
 How much time do you spend reading code?
 

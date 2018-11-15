@@ -6,9 +6,7 @@ coverphoto: _cover-photo.jpeg
 medium: "https://medium.com/@tadasant/learn-more-by-doing-less-c9fbfbf1d2d9"
 ---
 
-# Learn more by doing less
-
-![](https://cdn-images-1.medium.com/max/2000/1*y0Za_lvi-fLBb43s36JhjQ.jpeg)What if you spent an hour of your 9–5 reading a book or a series of blog posts?
+![](_cover-photo.jpeg "What if you spent an hour of your 9–5 reading a book or a series of blog posts?")
 
 As software engineers, we’re constantly under pressure to deliver. The next ticket, the next PR, the next POC. Whether implicit or explicit, that pressure is never going away.
 

@@ -6,10 +6,6 @@ coverphoto: _cover-photo.jpeg
 medium: "https://medium.com/@tadasant/theres-a-human-on-the-other-side-of-your-code-review-9732cc15bfee"
 ---
 
-_Originally published on [Medium](https://medium.com/@tadasant/theres-a-human-on-the-other-side-of-your-code-review-9732cc15bfee)_
-
-# There’s a human on the other side of your code review
-
 ![](https://cdn-images-1.medium.com/max/2000/1*H-7ysKLqFtZ5hJSbeCt9AQ.jpeg)Code reviews are a fact of life for most software developers; are we doing enough to look beyond the code within them?
 
 > _“Don’t take review comments personally, it’s just a busy engineer’s way of communicating.”_

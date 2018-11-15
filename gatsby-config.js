@@ -10,7 +10,18 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: ['gatsby-remark-component'],
+        plugins: [
+          'gatsby-remark-component',
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1600,
+              showCaptions: true,
+              backgroundColor: '#F0F1F2', // should match background of site
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
       }
     },
     'gatsby-plugin-extract-schema',
