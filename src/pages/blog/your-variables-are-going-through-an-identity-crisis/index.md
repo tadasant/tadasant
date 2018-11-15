@@ -6,7 +6,7 @@ coverphoto: _cover-photo.jpeg
 medium: "https://medium.com/@tadasant/your-variables-are-going-through-an-identity-crisis-5d135936febf"
 ---
 
-![](https://cdn-images-1.medium.com/max/2000/1*cCdSJ0mOqjQkm-soL5hlIw.jpeg)
+![](_cover-photo.jpeg)
 
 How much time do you spend reading code?
 
@@ -18,7 +18,7 @@ When writing the next line of code, you’re reading what you wrote two minutes 
 
 Let’s talk about naming: why taking naming your variables, your methods, your classes — everything — more seriously has the potential to 10x your and your team’s development efficiency.
 
-### There’s a lot to read about good naming practices
+## There’s a lot to read about good naming practices
 
 And I’m not here to add to that stack of literature. I’m writing to try to convince you that the **consequences** of naming in your code well are worth striving for, providing benefits in ways you may have yet to realize.
 
@@ -42,7 +42,7 @@ And here in-line my personal, abbreviated cheatsheet of naming code smells that 
 
 With that out of the way, **why should we care?**
 
-### Naming breaks your code into bite-size pieces, preserving your brain’s RAM
+## Naming breaks your code into bite-size pieces, preserving your brain’s RAM
 
 In the timeless [Getting Things Done](https://smile.amazon.com/Getting-Things-Done-Stress-Free-Productivity/dp/0143126563/) book on productivity, David Allen describes your human brain to be the equivalent of RAM. He emphasizes that the more you try to store there at a given time, the more likely you are to overload your brain’s RAM, resulting in forgotten details, lost focus, and overall increased stress.
 
@@ -58,7 +58,7 @@ When you (or your teammate) looks at that name later, immediately they’ll comp
 
 Now when you’re reading through your beautifully modular 10 line _main()_ function to add the latest feature, you can immediately understand that it fits best in between line 8 and 9 with a tweak to the value and name of the argument pass into line 9.
 
-### You and your code reviewers will find bugs
+## You and your code reviewers will find bugs
 
 Everyone writes bugs in their code. Some write more than others, but ultimately there’s no avoiding the occasional edge case.
 
@@ -76,7 +76,7 @@ In which one was it easier to find the bug?
 
 You probably found it pretty quickly in both, but when the situation is non-trivial, it’s easy to imagine a reviewer or developer thinking “Ok, that base is definitely correct. Ok, that exponent is definitely correct. Hmm, weren’t we supposed to combine three elements in step 3?” as opposed to “Does this one liner take all the different components of the problem into consideration?”
 
-### Your teammates will find your code to be reusable
+## Your teammates will find your code to be reusable
 
 When you’re working on a large codebase with a large team, maybe with a team that no longer has all of its original members, you’re often faced with the thought, “I’m sure someone has previously solved this sub-problem that’s staring me in the face right now…”
 
@@ -84,7 +84,7 @@ And then you’ll go hunting down the teammate who might have heard of such code
 
 In an alternative reality, you have an idea of what you want, you search across the codebase for some obvious keywords, see 5 candidate methods immediately, and find out the 4th one is exactly what you need. Maybe you’ll still spot-check the implementation, but at this point you’re only 30 seconds into your search so that’s a small sacrifice to make for the added assurance. You leverage it and move on with your life.
 
-### Do you *really* understand what you’re writing?
+## Do you *really* understand what you’re writing?
 
 Oftentimes we’re averse to slowing down and taking the time to construct a good name for our next variable because it’ll put a hurdle in our flow — we just want to keep on moving and cranking out those lines of code.
 
@@ -111,9 +111,3 @@ Naming is not an easy problem. Code reviewees might kick and scream as you keep 
 Through it all: remember why it matters. Treat the time and potential mental drainage of your future self and that of your teammates with respect. When you and others read your old code, you don’t want them to feel as if they’re re-writing and re-understanding it with your past self, over and over again.
 
 Lean in to the discomfort now, and build a codebase for a better tomorrow.
-
-* * *
-
-_Thanks for reading! If topics like this interest you, I’d love to chat. Shoot me a tweet @real_tadas._
-
-_As always, claps are much appreciated!_

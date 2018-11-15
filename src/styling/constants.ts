@@ -43,7 +43,7 @@ const constants = {
         'fontWeight': 'bold',
       },
       'tablet': {
-        'fontSize': '24px',
+        'fontSize': '28px',
         'fontWeight': 'bold',
       },
     },
