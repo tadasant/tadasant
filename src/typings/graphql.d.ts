@@ -10687,14 +10687,20 @@ export namespace GetPostData {
   export type MarkdownRemark = {
     __typename?: 'MarkdownRemark'
 
-    html?: string | null
+    rawMarkdownBody?: string | null
 
     frontmatter?: Frontmatter | null
+
+    timeToRead?: number | null
   }
 
   export type Frontmatter = {
     __typename?: 'frontmatter_2'
 
     title?: string | null
+
+    date?: Date | null
+
+    description?: string | null
   }
 }

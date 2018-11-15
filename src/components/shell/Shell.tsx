@@ -8,6 +8,10 @@ import Footer from './footer/Footer';
 import Navbar from './navbar/Navbar';
 import { BodyContainerDiv, NavbarContainerDiv } from './Shell.style';
 
+interface IProps {
+  unstickyNavbar?: boolean;
+}
+
 const SITE_TITLE_QUERY = graphql`
     query SiteTitleQuery {
         site {
@@ -18,11 +22,13 @@ const SITE_TITLE_QUERY = graphql`
     }
 `;
 
-interface IProps {
+interface IQueryProps {
   data: SiteTitleQuery.Query
 }
 
-const Shell: SFC<IProps> = ({ children, data }) => {
+type TProps = IProps & IQueryProps;
+
+const Shell: SFC<TProps> = ({ children, data, unstickyNavbar }) => {
   if (!data || !data.site || !data.site.siteMetadata || !data.site.siteMetadata.title) {
     console.warn(`Shell: GraphQL returned a null on build. This probably shouldn\'t happen. `);
     return null;
@@ -40,8 +46,8 @@ const Shell: SFC<IProps> = ({ children, data }) => {
           { name: 'google-site-verification', content: 'l4GtLlU7oAqrgl5VPmt1t8KcE1kWkWgeg4oXTcge5J0' },
         ]}
       />
-      <NavbarContainerDiv>
-        <Navbar/>
+      <NavbarContainerDiv unstickyNavbar={unstickyNavbar}>
+        <Navbar />
       </NavbarContainerDiv>
       <BodyContainerDiv>
         {children}
@@ -52,7 +58,7 @@ const Shell: SFC<IProps> = ({ children, data }) => {
 };
 
 // TODO look into converting to HOC
-const container: SFC = props => (
+const container: SFC<IProps> = props => (
   <StaticQuery
     query={SITE_TITLE_QUERY}
     render={data => <Shell data={data} {...props}/>}

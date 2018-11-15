@@ -1,34 +1,50 @@
-import { graphql } from 'gatsby'
-import * as React from 'react'
-import { SFC } from 'react'
-import { GetPostData } from '../typings/graphql'
+import { graphql } from 'gatsby';
+import * as React from 'react';
+import { SFC } from 'react';
+import Shell from '../components/shell/Shell';
+import { Body1, Body2, Caption, Header } from '../styling/Typography';
+import { GetPostData } from '../typings/graphql';
 
 interface IProps {
   data: GetPostData.Query
 }
 
-// TODO don't forget to make header non-sticky for reading (probably do the same on anything that's /blog)
-
 export const BLOG_QUERY = graphql`
     query GetPostData($slug: String!) {
         markdownRemark(fields: { slug: { eq: $slug } }) {
-            html
+            rawMarkdownBody
             frontmatter {
                 title
+                date
+                description
             }
+            timeToRead
         }
     }
-`
+`;
 
-const PostPage: SFC<IProps> = ({ data }) => {
-  const post = data.markdownRemark;
+const monthToName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+
+const PostPage: SFC<IProps> = props => {
+  const { data: { markdownRemark } } = props;
+  if (!markdownRemark || !markdownRemark.frontmatter || !markdownRemark.rawMarkdownBody ||
+    !markdownRemark.frontmatter.title || !markdownRemark.frontmatter.date || !markdownRemark.frontmatter.description || !markdownRemark.timeToRead) {
+    console.warn(`PostPage: GraphQL returned a null on build. This probably shouldn\'t happen. `);
+    return null;
+  }
+
+  const {rawMarkdownBody, frontmatter: {description, title, date: dateString}, timeToRead} = markdownRemark;
+  const date = new Date(dateString);
   return (
-    <div>
+    <Shell unstickyNavbar>
       <div>
-        <h1>{post ? post.frontmatter ? post.frontmatter.title : null : null}</h1>
+        <Header>{title}</Header>
+        <Body1>{description}</Body1>
+        <Caption>{`${monthToName[date.getMonth()]} ${date.getFullYear()}`} · {timeToRead} min read</Caption>
+        <Body2>{rawMarkdownBody}</Body2>
       </div>
-    </div>
-  )
-}
+    </Shell>
+  );
+};
 
 export default PostPage;

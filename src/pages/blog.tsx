@@ -4,7 +4,7 @@ import Blog from '../components/blog/Blog';
 import Shell from '../components/shell/Shell';
 
 const BlogPage: SFC = () => (
-  <Shell>
+  <Shell unstickyNavbar>
     <Blog/>
   </Shell>
 );

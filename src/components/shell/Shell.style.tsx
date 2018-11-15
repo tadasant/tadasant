@@ -14,8 +14,13 @@ export const BodyContainerDiv = styled.div`
   `}
 `;
 
+interface INavbarContainerDivProps {
+  unstickyNavbar?: boolean;
+}
+
 export const NavbarContainerDiv = styled.div`
-  position: sticky;
+  width: 100%;
+  position: ${(props: INavbarContainerDivProps) => props.unstickyNavbar ? 'inherit' : 'sticky'};
   top: 0;
   z-index: 5;
 `;
