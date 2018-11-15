@@ -10700,7 +10700,5 @@ export namespace GetPostData {
     title?: string | null
 
     date?: Date | null
-
-    description?: string | null
   }
 }

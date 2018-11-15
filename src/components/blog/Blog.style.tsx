@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { media } from '../../styling/core';
-import Post from '../post/Post';
+import Post from './post/Post';
 
 
 export const BlogContainerDiv = styled.div`
