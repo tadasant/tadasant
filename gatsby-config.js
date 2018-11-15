@@ -68,6 +68,7 @@ module.exports = {
         path: `${__dirname}/src/pages/blog`,
       },
     },
+    'gatsby-plugin-robots-txt',
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
