@@ -1,7 +1,7 @@
 import { graphql, Link, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import { SFC } from 'react';
-import { Body1 } from '../../styling/Typography';
+import { Body2 } from '../../styling/Typography';
 import { GetHomeData } from '../../typings/graphql';
 import { EMAIL, GITHUB_URL, LINKED_IN_URL, STACKOVERFLOW_URL } from '../lib/constants';
 import {
@@ -59,15 +59,15 @@ const Home: SFC<TProps> = (props) => {
         </ExternalIconAnchor>
       </ExternalIconsContainerDiv>
       <MessageContainerDiv>
-        <Body1>
+        <Body2>
           Hey! I’m Tadas, an entrepreneur and software engineer. I build products on the web to make people’s lives
           better.
-        </Body1>
-        <br/><br/><br/>
-        <Body1>
+        </Body2>
+        <br/><br/>
+        <Body2>
           I write about what I’ve learned along the way about <b>software</b>, <b>business</b>, and <b>life</b>: check
           out my <Link to='/blog'>blog</Link>.
-        </Body1>
+        </Body2>
       </MessageContainerDiv>
     </HomeContainerDiv>
   );

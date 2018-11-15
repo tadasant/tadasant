@@ -67,6 +67,7 @@ export const MessageContainerDiv = styled.div`
   text-align: center;
   
   ${media.desktop`
-    grid-column-end: 7;
+    grid-column-start: 3;
+    grid-column-end: 6;
   `}
 `;
