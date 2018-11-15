@@ -14,7 +14,8 @@ const constants = {
     'shadow': 'rgba(0, 0, 0, 0.5)',
   },
   'typography': {
-    'fontFamily': 'Open Sans',
+    'fontFamily': 'Open Sans,Helvetica,Arial,sans-serif',
+    'serifFontFamily': 'Georgia,Cambria,"Times New Roman",Times,serif',
     'fontStyle': 'italic',
     'header': {
       'mobile': {

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { SFC } from 'react';
-import { Body2, Caption, Header3 } from '../../../styling/Typography';
+import { Caption, Header3 } from '../../../styling/Typography';
 import { GetBlogData } from '../../../typings/graphql';
 import { UndecoratedLink } from '../../lib/styled-lib';
-import { CoverImg, CoverPhotoDiv, PostContainerDiv, TextDiv } from './Post.style';
+import { CoverImg, CoverPhotoDiv, PostContainerDiv, SerifBody2, TextDiv } from './Post.style';
 
 interface IProps {
   post: GetBlogData.Node;
@@ -17,7 +17,7 @@ const monthToName = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'S
 const Post: SFC<TProps> = props => {
   const { post } = props;
   if (!post || !post.frontmatter || !post.fields || !post.fields.slug) {
-    console.warn(`Post: GraphQL returned a null on build. This probably shouldn\'t happen. `);
+    console.warn(`BlogPost: GraphQL returned a null on build. This probably shouldn\'t happen. `);
     return null;
   }
 
@@ -35,7 +35,7 @@ const Post: SFC<TProps> = props => {
         <TextDiv>
           <Header3>{post.frontmatter.title}</Header3>
           <br/><br/>
-          <Body2>{post.frontmatter.description}</Body2>
+          <SerifBody2>{post.frontmatter.description}</SerifBody2>
           <br/><br/>
           <Caption>{`${monthToName[date.getMonth()]} ${date.getFullYear()}`} · {post.timeToRead} min read</Caption>
         </TextDiv>

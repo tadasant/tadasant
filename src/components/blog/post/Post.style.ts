@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import constants from '../../../styling/constants';
 import { media } from '../../../styling/core';
 import Img from 'gatsby-image';
+import { Body2 } from '../../../styling/Typography';
 
 export const PostContainerDiv = styled.div`
   display: grid;
@@ -38,4 +39,10 @@ export const TextDiv = styled.div`
 export const CoverImg = styled(Img)`
   max-height: 100%;
   max-width: 100%;
+`;
+
+export const SerifBody2 = styled(Body2)`
+  && {
+    font-family: ${constants.typography.serifFontFamily};
+  }
 `;
