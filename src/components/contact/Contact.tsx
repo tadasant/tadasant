@@ -41,12 +41,12 @@ const Contact: SFC<TProps> = props => {
       <ContentContainerDiv>
         <UndecoratedAnchor
           href='mailto:tadas@tadasant.com'
-          rel='noopener nofollower norefer'>
+          rel='noopener nofollower'>
           <InlineIconImage fluid={mail.childImageSharp.fluid} alt='Tadas Antanavicius Email'/>
         </UndecoratedAnchor>
         <Body2>
           The best way to get in touch with me is via email, at <a href='mailto:tadas@tadasant.com'
-                                                                   rel='noopener nofollower norefer'>
+                                                                   rel='noopener nofollower'>
           tadas@tadasant.com</a>. <br/><br/>Among other things, I love hearing
           about:
           <ul>
@@ -61,12 +61,12 @@ const Contact: SFC<TProps> = props => {
         <UndecoratedAnchor
           target='__blank'
           href='https://linkedin.com/in/antanavicius'
-          rel='noopener nofollower norefer'>
+          rel='noopener nofollower'>
           <InlineIconImage fluid={linkedin.childImageSharp.fluid} alt='Tadas Antanavicius LinkedIn'/>
         </UndecoratedAnchor>
         <Body2>
           If we've met, I'd love to stay connected on <a target='_blank' href='https://linkedin.com/in/antanavicius'
-                                                         rel='noopener nofollower norefer'>
+                                                         rel='noopener nofollower'>
           LinkedIn</a>.
         </Body2>
       </ContentContainerDiv>
@@ -74,43 +74,43 @@ const Contact: SFC<TProps> = props => {
         <UndecoratedAnchor
           href={FACEBOOK_URL}
           target='__blank'
-          rel='noopener nofollower norefer'>
+          rel='noopener nofollower'>
           <BottomIconImage fluid={facebook.childImageSharp.fluid} alt='Tadas Antanavicius Facebook'/>
         </UndecoratedAnchor>
         <UndecoratedAnchor
           href={GOODREADS_URL}
           target='__blank'
-          rel='noopener nofollower norefer'>
+          rel='noopener nofollower'>
           <BottomIconImage fluid={goodreads.childImageSharp.fluid} alt='Tadas Antanavicius GoodReads'/>
         </UndecoratedAnchor>
         <UndecoratedAnchor
           href={INSTAGRAM_URL}
           target='__blank'
-          rel='noopener nofollower norefer'>
+          rel='noopener nofollower'>
           <BottomIconImage fluid={instagram.childImageSharp.fluid} alt='Tadas Antanavicius Instagram'/>
         </UndecoratedAnchor>
         <UndecoratedAnchor
           href={GITHUB_URL}
           target='__blank'
-          rel='noopener nofollower norefer'>
+          rel='noopener nofollower'>
           <BottomIconImage fluid={github.childImageSharp.fluid} alt='Tadas Antanavicius GitHub'/>
         </UndecoratedAnchor>
         <UndecoratedAnchor
           href={STACKOVERFLOW_URL}
           target='__blank'
-          rel='noopener nofollower norefer'>
+          rel='noopener nofollower'>
           <BottomIconImage fluid={stackoverflow.childImageSharp.fluid} alt='Tadas Antanavicius StackOverflow'/>
         </UndecoratedAnchor>
         <UndecoratedAnchor
           href={MEDIUM_URL}
           target='__blank'
-          rel='noopener nofollower norefer'>
+          rel='noopener nofollower'>
           <BottomIconImage fluid={medium.childImageSharp.fluid} alt='Tadas Antanavicius Medium'/>
         </UndecoratedAnchor>
         <UndecoratedAnchor
           href={TWITTER_URL}
           target='__blank'
-          rel='noopener nofollower norefer'>
+          rel='noopener nofollower'>
           <BottomIconImage fluid={twitter.childImageSharp.fluid} alt='Tadas Antanavicius Twitter'/>
         </UndecoratedAnchor>
       </SocialMediaContainerDiv>

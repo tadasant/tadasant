@@ -36,25 +36,25 @@ const Home: SFC<TProps> = (props) => {
         <ExternalIconAnchor
           href={LINKED_IN_URL}
           target='__blank'
-          rel='noopener nofollower norefer'>
+          rel='noopener nofollower'>
           <ExternalIconImg fluid={linkedin.childImageSharp.fluid} alt='Tadas Antanavicius LinkedIn'/>
         </ExternalIconAnchor>
         <ExternalIconAnchor
           href={GITHUB_URL}
           target='__blank'
-          rel='noopener nofollower norefer'>
+          rel='noopener nofollower'>
           <ExternalIconImg fluid={github.childImageSharp.fluid} alt='Tadas Antanavicius GitHub'/>
         </ExternalIconAnchor>
         <ExternalIconAnchor
           href={`mailto:${EMAIL}`}
           target='__blank'
-          rel='noopener nofollower norefer'>
+          rel='noopener nofollower'>
           <ExternalIconImg fluid={mail.childImageSharp.fluid} alt='Tadas Antanavicius Mail'/>
         </ExternalIconAnchor>
         <ExternalIconAnchor
           href={STACKOVERFLOW_URL}
           target='__blank'
-          rel='noopener nofollower norefer'>
+          rel='noopener nofollower'>
           <ExternalIconImg fluid={stackoverflow.childImageSharp.fluid} alt='Tadas Antanavicius StackOverflow'/>
         </ExternalIconAnchor>
       </ExternalIconsContainerDiv>
