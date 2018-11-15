@@ -108,3 +108,20 @@ export const SubscribeButton = styled(Button).attrs({
     `
   }
 `;
+
+export const ModalDiv = styled.div`
+  position: absolute;
+  background-color: ${constants.colors.base.grey};
+  box-shadow: 0px 0px 4px 4px ${constants.colors.shadow};
+  outline: 0;
+  
+  top: 12.5vh;
+  left: 12.5vw;
+  width: 75vw;
+  height: 75vh;
+  
+  ${media.tablet`
+    left: 25vw;
+    width: 50vw;
+  `}
+`;

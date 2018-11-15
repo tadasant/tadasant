@@ -2,7 +2,7 @@ import * as React from 'react';
 import { SFC } from 'react';
 import { compose, withState } from 'recompose';
 import { Body2, Header } from '../../../styling/Typography';
-import { ContentDiv, ModalDiv, StyledTextField, SubmitButton } from './SubscribePanel.style';
+import { ContentDiv, StyledTextField, SubmitButton } from './SubscribePanel.style';
 
 // TODO could turn this into a public mailchimp component
 const postToMailchimp = (email: string, firstName: string, lastName?: string) => {
@@ -83,26 +83,24 @@ const SubscribePanel: SFC<IStateProps> = props => {
   );
 
   return (
-    <ModalDiv tabIndex={-1}>
-      <ContentDiv>
-        <Header>Subscribe</Header>
-        <br/>
-        <Body2>You'll receive an occasional email from me when I've published a blog post or have some
-          announcement.</Body2>
-        <br/>
-        {EmailField}
-        <br/>
-        {FirstNameField}
-        <br/>
-        {LastNameField}
-        <br/>
-        <SubmitButton
-          disabled={firstName === '' || emailAddress === ''}
-          onClick={handleSubmit}>
-          Submit
-        </SubmitButton>
-      </ContentDiv>
-    </ModalDiv>
+    <ContentDiv>
+      <Header>Subscribe</Header>
+      <br/>
+      <Body2>You'll receive an occasional email from me when I've published a blog post or have some
+        announcement.</Body2>
+      <br/>
+      {EmailField}
+      <br/>
+      {FirstNameField}
+      <br/>
+      {LastNameField}
+      <br/>
+      <SubmitButton
+        disabled={firstName === '' || emailAddress === ''}
+        onClick={handleSubmit}>
+        Submit
+      </SubmitButton>
+    </ContentDiv>
   );
 };
 

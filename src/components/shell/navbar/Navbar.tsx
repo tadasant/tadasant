@@ -13,6 +13,7 @@ import {
   MenuImg,
   MobileNavigationContainerDiv,
   MobilePageHeaderContainerDiv,
+  ModalDiv,
   NavigationButtonSpan,
   SubscribeButton,
   TabletNavigationContainerDiv,
@@ -61,7 +62,9 @@ const NavbarPure: SFC<TProps> = props => {
         open={subscribeModalOpen}
         onClose={() => setSubscribeModalOpen(false)}
       >
-        <SubscribePanel/>
+        <ModalDiv tabIndex={-1}>
+          <SubscribePanel/>
+        </ModalDiv>
       </Modal>
       <ContentContainerDiv>
         <LogoContainerDiv>
