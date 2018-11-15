@@ -16,7 +16,7 @@ Don’t get me wrong. There’s merit to [being a finisher](https://simpleprogra
 
 The problem is that we’re all prone to succumbing to this mindset for the long run. We’ll spend the entirety of our 40 or 60 or 80 or however many hours we’re working in a given week focusing on this task at hand. Our reward? We’ll be handed a similar task a week later.
 
-![](https://cdn-images-1.medium.com/max/1200/1*7AgemdjrSWLVHNfPrUoFJg.jpeg)A software developer’s worst nightmare
+![](dinosaur.jpeg "A software developer’s worst nightmare")
 
 Three years later, we get curious and start poking around the industry. Oh, I know how to write jQuery-based UI code for a desktop-only web application. But what is this growing DevOps thing? React? Functional programming?
 
@@ -44,7 +44,7 @@ As a developer on a small team without a ton of experience to lean on, I’m con
 
 Here’s a few of the ways I’m addressing that issue, strategies that can be used by anyone looking to level-up their technical skills. I try to spend at least an hour or two a day doing one of these activities — and I believe you can too.
 
-### Learning from mentors and more experienced developers
+## Learning from mentors and more experienced developers
 
 The most obvious way to learn is directly from others, whether through discussions or hands-on collaborating on code. Most people who successfully avoid the learning vs. doing trap probably do it this way as somebody more senior takes them under their wing, teaches them concepts, code reviews them, and helps guide what projects they get assigned to so that they’re useful for their development.
 
@@ -52,7 +52,7 @@ If you’re at a big company, take advantage of it. There’s so many smart peop
 
 If all of this is already happening for you, that’s awesome. Maybe you don’t need most of the tips below, but I’d argue it could still leave you miles ahead of your similarly fortunate peers.
 
-### Reading books
+## Reading books
 
 Although reading technical books might be [getting replaced by YouTube videos](http://research.hackerrank.com/developer-skills/2018/), I think they’re still a key cornerstone in technical skill development. As far as I know, industry legends like Uncle Bob or Martin Fowler have yet to make plans to translate their timeless books to videos.
 
@@ -62,7 +62,7 @@ Here are some of my personal favorites, perhaps too niche to be very broadly app
 *   [Domain Driven Design](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/) by Eric Evans
 *   [Effective Python](https://www.amazon.com/Effective-Python-Specific-Software-Development/dp/0134034287/) by Brett Slatkin
 
-### Reading Medium posts
+## Reading Medium posts
 
 You’re already here, so this probably barely needs to be said.
 
@@ -74,7 +74,7 @@ I’ll defer a definition to Ray Dalio:
 
 I’d be lenient if you’re seeking ideas rather than answers, but it’s a factor to consider nonetheless.
 
-### Listening to podcasts
+## Listening to podcasts
 
 Technical podcasts keep our finger on the pulse of the industry. Any industry-wide breakthroughs will get mentioned, and we start to feel part of the greater technology community beyond your workplace.
 
@@ -84,7 +84,7 @@ Like the books above, I’m biased towards my favorite language — Python�
 *   [Talk Python to Me](https://talkpython.fm/): Interviews with Python influencers
 *   [Python Bytes](https://pythonbytes.fm/): Weekly Python news updates
 
-### Attending meetups & conferences
+## Attending meetups & conferences
 
 These may be hit or miss depending on your geographic location and/or your or your company’s financial willingness. Meetup.com and conferences serve more or less the same purpose.
 
@@ -94,7 +94,7 @@ Naturally, most software engineers are not the gregarious type to be walking aro
 
 But this presents an enormous opportunity: if you’re one of the few who’s capable of overcoming those social fears, you’re in prime position to bring home value like few others can.
 
-### Getting assigned work where you’re not an expert
+## Getting assigned work where you’re not an expert
 
 Lastly, it’s certainly possible to be learning _while_ doing. If the tickets coming our way push us slightly beyond our comfort zone, and our management is fortunate enough to keep the wheels turning without relegating us to far-too-long stints on stagnant, hopeless ventures, then maybe this learning will happen naturally.
 

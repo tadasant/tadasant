@@ -8,11 +8,11 @@ export const PostContainerDiv = styled.div`
   grid-template-columns: auto 95% auto;
   
   ${media.tablet`
-    grid-template-columns: auto 80% auto;  
+    grid-template-columns: auto 70% auto;  
   `}
   
   ${media.desktop`
-    grid-template-columns: auto 66% auto;
+    grid-template-columns: auto 55% auto;
   `}
 `;
 

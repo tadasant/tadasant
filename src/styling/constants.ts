@@ -15,7 +15,7 @@ const constants = {
   },
   'typography': {
     'fontFamily': 'Open Sans,Helvetica,Arial,sans-serif',
-    'serifFontFamily': 'Georgia,Cambria,"Times New Roman",Times,serif',
+    'serifFontFamily': 'Cambria,"Times New Roman",Times,Georgia,serif',
     'fontStyle': 'italic',
     'header': {
       'mobile': {
