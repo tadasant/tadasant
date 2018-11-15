@@ -6,9 +6,11 @@ Personal site for [@tadasant](https://github.com/tadasant)
 
 Technology used:
 * Gatsby Static Site Generator (React, GraphQL)
-* TypeScript
-* `styled-components`
-* `prismjs`
+* Leveraging plugins to enable:
+  * TypeScript
+  * `styled-components`
+  * `remark`
+  * `prismjs`
 * Deployed on Netlify
 
 ## Commands
