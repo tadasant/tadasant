@@ -17,7 +17,7 @@ export const PostContainerDiv = styled.div`
 `;
 
 export const PostContentDiv = styled.div`
-  padding-top: 2vh;
+  padding: 2vh 0 2vh 0;
   grid-column-start: 2;
 `;
 
