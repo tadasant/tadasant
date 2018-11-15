@@ -16,10 +16,8 @@ export const ModalDiv = styled.div`
   height: 75vh;
   
   ${media.tablet`
-    top: 25vh;
     left: 25vw;
     width: 50vw;
-    height: 50vh;
   `}
 `;
 

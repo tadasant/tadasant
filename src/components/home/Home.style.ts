@@ -63,7 +63,7 @@ export const MessageContainerDiv = styled.div`
   grid-column-start: 2;
   grid-column-end: 5;
   
-  padding: 2vh 0 2vh 0;
+  padding: 4vh 0 2vh 0;
   text-align: center;
   
   ${media.desktop`
