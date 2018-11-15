@@ -1,7 +1,6 @@
 import { TextField } from '@material-ui/core';
 import styled from 'styled-components';
 import constants from '../../../styling/constants';
-import { media } from '../../../styling/core';
 import { Button } from '../../lib/styled-lib';
 
 export const ContentDiv = styled.div`

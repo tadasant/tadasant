@@ -3,7 +3,7 @@ import * as React from 'react';
 import { SFC } from 'react';
 import { Caption, Header2 } from '../../styling/Typography';
 import { GetPostData } from '../../typings/graphql';
-import { MarkdownCaption, MarkdownHr, renderAst } from './MarkdownRenderers';
+import { MarkdownCaption, renderAst } from './MarkdownRenderers';
 import { EndBlogCTADiv, PostContainerDiv, PostContentDiv } from './Post.style';
 
 interface IProps {
@@ -32,7 +32,7 @@ const Post: SFC<IProps> = props => {
         {renderAst(htmlAst)}
         <EndBlogCTADiv>
           <MarkdownCaption>
-            Like what you just read? <Link to='/contact'>Contact me</Link> and/or consider subscribing to my (very occasional email) list.
+            Like what you just read? <Link to='/contact'>Contact</Link> me and/or consider <Link to='/subscribe'>subscribing</Link> to my (very occasional email) list.
           </MarkdownCaption>
         </EndBlogCTADiv>
       </PostContentDiv>
