@@ -74,7 +74,7 @@ module.exports = {
       options: {
         serialize: ({ site, allSitePage }) =>
           allSitePage.edges.map(edge => {
-            if (edge.node.path.startsWith('/blog')) {
+            if (edge.node.path.startsWith('/blog/') && edge.node.path !== '/blog/') {
               return {
                 url: site.siteMetadata.siteUrl + edge.node.path,
                 changefreq: 'monthly',
