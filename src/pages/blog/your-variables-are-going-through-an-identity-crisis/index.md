@@ -66,6 +66,11 @@ When you name well, it becomes possible to mentally unit-test your code. As a re
 
 Observe poorly named code:
 
+```python
+def calculate(p, r, n, t):
+    """Returns compound interest for the formula A = P(1 + r/n)^(nt)"""
+    return pow(1 + (r/n), n * t)
+```
 <iframe width="700" height="250" src="/media/66931e8847d7944aaa7ef24e7767ff7b?postId=5d135936febf" data-media-id="66931e8847d7944aaa7ef24e7767ff7b" allowfullscreen="" frameborder="0"></iframe>
 
 And better named code:
