@@ -71,11 +71,16 @@ def calculate(p, r, n, t):
     """Returns compound interest for the formula A = P(1 + r/n)^(nt)"""
     return pow(1 + (r/n), n * t)
 ```
-<iframe width="700" height="250" src="/media/66931e8847d7944aaa7ef24e7767ff7b?postId=5d135936febf" data-media-id="66931e8847d7944aaa7ef24e7767ff7b" allowfullscreen="" frameborder="0"></iframe>
 
 And better named code:
 
-<iframe width="700" height="250" src="/media/203acadf4d3ce56f441c1c5e4ca4b4c9?postId=5d135936febf" data-media-id="203acadf4d3ce56f441c1c5e4ca4b4c9" data-thumbnail="https://i.embed.ly/1/image?url=https%3A%2F%2Favatars2.githubusercontent.com%2Fu%2F3900899%3Fs%3D400%26v%3D4&amp;key=a19fcc184b9711e1b4764040d3dc5c07" allowfullscreen="" frameborder="0"></iframe>
+```python
+def calculate_compound_interest(principal, rate, times_per_year, years):
+    """A = P(1 + r/n)^(nt)"""
+    base = 1 + (rate / times_per_year)
+    exponent = times_per_year * years
+    return pow(base, exponent)
+```
 
 In which one was it easier to find the bug?
 
@@ -97,11 +102,25 @@ But if you’re incapable of putting a label on the concept you’re about to le
 
 Maybe you wrote this:
 
-<iframe width="700" height="250" src="/media/7569beaaaa4d534ea9de6f3a625299eb?postId=5d135936febf" data-media-id="7569beaaaa4d534ea9de6f3a625299eb" data-thumbnail="https://i.embed.ly/1/image?url=https%3A%2F%2Favatars2.githubusercontent.com%2Fu%2F3900899%3Fs%3D400%26v%3D4&amp;key=a19fcc184b9711e1b4764040d3dc5c07" allowfullscreen="" frameborder="0"></iframe>
+```python
+def charge_customer(value):
+    # Let's say you implemented all these helpers as well
+    db_session = getDbSession()
+    insert_value_into_db(db_session, value)
+    inform_customer_of_charge(value)
+```
 
 When you ultimately realize you need something more like this:
 
-<iframe width="700" height="250" src="/media/e0f0f8170a88d15009f38ae71fc0fbe6?postId=5d135936febf" data-media-id="e0f0f8170a88d15009f38ae71fc0fbe6" data-thumbnail="https://i.embed.ly/1/image?url=https%3A%2F%2Favatars2.githubusercontent.com%2Fu%2F3900899%3Fs%3D400%26v%3D4&amp;key=a19fcc184b9711e1b4764040d3dc5c07" allowfullscreen="" frameborder="0"></iframe>
+```python
+def charge_cost_of_coffee(CoffeeDrink):
+    total_coffee_cost = 0
+    total_coffee_cost += CoffeeDrink.base_cost
+    if CoffeeDrink.has_milk:
+        total_coffee_cost += 0.5
+    total_coffee_cost += calculate_added_cost_for_size(CoffeeDrink.size)
+    # and so on...
+```
 
 You can see how this problem could balloon in more complicated situations.
 
