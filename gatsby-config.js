@@ -3,6 +3,7 @@ const path = require(`path`);
 module.exports = {
   siteMetadata: {
     title: 'Tadas Antanavicius | Personal Site',
+    siteUrl: `https://tadasant.com/`
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -51,5 +52,6 @@ module.exports = {
         path: `${__dirname}/src/pages/blog`,
       },
     },
+    'gatsby-plugin-sitemap',
   ],
-}
+};
