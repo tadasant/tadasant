@@ -26,11 +26,11 @@ const postToMailchimp = (email: string, firstName: string, lastName?: string) =>
   firstNameField.setAttribute('value', firstName);
   form.appendChild(firstNameField);
 
-  if (lastName) {
+  if (lastName !== '' && lastName) {
     const lastNameField = document.createElement('input');
     lastNameField.setAttribute('type', 'hidden');
     lastNameField.setAttribute('name', 'LNAME');
-    lastNameField.setAttribute('value', firstName);
+    lastNameField.setAttribute('value', lastName);
     form.appendChild(lastNameField);
   }
 
