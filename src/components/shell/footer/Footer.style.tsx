@@ -36,9 +36,9 @@ export const RightDiv = styled.div`
 
 export const IconImg = styled(Img)`
   margin-right: 1vw;
-  width: 32px;
+  width: 24px;
   
   ${media.tablet`
-    width: 48px;
+    width: 32px;
   `}
 `;

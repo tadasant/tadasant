@@ -11504,6 +11504,8 @@ export namespace GetFooterData {
     __typename?: 'Query'
 
     githubsource?: Githubsource | null
+
+    mail?: Mail | null
   }
 
   export type Githubsource = {
@@ -11519,6 +11521,20 @@ export namespace GetFooterData {
   }
 
   export type Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
+
+  export type Mail = {
+    __typename?: 'File'
+
+    childImageSharp?: _ChildImageSharp | null
+  }
+
+  export type _ChildImageSharp = {
+    __typename?: 'ImageSharp'
+
+    fluid?: _Fluid | null
+  }
+
+  export type _Fluid = GatsbyImageSharpFluidTracedSvg.Fragment
 }
 
 export namespace GetNavbarData {

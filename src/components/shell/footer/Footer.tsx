@@ -3,7 +3,7 @@ import { SFC } from 'react';
 import * as React from 'react';
 import { Caption } from '../../../styling/Typography';
 import { GetFooterData } from '../../../typings/graphql';
-import { REPO_URL } from '../../lib/constants';
+import { EMAIL, REPO_URL } from '../../lib/constants';
 import { UndecoratedAnchor, UndecoratedLink } from '../../lib/styled-lib';
 import { CenterDiv, FooterContainerDiv, IconImg, RightDiv } from './Footer.style';
 
@@ -15,7 +15,7 @@ interface IQueryProps {
 type TProps = IQueryProps;
 
 const Footer: SFC<TProps> = props => {
-  if (!props.data.githubsource || !props.data.githubsource.childImageSharp) {
+  if (!props.data.githubsource || !props.data.githubsource.childImageSharp || !props.data.mail || !props.data.mail.childImageSharp) {
     return null;
   }
   return (
@@ -24,6 +24,11 @@ const Footer: SFC<TProps> = props => {
         <Caption white>© Tadas Antanavicius 2018</Caption>
       </CenterDiv>
       <RightDiv>
+        <UndecoratedAnchor
+          href={`mailto:${EMAIL}`}
+          rel='noopener nofollower'>
+          <IconImg fluid={props.data.mail.childImageSharp.fluid} alt='Email Icon'/>
+        </UndecoratedAnchor>
         <UndecoratedAnchor
           href={REPO_URL}
           target='__blank'
@@ -48,6 +53,13 @@ export default container;
 const FOOTER_QUERY = graphql`
     query GetFooterData {
         githubsource: file(relativePath: {eq: "images/github-source.png"}) {
+            childImageSharp {
+                fluid(maxWidth: 100) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                }
+            }
+        }
+        mail: file(relativePath: {eq: "images/icons/envelope-white.png"}) {
             childImageSharp {
                 fluid(maxWidth: 100) {
                     ...GatsbyImageSharpFluid_tracedSVG
