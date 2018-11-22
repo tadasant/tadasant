@@ -3,10 +3,12 @@ import { SFC } from 'react';
 import * as RehypeReact from 'rehype-react';
 import styled from 'styled-components';
 import constants from '../../styling/constants';
+import { media } from '../../styling/core';
 import { Body2, Caption, Header3 } from '../../styling/Typography';
 
 const MarkdownBody = styled(Body2)`
   font-family: ${constants.typography.serifFontFamily};
+  line-height: 1.2;
 `;
 
 const MarkdownP: SFC = props => {
@@ -59,6 +61,21 @@ const MarkdownUL: SFC = props => {
   );
 };
 
+const MarkdownCode = styled.code`
+  && {
+    background: #f9f9f9;
+    color: #D72B3F;
+    padding: 2px 3px 1px;
+    white-space: normal;
+  
+    font-size: calc(${constants.typography.body2.mobile.fontSize} - 5px);
+    
+    ${media.tablet`
+      font-size: calc(${constants.typography.body2.tablet.fontSize} - 5px);
+    `
+  }
+`;
+
 // https://using-remark.gatsbyjs.org/custom-components/
 export const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -71,5 +88,6 @@ export const renderAst = new RehypeReact({
     blockquote: MarkdownBlockQuote,
     ol: MarkdownOL,
     ul: MarkdownUL,
+    code: MarkdownCode,
   },
 }).Compiler;
