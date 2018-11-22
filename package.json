@@ -39,7 +39,8 @@
     "build": "gatsby build",
     "start": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lighthouse": "lighthouse https://tadasant.com/ --output-path=./lighthouse/home.html && lighthouse https://tadasant.com/blog --output-path=./lighthouse/blog.html && lighthouse https://tadasant.com/contact --output-path=./lighthouse/contact.html"
   },
   "devDependencies": {
     "@types/react-helmet": "^5.0.7",
