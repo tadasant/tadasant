@@ -34,7 +34,9 @@ audience is asked to pin the location where the photo was taken on a map. The
 closer a player is to the actual location, the higher on the leaderboard they
 place.*
 
-![WITWorld Demo GIF](witworld-demo.gif "WITWorld in action with 4 players")
+<gif title="WITWorld Demo GIF" caption="WITWorld in action with 4 players">
+    <img src="witworld-demo.gif"/>
+</gif>
 
 [See the repository here.](https://github.com/tadasant/where-in-the-world)
 
@@ -238,4 +240,4 @@ beginning. We look forward to the bright future of the JAMstack community!
 
 *****
 
-*Big thank-you to Jeff Appareti, Gabe Greenfield, and Tyler Vick for reviewing drafts of this post.*
+*Big thank-you to Jeff Appareti, Gabe Greenfield, and Tyler Vick for reviewing drafts of this post. And being an awesome team to spend the weekend with.*

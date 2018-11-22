@@ -41,9 +41,27 @@ const MarkdownH2: SFC = props => {
   );
 };
 
-const MarkdownBlockQuote = styled.blockquote`
+const MarkdownBlockQuoteBlockquote = styled.blockquote`
   font-style: italic;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  margin-left: 2vw;
 `;
+
+const MarkdownBlockQuoteWrapperDiv = styled.div`
+  border-left: 3px solid rgba(0,0,0,.84);
+  margin-left: -2vw;
+`;
+
+const MarkdownBlockQuote: SFC = props => {
+  return (
+    <MarkdownBlockQuoteWrapperDiv>
+      <MarkdownBlockQuoteBlockquote>
+        {props.children}
+      </MarkdownBlockQuoteBlockquote>
+    </MarkdownBlockQuoteWrapperDiv>
+  )
+}
 
 const MarkdownOL: SFC = props => {
   return (
@@ -76,6 +94,23 @@ const MarkdownCode = styled.code`
   }
 `;
 
+const MardownGifWrapperDiv = styled.div`
+  text-align: center;
+`;
+
+interface IMarkdownGifProps {
+  caption?: string
+}
+
+const MarkdownGif: SFC<IMarkdownGifProps> = props => {
+  return (
+    <MardownGifWrapperDiv>
+      {props.children}<br/>
+      <MarkdownCaption>{props.caption}</MarkdownCaption>
+    </MardownGifWrapperDiv>
+  )
+};
+
 // https://using-remark.gatsbyjs.org/custom-components/
 export const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -89,5 +124,6 @@ export const renderAst = new RehypeReact({
     ol: MarkdownOL,
     ul: MarkdownUL,
     code: MarkdownCode,
+    gif: MarkdownGif,
   },
 }).Compiler;

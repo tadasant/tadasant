@@ -6287,6 +6287,14 @@ gatsby-remark-copy-linked-files@^2.0.6:
     probe-image-size "^4.0.0"
     unist-util-visit "^1.3.0"
 
+gatsby-remark-custom-blocks@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-custom-blocks/-/gatsby-remark-custom-blocks-2.0.1.tgz#dc4464df8d44536ccd11e275b2a76db20f35132c"
+  integrity sha512-9s6Q191jugE9yJyo4k3rvIK7OVzrkdRxovxhxSa9owXFCpUGlOXbafWfLvKKxMDeCHimCpcxhYubgxfOSQeRpQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    remark-custom-blocks "^2.1.2"
+
 gatsby-remark-images@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-2.0.6.tgz#7567b40be11fec8931084f27d8b3aa18ccc4d5fc"
@@ -11938,6 +11946,13 @@ relay-runtime@1.5.0:
     babel-runtime "^6.23.0"
     fbjs "^0.8.14"
 
+remark-custom-blocks@^2.1.2:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/remark-custom-blocks/-/remark-custom-blocks-2.3.0.tgz#769928bcf40cae408193467aa52386991aecf609"
+  integrity sha512-sbXb8TNhWBPz+skQ3J/MHT6Cw+HVvLJ7355eDUgYD+uLwWCTDvZmcrXF+BFIcQWGbGSOeayIeo3ihkdM+cdIwg==
+  dependencies:
+    space-separated-tokens "^1.1.1"
+
 remark-parse@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/remark-parse/-/remark-parse-5.0.0.tgz#4c077f9e499044d1d5c13f80d7a98cf7b9285d95"
@@ -12760,7 +12775,7 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
-space-separated-tokens@^1.0.0:
+space-separated-tokens@^1.0.0, space-separated-tokens@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/space-separated-tokens/-/space-separated-tokens-1.1.2.tgz#e95ab9d19ae841e200808cd96bc7bd0adbbb3412"
   integrity sha512-G3jprCEw+xFEs0ORweLmblJ3XLymGGr6hxZYTYZjIlvDti9vOBUjRQa1Rzjt012aRrocKstHwdNi+F7HguPsEA==
