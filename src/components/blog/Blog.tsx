@@ -13,7 +13,7 @@ type TProps = IQueryProps;
 
 const Blog: SFC<TProps> = props => {
   const {data: {allMarkdownRemark}} = props;
-  if (!allMarkdownRemark || !allMarkdownRemark.edges || !allMarkdownRemark.edges.every(edge => Boolean(edge && edge.node))) {
+  if (!allMarkdownRemark || !allMarkdownRemark.edges || !allMarkdownRemark.edges.every(edge => Boolean(edge && edge.node && edge.node.fields && edge.node.fields.slug))) {
     console.warn(`Blog: GraphQL returned a null on build. This probably shouldn\'t happen. `);
     return null;
   }
@@ -25,7 +25,7 @@ const Blog: SFC<TProps> = props => {
         </HeaderDiv>
         {allMarkdownRemark.edges.map(edge => (
           // @ts-ignore nullcheck performed by .every above
-          <PostComponent post={edge.node} />
+          <PostComponent key={edge.node.fields.slug} post={edge.node} />
         ))}
       </ContentContainerDiv>
     </BlogContainerDiv>

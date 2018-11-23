@@ -21,6 +21,10 @@ const MarkdownP: SFC = props => {
 
 const MarkdownFigure = styled.figure`
   text-align: center;
+  
+  span {
+    margin-bottom: 8px;
+  }
 `;
 
 export const MarkdownCaption = styled(Caption)``;
@@ -61,7 +65,7 @@ const MarkdownBlockQuote: SFC = props => {
       </MarkdownBlockQuoteBlockquote>
     </MarkdownBlockQuoteWrapperDiv>
   )
-}
+};
 
 const MarkdownOL: SFC = props => {
   return (
@@ -98,6 +102,10 @@ const MardownGifWrapperDiv = styled.div`
   text-align: center;
 `;
 
+const MarkdownGifImgWrapperDiv = styled.div`
+  margin-bottom: 8px;
+`;
+
 interface IMarkdownGifProps {
   caption?: string
 }
@@ -105,7 +113,9 @@ interface IMarkdownGifProps {
 const MarkdownGif: SFC<IMarkdownGifProps> = props => {
   return (
     <MardownGifWrapperDiv>
-      {props.children}<br/>
+      <MarkdownGifImgWrapperDiv>
+        {props.children}
+      </MarkdownGifImgWrapperDiv>
       <MarkdownCaption>{props.caption}</MarkdownCaption>
     </MardownGifWrapperDiv>
   )
