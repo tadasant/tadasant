@@ -11,7 +11,7 @@ const SubscribePage: SFC = () => (
       meta={[
         {
           name: 'description',
-          content: 'Sign up form for access to Tadas Antanavicius\'s email list',
+          content: 'Sign up form for access to Tadas Antanavicius\'s email list.',
         },
       ]}
     />

@@ -42,7 +42,6 @@ const Shell: SFC<TProps> = ({ children, data, unstickyNavbar }) => {
             name: 'description',
             content: 'Tadas Antanavicius\' personal website. Tadas is a software engineer, entrepreneur, and blogger based in the United States. Here you\'ll find basic information about him, his blog, and links to his other profiles around the web.',
           },
-          { name: 'keywords', content: 'tadas antanavicius, antanavicius, tadas antanavicius, tadasant' },
           { name: 'google-site-verification', content: 'l4GtLlU7oAqrgl5VPmt1t8KcE1kWkWgeg4oXTcge5J0' },
           { name: 'google-site-verification', content: 'yjc_SinQZJRCEJyKtRcN8xmwD3vxxtJx7mhQ42kDaE4' }
         ]}

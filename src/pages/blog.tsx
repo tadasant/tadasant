@@ -13,7 +13,6 @@ const BlogPage: SFC = () => (
           name: 'description',
           content: 'Tadas Antanavicius\' personal website. Tadas is a software engineer, entrepreneur, and blogger based in the United States. Here you\'ll find basic information about him, his blog, and links to his other profiles around the web.',
         },
-        { name: 'keywords', content: 'tadas antanavicius, antanavicius, tadas antanavicius, tadasant, blog, software, business, economics, psychology' },
       ]}
     />
     <Blog/>
