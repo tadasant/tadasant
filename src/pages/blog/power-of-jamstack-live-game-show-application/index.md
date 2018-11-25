@@ -34,9 +34,9 @@ audience is asked to pin the location where the photo was taken on a map. The
 closer a player is to the actual location, the higher on the leaderboard they
 place.*
 
-<gif title="WITWorld Demo GIF" caption="WITWorld in action with 4 players">
-    <img src="witworld-demo.gif"/>
-</gif>
+<media>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QhybHEs87mk?start=5227" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</media>
 
 [See the repository here.](https://github.com/tadasant/where-in-the-world)
 

@@ -98,26 +98,26 @@ const MarkdownCode = styled.code`
   }
 `;
 
-const MardownGifWrapperDiv = styled.div`
+const MardownMediaWrapperDiv = styled.div`
   text-align: center;
 `;
 
-const MarkdownGifImgWrapperDiv = styled.div`
+const MarkdownMediaImgWrapperDiv = styled.div`
   margin-bottom: 8px;
 `;
 
-interface IMarkdownGifProps {
+interface IMarkdownMediaProps {
   caption?: string
 }
 
-const MarkdownGif: SFC<IMarkdownGifProps> = props => {
+const MarkdownMedia: SFC<IMarkdownMediaProps> = props => {
   return (
-    <MardownGifWrapperDiv>
-      <MarkdownGifImgWrapperDiv>
+    <MardownMediaWrapperDiv>
+      <MarkdownMediaImgWrapperDiv>
         {props.children}
-      </MarkdownGifImgWrapperDiv>
+      </MarkdownMediaImgWrapperDiv>
       <MarkdownCaption>{props.caption}</MarkdownCaption>
-    </MardownGifWrapperDiv>
+    </MardownMediaWrapperDiv>
   )
 };
 
@@ -134,6 +134,6 @@ export const renderAst = new RehypeReact({
     ol: MarkdownOL,
     ul: MarkdownUL,
     code: MarkdownCode,
-    gif: MarkdownGif,
+    media: MarkdownMedia,
   },
 }).Compiler;
