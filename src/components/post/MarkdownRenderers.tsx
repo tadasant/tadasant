@@ -8,7 +8,7 @@ import { Body2, Caption, Header3 } from '../../styling/Typography';
 
 const MarkdownBody = styled(Body2)`
   font-family: ${constants.typography.serifFontFamily};
-  line-height: 1.2;
+  line-height: 1.4;
 `;
 
 const MarkdownP: SFC = props => {
