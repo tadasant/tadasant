@@ -66,7 +66,7 @@ When you name well, it becomes possible to mentally unit-test your code. As a re
 
 Observe poorly named code:
 
-```python
+```python{numberLines: true}
 def calculate(p, r, n, t):
     """Returns compound interest for the formula A = P(1 + r/n)^(nt)"""
     return pow(1 + (r/n), n * t)
@@ -74,7 +74,7 @@ def calculate(p, r, n, t):
 
 And better named code:
 
-```python
+```python{numberLines: true}
 def calculate_compound_interest(principal, rate, times_per_year, years):
     """A = P(1 + r/n)^(nt)"""
     base = 1 + (rate / times_per_year)
@@ -102,7 +102,7 @@ But if you’re incapable of putting a label on the concept you’re about to le
 
 Maybe you wrote this:
 
-```python
+```python{numberLines: true}
 def charge_customer(value):
     # Let's say you implemented all these helpers as well
     db_session = getDbSession()
@@ -112,7 +112,7 @@ def charge_customer(value):
 
 When you ultimately realize you need something more like this:
 
-```python
+```python{numberLines: true}
 def charge_cost_of_coffee(CoffeeDrink):
     total_coffee_cost = 0
     total_coffee_cost += CoffeeDrink.base_cost

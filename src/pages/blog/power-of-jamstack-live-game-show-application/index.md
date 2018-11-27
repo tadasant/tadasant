@@ -138,6 +138,18 @@ of, in the words of Hasura’s documentation:
 And a few lines of Apollo config to pop in Hasura’s convenient web socket
 endpoint.
 
+```javascript{numberLines: true}
+const graphqlUri = 'https://where-in-the-world-hq.herokuapp.com/v1alpha1/graphql';
+
+const splitUri = graphqlUri.split('//');
+const wsLink = new WebSocketLink({
+  uri: 'wss://' + splitUri[1],
+  options: {
+    reconnect: true
+  }
+});
+```
+
 That’s just one example. We experienced this simple “2 lines of code and XYZ
 major feature is ready to go” paradigm over and over again:
 

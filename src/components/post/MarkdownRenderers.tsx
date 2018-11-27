@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import constants from '../../styling/constants';
 import { media } from '../../styling/core';
 import { Body2, Caption, Header3 } from '../../styling/Typography';
+import endorsedDomains from './endorsedDomainWhitelist';
 
 const MarkdownBody = styled(Body2)`
   font-family: ${constants.typography.serifFontFamily};
@@ -121,12 +122,22 @@ const MarkdownMedia: SFC<IMarkdownMediaProps> = props => {
   )
 };
 
-const MarkdownA: SFC = props => {
+interface IAProps {
+  href: string;
+}
+
+const MarkdownA: SFC<IAProps> = props => {
+  const isWhitelistedHostname = endorsedDomains.includes(getHostname(props.href));
   return (
-    <a {...props} rel='nofollow noopener'>
+    <a href={props.href} rel={`noopener${isWhitelistedHostname ? '' : ' nofollow '}`} target='_blank'>
       {props.children}
     </a>
-  )
+  );
+};
+
+const getHostname = (href: string) => {
+  const url = new URL(href);
+  return url.hostname;
 };
 
 // https://using-remark.gatsbyjs.org/custom-components/
