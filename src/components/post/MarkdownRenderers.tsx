@@ -121,6 +121,14 @@ const MarkdownMedia: SFC<IMarkdownMediaProps> = props => {
   )
 };
 
+const MarkdownA: SFC = props => {
+  return (
+    <a {...props} rel='nofollow noopener'>
+      {props.children}
+    </a>
+  )
+};
+
 // https://using-remark.gatsbyjs.org/custom-components/
 export const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -135,5 +143,6 @@ export const renderAst = new RehypeReact({
     ul: MarkdownUL,
     code: MarkdownCode,
     media: MarkdownMedia,
+    a: MarkdownA,
   },
 }).Compiler;
