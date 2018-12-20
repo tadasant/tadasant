@@ -1,14 +1,18 @@
 import { graphql, StaticQuery } from 'gatsby';
 import * as React from 'react';
-import { SFC } from 'react';
+import { FunctionComponent } from 'react';
 import { Body1, Header } from '../../styling/Typography';
 import { GetHomeData } from '../../typings/graphql';
 import {
+  BelieveSectionDiv,
   HeadshotContainerDiv,
   HeadshotImg,
   HomeContainerDiv,
   HomeTopContainerDiv,
   IntroductionTextDiv,
+  TabletContentDiv,
+  TabletDiv,
+  TabletText,
 } from './Home.style';
 
 interface IQueryProps {
@@ -17,10 +21,9 @@ interface IQueryProps {
 
 type TProps = IQueryProps;
 
-const Home: SFC<TProps> = (props) => {
-  const { data: { headshot, linkedin, github, mail, stackoverflow } } = props;
-  if (!headshot || !headshot.childImageSharp || !linkedin || !linkedin.childImageSharp || !github
-    || !github.childImageSharp || !mail || !mail.childImageSharp || !stackoverflow || !stackoverflow.childImageSharp) {
+const Home: FunctionComponent<TProps> = (props) => {
+  const { data: { headshot } } = props;
+  if (!headshot || !headshot.childImageSharp) {
     console.warn(`Home: GraphQL returned a null on build. This probably shouldn\'t happen. `);
     return null;
   }
@@ -44,13 +47,30 @@ const Home: SFC<TProps> = (props) => {
             time.
           </Body1>
         </IntroductionTextDiv>
+        <BelieveSectionDiv>
+          <Header>What I Believe</Header>
+          <br/><br/>
+          <TabletDiv>
+            <TabletContentDiv>
+              <TabletText white>I can always do better</TabletText>
+              <br/><br/>
+              <TabletText white>Give without expectation of return</TabletText>
+              <br/><br/>
+              <TabletText white>None of us really has it figured out</TabletText>
+              <br/><br/>
+              <TabletText white>Incentives are a super power</TabletText>
+              <br/><br/>
+              <TabletText white>It's hard to do good by doing well</TabletText>
+            </TabletContentDiv>
+          </TabletDiv>
+        </BelieveSectionDiv>
       </HomeTopContainerDiv>
     </HomeContainerDiv>
   );
 };
 
 // TODO look into converting to HOC
-const container: SFC = props => (
+const container: FunctionComponent = props => (
   <StaticQuery
     query={HOME_QUERY}
     render={data => <Home data={data} {...props}/>}
@@ -64,34 +84,6 @@ const HOME_QUERY = graphql`
         headshot: file(relativePath: {eq: "images/headshot-circle.png"}) {
             childImageSharp {
                 fluid(maxHeight: 500) {
-                    ...GatsbyImageSharpFluid_tracedSVG
-                }
-            }
-        }
-        linkedin: file(relativePath: {eq: "images/icons/linkedin.png"}) {
-            childImageSharp {
-                fluid(maxWidth: 100) {
-                    ...GatsbyImageSharpFluid_tracedSVG
-                }
-            }
-        }
-        github: file(relativePath: {eq: "images/icons/github.png"}) {
-            childImageSharp {
-                fluid(maxWidth: 100) {
-                    ...GatsbyImageSharpFluid_tracedSVG
-                }
-            }
-        }
-        mail: file(relativePath: {eq: "images/icons/envelope.png"}) {
-            childImageSharp {
-                fluid(maxWidth: 100) {
-                    ...GatsbyImageSharpFluid_tracedSVG
-                }
-            }
-        }
-        stackoverflow: file(relativePath: {eq: "images/icons/stackoverflow.png"}) {
-            childImageSharp {
-                fluid(maxWidth: 100) {
                     ...GatsbyImageSharpFluid_tracedSVG
                 }
             }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="519px" height="329px" viewBox="0 0 519 329" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M52.8263217,55.819319 C120.354604,18.6064397 188.103576,-5.22687822e-15 256.07324,0 C324.099655,2.36964084e-15 392.123984,18.6375238 460.146227,55.9125715 L460.146227,55.9125712 C492.176946,73.4648679 512.090198,107.08409 512.090198,143.60874 L512.090198,316.34472 C512.090198,319.106144 509.851621,321.34472 507.090198,321.34472 L6.09019724,321.34472 C3.32877349,321.34472 1.09019724,319.106144 1.09019724,316.34472 L1.09019723,143.401271 C1.0901973,106.961593 20.9117404,73.40652 52.8263217,55.819319 Z" id="path-1"></path>
+        <filter x="-1.4%" y="-1.6%" width="102.7%" height="104.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Home-v2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Beliefs-Tablet" transform="translate(2.998882, 2.000000)" fill-rule="nonzero">
+            <g id="Beliefs">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#1D2E40" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
