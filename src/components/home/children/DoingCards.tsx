@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Fragment, FunctionComponent } from 'react';
 import DoingCard, { ICardProps } from './DoingCard';
 
-const cardProps: ICardProps[] = [
+const cardProps: Partial<ICardProps>[] = [
   {
     title: 'BariBuilder',
     description: 'E-commerce web application built for weight loss surgery patients to help them comparison shop for vitamins.',
@@ -56,7 +56,13 @@ const cardProps: ICardProps[] = [
 const DoingCards: FunctionComponent = () => {
   return (
     <Fragment>
-      {cardProps.map(props => <DoingCard {...props}/>)}
+      {cardProps.map((props, i) => {
+        if (!props.title || !props.description || !props.urlDisplay || !props.url) {
+          return null;
+        }
+        // @ts-ignore doesn't recognize null check above
+        return <DoingCard {...props} totalCardCount={cardProps.length} cardIndex={i}/>;
+      })}
     </Fragment>
   );
 };

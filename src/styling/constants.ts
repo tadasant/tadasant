@@ -7,6 +7,12 @@ const constants = {
     },
     'highlight': {
       'gold': '#D9C477',
+      'goldhsla': {
+        'h': 47,
+        's': 56,
+        'l': 66,
+        'a': 1
+      }
     },
     'base': {
       'grey': '#F0F1F2',

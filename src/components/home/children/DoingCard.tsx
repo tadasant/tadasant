@@ -8,11 +8,13 @@ export interface ICardProps {
   description: string
   urlDisplay: string
   url: string
+  totalCardCount: number
+  cardIndex: number
 }
 
 const DoingCard: FunctionComponent<ICardProps> = props => {
   return (
-    <CardDiv>
+    <CardDiv {...props}>
       <div>
         <Header3>{props.title}</Header3>
         <br/><br/>
