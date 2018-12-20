@@ -4,9 +4,13 @@ import { media } from '../../styling/core';
 import { UndecoratedAnchor } from '../lib/styled-lib';
 
 export const HomeContainerDiv = styled.div`
+  padding: 16px 0 16px 0;
+`;
+
+export const HomeTopContainerDiv = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr 4fr 3fr 1fr;
-  
+   
   ${media.desktop`
     grid-template-columns: 1fr 3fr 2fr 1fr 2fr 3fr 1fr;
   `}
@@ -18,8 +22,6 @@ export const HeadshotContainerDiv = styled.div`
   display: flex;
   align-items: center;
   
-  padding-top: 2vh;
-  
   ${media.desktop`
     grid-column-start: 4;
   `}
@@ -29,41 +31,11 @@ export const HeadshotImg = styled(Img)`
   width: 100%;
 `;
 
-export const ExternalIconsContainerDiv = styled.div`
-  grid-column-start: 3;
-  
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
-  padding-top: 1vh;
-  
-  ${media.desktop`
-    grid-column-start: 4;
-  `}
-`;
-
-export const ExternalIconAnchor = styled(UndecoratedAnchor)`
-  display: flex;
-  align-items: center;
-  
-  padding: 0 1vw 0 1vw;
-  width: 5vw;
-  
-  ${media.desktop`
-    width: 3vw;
-  `}
-`;
-
-export const ExternalIconImg = styled(Img)`
-  width: 100%;
-`;
-
-export const MessageContainerDiv = styled.div`
+export const IntroductionTextDiv = styled.div`
   grid-column-start: 2;
   grid-column-end: 5;
   
-  padding: 4vh 0 2vh 0;
+  padding-top: 16px;
   text-align: center;
   
   ${media.desktop`

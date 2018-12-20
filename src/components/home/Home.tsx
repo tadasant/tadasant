@@ -1,17 +1,14 @@
-import { graphql, Link, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import { SFC } from 'react';
-import { Body2 } from '../../styling/Typography';
+import { Body1, Header } from '../../styling/Typography';
 import { GetHomeData } from '../../typings/graphql';
-import { EMAIL, GITHUB_URL, LINKED_IN_URL, STACKOVERFLOW_URL } from '../lib/constants';
 import {
-  ExternalIconAnchor,
-  ExternalIconImg,
-  ExternalIconsContainerDiv,
   HeadshotContainerDiv,
   HeadshotImg,
   HomeContainerDiv,
-  MessageContainerDiv,
+  HomeTopContainerDiv,
+  IntroductionTextDiv,
 } from './Home.style';
 
 interface IQueryProps {
@@ -29,46 +26,25 @@ const Home: SFC<TProps> = (props) => {
   }
   return (
     <HomeContainerDiv>
-      <HeadshotContainerDiv>
-        <HeadshotImg fluid={headshot.childImageSharp.fluid} alt='Tadas Antanavicius headshot'/>
-      </HeadshotContainerDiv>
-      <ExternalIconsContainerDiv>
-        <ExternalIconAnchor
-          href={LINKED_IN_URL}
-          target='__blank'
-          rel='noopener nofollower'>
-          <ExternalIconImg fluid={linkedin.childImageSharp.fluid} alt='Tadas Antanavicius LinkedIn'/>
-        </ExternalIconAnchor>
-        <ExternalIconAnchor
-          href={GITHUB_URL}
-          target='__blank'
-          rel='noopener nofollower'>
-          <ExternalIconImg fluid={github.childImageSharp.fluid} alt='Tadas Antanavicius GitHub'/>
-        </ExternalIconAnchor>
-        <ExternalIconAnchor
-          href={`mailto:${EMAIL}`}
-          target='__blank'
-          rel='noopener nofollower'>
-          <ExternalIconImg fluid={mail.childImageSharp.fluid} alt='Tadas Antanavicius Mail'/>
-        </ExternalIconAnchor>
-        <ExternalIconAnchor
-          href={STACKOVERFLOW_URL}
-          target='__blank'
-          rel='noopener nofollower'>
-          <ExternalIconImg fluid={stackoverflow.childImageSharp.fluid} alt='Tadas Antanavicius StackOverflow'/>
-        </ExternalIconAnchor>
-      </ExternalIconsContainerDiv>
-      <MessageContainerDiv>
-        <Body2>
-          Hey! I’m Tadas, an entrepreneur and software engineer. I build products on the web to make people’s lives
-          better.
-        </Body2>
-        <br/><br/>
-        <Body2>
-          I write about what I’ve learned along the way about <b>software</b>, <b>business</b>, and <b>life</b>: check
-          out my <Link to='/blog'>blog</Link>.
-        </Body2>
-      </MessageContainerDiv>
+      <HomeTopContainerDiv>
+        <HeadshotContainerDiv>
+          <HeadshotImg fluid={headshot.childImageSharp.fluid} alt='Tadas Antanavicius headshot'/>
+        </HeadshotContainerDiv>
+        <IntroductionTextDiv>
+          <Header>Hey! I’m Tadas.</Header>
+          <br/><br/>
+          <Body1>
+            I'm an entrepreneur and software developer. I build software on the web to make people's lives better.
+          </Body1>
+          <br/><br/>
+          <Body1>
+            I'm a <b>full-stack engineer</b> with an affection for the front-end, especially with <b>React</b>. While I
+            definitely enjoy my time in the flow of coding, I'm obsessively curious about the world more broadly. Find
+            me <b>traveling</b>, <b>reading</b>, and <b>learning</b> from people I admire: sometimes all at the same
+            time.
+          </Body1>
+        </IntroductionTextDiv>
+      </HomeTopContainerDiv>
     </HomeContainerDiv>
   );
 };
