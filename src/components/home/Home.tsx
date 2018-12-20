@@ -3,10 +3,13 @@ import * as React from 'react';
 import { FunctionComponent } from 'react';
 import { Body1, Header } from '../../styling/Typography';
 import { GetHomeData } from '../../typings/graphql';
+import DoingCards from './children/DoingCards';
 import {
   BelieveSectionDiv,
+  DoingDiv,
   HeadshotContainerDiv,
   HeadshotImg,
+  HomeBottomContainerDiv,
   HomeContainerDiv,
   HomeTopContainerDiv,
   IntroductionTextDiv,
@@ -65,6 +68,13 @@ const Home: FunctionComponent<TProps> = (props) => {
           </TabletDiv>
         </BelieveSectionDiv>
       </HomeTopContainerDiv>
+      <HomeBottomContainerDiv>
+        <DoingDiv>
+          <Header>What I'm Doing</Header>
+          <br/><br/>
+          <DoingCards/>
+        </DoingDiv>
+      </HomeBottomContainerDiv>
     </HomeContainerDiv>
   );
 };

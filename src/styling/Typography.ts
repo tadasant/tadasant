@@ -74,7 +74,6 @@ export const Body2 = styled.span`
 export const Caption = styled.span`
   color: ${(props: ITypographyProps) => props.white ? constants.colors.base.grey : constants.colors.brand};
   font-family: ${constants.typography.fontFamily};
-  font-style: ${constants.typography.fontStyle};
   
   font-size: ${constants.typography.caption.fontSize};
   font-weight: ${constants.typography.caption.fontWeight};

@@ -64,9 +64,24 @@ export const TabletDiv = styled.div`
 `;
 
 export const TabletContentDiv = styled.div`
-  padding: 96px 32px 64px 32px;
+  padding: 48px 32px 32px 32px;
 `;
 
 export const TabletText = styled(Body2)`
+  text-align: center;
+`;
+
+export const HomeBottomContainerDiv = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  
+  ${media.desktop`
+    grid-template-columns: 1fr 9fr 1fr;
+  `}
+`;
+
+export const DoingDiv = styled.div`
+  grid-column-start: 2;
+  padding-top: 64px;
   text-align: center;
 `;
