@@ -7,15 +7,17 @@ export interface ICardProps {
   title: string
   description: string
   urlDisplay: string
+  url: string
 }
 
 const DoingCard: FunctionComponent<ICardProps> = props => {
   return (
     <CardDiv>
-      <Header3>{props.title}</Header3>
-      <br/><br/>
-      <Body2>{props.description}</Body2>
-      <br/><br/>
+      <div>
+        <Header3>{props.title}</Header3>
+        <br/><br/>
+        <Body2>{props.description}</Body2>
+      </div>
       <UrlDisplayTextDiv>
         <Caption>{props.urlDisplay}</Caption>
       </UrlDisplayTextDiv>
