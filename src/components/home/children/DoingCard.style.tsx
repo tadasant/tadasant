@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import constants from '../../../styling/constants';
 import { ICardProps } from './DoingCard';
 
-const {h, s, l, a} = constants.colors.highlight.goldhsla;
+const {h, s, l} = constants.colors.highlight.goldhsla;
 
 export const CardDiv = styled.div`
   // idx 0 is alpha 1, idx n is alpha 0.2
