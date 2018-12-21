@@ -5,6 +5,7 @@ import { Body2, Header } from '../../styling/Typography';
 import { GetHomeData } from '../../typings/graphql';
 import DoingCards from './children/DoingCards';
 import {
+  BelieveHeaderDiv,
   BelieveSectionDiv,
   DoingDiv,
   FirstParagraphDiv, HeaderAndFirstParagraphDiv,
@@ -14,7 +15,7 @@ import {
   HomeBottomContainerDiv,
   HomeContainerDiv,
   HomeTopContainerDiv,
-  SecondParagraphDiv,
+  SecondParagraphDiv, Sup,
   TabletContentDiv,
   TabletDiv,
   TabletText,
@@ -57,19 +58,21 @@ const Home: FunctionComponent<TProps> = (props) => {
           </Body2>
         </SecondParagraphDiv>
         <BelieveSectionDiv>
-          <Header>What I Believe</Header>
+          <BelieveHeaderDiv>
+            <Header>What I Believe</Header>
+          </BelieveHeaderDiv>
           <br/><br/>
           <TabletDiv>
             <TabletContentDiv>
-              <TabletText white>I can always do better</TabletText>
+              <TabletText white>I can always do better <Sup>1</Sup></TabletText>
               <br/><br/>
-              <TabletText white>Give without expectation of return</TabletText>
+              <TabletText white>Give without expectation of return <Sup>2</Sup></TabletText>
               <br/><br/>
-              <TabletText white>None of us really has it figured out</TabletText>
+              <TabletText white>None of us really has it figured out <Sup>3</Sup></TabletText>
               <br/><br/>
-              <TabletText white>Incentives are a super power</TabletText>
+              <TabletText white>Incentives are a super power <Sup>4</Sup></TabletText>
               <br/><br/>
-              <TabletText white>It's hard to do good by doing well</TabletText>
+              <TabletText white>It's hard to do good by doing well <Sup>5</Sup></TabletText>
             </TabletContentDiv>
           </TabletDiv>
         </BelieveSectionDiv>

@@ -28,7 +28,7 @@ export const HomeTopContainerDiv = styled.div`
   `}
   
   ${media(1200)`
-    margin: 0 25vw 0 25vw;
+    margin: 0 29vw 0 29vw;
   `}
 `;
 
@@ -63,7 +63,7 @@ export const HeaderAndFirstParagraphDiv = styled.div`
   `}
   
   ${media(1200)`
-    width: calc(100vw - 175px - 32px - 16px - 16px - 50vw);
+    width: calc(100vw - 175px - 32px - 16px - 16px - 58vw);
   `}
 `;
 
@@ -85,12 +85,22 @@ export const SecondParagraphDiv = styled.div`
 
 export const BelieveSectionDiv = styled.div`
   padding-top: 32px;
+  width: 100%;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+`;
+
+export const BelieveHeaderDiv = styled.div`
+  width: 100%;
 `;
 
 export const TabletDiv = styled.div`
+  margin-top: 16px;
   background-image: url(${Tablet});
   background-size: 100% 100%;
+  max-width: 400px;
 `;
 
 export const TabletContentDiv = styled.div`
@@ -107,4 +117,8 @@ export const HomeBottomContainerDiv = styled.div`
 export const DoingDiv = styled.div`
   padding-top: 64px;
   text-align: center;
+`;
+
+export const Sup = styled.sup`
+  font-size: 8px;
 `;
