@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Fragment, FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import DoingCard, { ICardProps } from './DoingCard';
+import {DoingCardsContainerDiv} from './DoingCards.style';
 
 const cardProps: Partial<ICardProps>[] = [
   {
@@ -55,7 +56,7 @@ const cardProps: Partial<ICardProps>[] = [
 
 const DoingCards: FunctionComponent = () => {
   return (
-    <Fragment>
+    <DoingCardsContainerDiv>
       {cardProps.map((props, i) => {
         if (!props.title || !props.description || !props.urlDisplay || !props.url) {
           return null;
@@ -63,7 +64,7 @@ const DoingCards: FunctionComponent = () => {
         // @ts-ignore doesn't recognize null check above
         return <DoingCard {...props} totalCardCount={cardProps.length} cardIndex={i}/>;
       })}
-    </Fragment>
+    </DoingCardsContainerDiv>
   );
 };
 
