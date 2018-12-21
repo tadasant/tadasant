@@ -6,6 +6,7 @@ import constants from '../../styling/constants';
 import { media } from '../../styling/core';
 import { Body2, Caption, Header3 } from '../../styling/Typography';
 import endorsedDomains from './endorsedDomainWhitelist';
+import * as url from 'url';
 
 const MarkdownBody = styled(Body2)`
   font-family: ${constants.typography.serifFontFamily};
@@ -136,8 +137,7 @@ const MarkdownA: SFC<IAProps> = props => {
 };
 
 const getHostname = (href: string) => {
-  const url = new URL(href);
-  return url.hostname;
+  return url.parse(href).hostname || '';
 };
 
 // https://using-remark.gatsbyjs.org/custom-components/
