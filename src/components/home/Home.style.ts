@@ -19,6 +19,14 @@ export const HomeTopContainerDiv = styled.div`
     align-items: flex-start;
   `}
   
+  ${media(745)`
+    margin: 0 10vw 0 10vw;
+  `}
+  
+  ${media(950)`
+    margin: 0 15vw 0 15vw;
+  `}
+  
   ${media(1200)`
     margin: 0 25vw 0 25vw;
   `}
@@ -44,6 +52,14 @@ export const HeaderAndFirstParagraphDiv = styled.div`
     padding-left: 16px;
     text-align: left;
     width: calc(100vw - 175px - 32px - 16px - 16px);
+  `}
+  
+  ${media(745)`
+    width: calc(100vw - 175px - 32px - 16px - 16px - 20vw);
+  `}
+  
+  ${media(950)`
+    width: calc(100vw - 175px - 32px - 16px - 16px - 30vw);
   `}
   
   ${media(1200)`
