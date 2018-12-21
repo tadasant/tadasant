@@ -5,26 +5,30 @@ import Tablet from '../../assets/images/shapes/Tablet.svg';
 import { Body2 } from '../../styling/Typography';
 
 export const HomeContainerDiv = styled.div`
-  padding: 16px 0 16px 0;
+  padding: 16px;
 `;
 
 export const HomeTopContainerDiv = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 3fr 4fr 3fr 1fr;
-   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  ${media.tablet`
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  `}
+  
   ${media.desktop`
-    grid-template-columns: 1fr 3fr 2fr 1fr 2fr 3fr 1fr;
+    margin: 0 25vw 0 25vw;
   `}
 `;
 
 export const HeadshotContainerDiv = styled.div`
-  grid-column-start: 3;
+  width: 200px;
   
-  display: flex;
-  align-items: center;
-  
-  ${media.desktop`
-    grid-column-start: 4;
+  ${media.tablet`
+    width: 175px;
   `}
 `;
 
@@ -32,30 +36,40 @@ export const HeadshotImg = styled(Img)`
   width: 100%;
 `;
 
-export const IntroductionTextDiv = styled.div`
-  grid-column-start: 2;
-  grid-column-end: 5;
+export const HeaderAndFirstParagraphDiv = styled.div`
+  padding-top: 8px;
   
-  padding-top: 16px;
-  text-align: center;
+  ${media.tablet`
+    padding-top: 0px;
+    padding-left: 16px;
+    text-align: left;
+    width: calc(100vw - 175px - 32px - 16px - 16px);
+  `}
   
   ${media.desktop`
-    grid-column-start: 3;
-    grid-column-end: 6;
+    width: calc(100vw - 175px - 32px - 16px - 16px - 50vw);
   `}
 `;
 
-export const BelieveSectionDiv = styled.div`
-  grid-column-start: 2;
-  grid-column-end: 5;
-  
-  padding-top: 64px;
+export const HeaderTextDiv = styled.div`
   text-align: center;
   
-  ${media.desktop`
-    grid-column-start: 3;
-    grid-column-end: 6;
+  ${media.tablet`
+    text-align: left;
   `}
+`;
+
+export const FirstParagraphDiv = styled.div`
+  padding-top: 8px;
+`;
+
+export const SecondParagraphDiv = styled.div`
+  padding-top: 8px;
+`;
+
+export const BelieveSectionDiv = styled.div`
+  padding-top: 32px;
+  text-align: center;
 `;
 
 export const TabletDiv = styled.div`
@@ -72,16 +86,9 @@ export const TabletText = styled(Body2)`
 `;
 
 export const HomeBottomContainerDiv = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
-  
-  ${media.desktop`
-    grid-template-columns: 1fr 9fr 1fr;
-  `}
 `;
 
 export const DoingDiv = styled.div`
-  grid-column-start: 2;
   padding-top: 64px;
   text-align: center;
 `;

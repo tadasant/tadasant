@@ -1,18 +1,20 @@
 import { graphql, StaticQuery } from 'gatsby';
 import * as React from 'react';
 import { FunctionComponent } from 'react';
-import { Body1, Header } from '../../styling/Typography';
+import { Body2, Header } from '../../styling/Typography';
 import { GetHomeData } from '../../typings/graphql';
 import DoingCards from './children/DoingCards';
 import {
   BelieveSectionDiv,
   DoingDiv,
+  FirstParagraphDiv, HeaderAndFirstParagraphDiv,
+  HeaderTextDiv,
   HeadshotContainerDiv,
   HeadshotImg,
   HomeBottomContainerDiv,
   HomeContainerDiv,
   HomeTopContainerDiv,
-  IntroductionTextDiv,
+  SecondParagraphDiv,
   TabletContentDiv,
   TabletDiv,
   TabletText,
@@ -36,20 +38,24 @@ const Home: FunctionComponent<TProps> = (props) => {
         <HeadshotContainerDiv>
           <HeadshotImg fluid={headshot.childImageSharp.fluid} alt='Tadas Antanavicius headshot'/>
         </HeadshotContainerDiv>
-        <IntroductionTextDiv>
-          <Header>Hey! I’m Tadas.</Header>
-          <br/><br/>
-          <Body1>
-            I'm an entrepreneur and software developer. I build software on the web to make people's lives better.
-          </Body1>
-          <br/><br/>
-          <Body1>
+        <HeaderAndFirstParagraphDiv>
+          <HeaderTextDiv>
+            <Header>Hey! I’m Tadas.</Header>
+          </HeaderTextDiv>
+          <FirstParagraphDiv>
+            <Body2>
+              I'm an entrepreneur and software developer. I build software on the web to make people's lives better.
+            </Body2>
+          </FirstParagraphDiv>
+        </HeaderAndFirstParagraphDiv>
+        <SecondParagraphDiv>
+          <Body2>
             I'm a <b>full-stack engineer</b> with an affection for the front-end, especially with <b>React</b>. While I
             definitely enjoy my time in the flow of coding, I'm obsessively curious about the world more broadly. Find
             me <b>traveling</b>, <b>reading</b>, and <b>learning</b> from people I admire: sometimes all at the same
             time.
-          </Body1>
-        </IntroductionTextDiv>
+          </Body2>
+        </SecondParagraphDiv>
         <BelieveSectionDiv>
           <Header>What I Believe</Header>
           <br/><br/>
