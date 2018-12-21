@@ -4,6 +4,7 @@ import { FunctionComponent } from 'react';
 import { Body2, Header } from '../../styling/Typography';
 import { GetHomeData } from '../../typings/graphql';
 import DoingCards from './children/DoingCards';
+import Tablet from './children/Tablet';
 import {
   BelieveHeaderDiv,
   BelieveSectionDiv,
@@ -15,10 +16,7 @@ import {
   HomeBottomContainerDiv,
   HomeContainerDiv,
   HomeTopContainerDiv,
-  SecondParagraphDiv, Sup,
-  TabletContentDiv,
-  TabletDiv,
-  TabletText,
+  SecondParagraphDiv,
 } from './Home.style';
 
 interface IQueryProps {
@@ -62,19 +60,7 @@ const Home: FunctionComponent<TProps> = (props) => {
             <Header>What I Believe</Header>
           </BelieveHeaderDiv>
           <br/><br/>
-          <TabletDiv>
-            <TabletContentDiv>
-              <TabletText white>I can always do better <Sup>1</Sup></TabletText>
-              <br/><br/>
-              <TabletText white>Give without expectation of return <Sup>2</Sup></TabletText>
-              <br/><br/>
-              <TabletText white>None of us really has it figured out <Sup>3</Sup></TabletText>
-              <br/><br/>
-              <TabletText white>Incentives are a super power <Sup>4</Sup></TabletText>
-              <br/><br/>
-              <TabletText white>It's hard to do good by doing well <Sup>5</Sup></TabletText>
-            </TabletContentDiv>
-          </TabletDiv>
+          <Tablet/>
         </BelieveSectionDiv>
       </HomeTopContainerDiv>
       <HomeBottomContainerDiv>
