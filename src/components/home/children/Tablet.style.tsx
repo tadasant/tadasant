@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Tablet from '../../../assets/images/shapes/Tablet.svg';
+import Tablet from '../../../assets/images/shapes/tablet.svg';
 import { Body2 } from '../../../styling/Typography';
 
 export const TabletDiv = styled.div`
