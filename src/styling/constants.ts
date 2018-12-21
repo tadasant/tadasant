@@ -87,12 +87,6 @@ const constants = {
       'fontWeight': 300,
     }
   },
-  // in pixels
-  'breakpoints': {
-    'desktop': 1119,
-    'tablet': 599,
-    'mobile': 319,
-  },
 };
 
 export default constants;

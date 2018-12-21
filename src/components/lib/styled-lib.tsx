@@ -54,7 +54,7 @@ export const Button = styled(ButtonBaseWithoutExtraProps)`
     font-size: ${constants.typography.button.mobile.fontSize};
     font-weight: ${constants.typography.button.mobile.fontWeight};
     
-    ${media.tablet`
+    ${media(600)`
       font-size: ${constants.typography.button.tablet.fontSize};
       font-weight: ${constants.typography.button.tablet.fontWeight};
     `}

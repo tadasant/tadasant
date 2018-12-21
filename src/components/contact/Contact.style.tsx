@@ -13,7 +13,7 @@ export const ContactContainerDiv = styled.div`
   
   min-height: calc(${BodyContainerSize} - 4vh);
   
-  ${media.tablet`
+  ${media(600)`
     min-height: calc(${BodyContainerSizeTablet} - 4vh));
   `}
 `;
@@ -23,12 +23,12 @@ export const ContentContainerDiv = styled.div`
   grid-column-end: 7;
   grid-row-start: 1;
   
-  ${media.tablet`
+  ${media(600)`
     grid-column-start: 3;
     grid-column-end: 6;
   `}
   
-  ${media.desktop`
+  ${media(1200)`
     grid-column-start: 4;
     grid-column-end: 5;
   `}
@@ -52,7 +52,7 @@ export const InlineIconImage = styled(Img)`
   margin-right: 8px;
   width: calc(${constants.typography.body2.mobile.fontSize} * 2 + 10px);
   
-  ${media.tablet`
+  ${media(600)`
     margin-top: 7px;
     margin-right: 16px;
     width: calc(${constants.typography.body2.tablet.fontSize} * 2 + 10px);
@@ -62,7 +62,7 @@ export const InlineIconImage = styled(Img)`
 export const BottomIconImage = styled(Img)`
   width: 32px;
   
-  ${media.tablet`
+  ${media(600)`
     width: 48px;
   `}
 `;

@@ -16,7 +16,7 @@ export const ContentContainerDiv = styled.div`
   grid-column-start: 1;
   grid-column-end: 4;
   
-  ${media.tablet`
+  ${media(600)`
     grid-column-start: 2;
     grid-column-end: 3;
   `}

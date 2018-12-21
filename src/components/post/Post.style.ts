@@ -5,11 +5,11 @@ export const PostContainerDiv = styled.div`
   display: grid;
   grid-template-columns: auto 95% auto;
   
-  ${media.tablet`
+  ${media(600)`
     grid-template-columns: auto 70% auto;  
   `}
   
-  ${media.desktop`
+  ${media(1200)`
     grid-template-columns: auto 55% auto;
   `}
 `;

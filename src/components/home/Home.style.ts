@@ -13,13 +13,13 @@ export const HomeTopContainerDiv = styled.div`
   flex-direction: column;
   align-items: center;
   
-  ${media.tablet`
+  ${media(600)`
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
   `}
   
-  ${media.desktop`
+  ${media(1200)`
     margin: 0 25vw 0 25vw;
   `}
 `;
@@ -27,7 +27,7 @@ export const HomeTopContainerDiv = styled.div`
 export const HeadshotContainerDiv = styled.div`
   width: 200px;
   
-  ${media.tablet`
+  ${media(600)`
     width: 175px;
   `}
 `;
@@ -39,14 +39,14 @@ export const HeadshotImg = styled(Img)`
 export const HeaderAndFirstParagraphDiv = styled.div`
   padding-top: 8px;
   
-  ${media.tablet`
+  ${media(600)`
     padding-top: 0px;
     padding-left: 16px;
     text-align: left;
     width: calc(100vw - 175px - 32px - 16px - 16px);
   `}
   
-  ${media.desktop`
+  ${media(1200)`
     width: calc(100vw - 175px - 32px - 16px - 16px - 50vw);
   `}
 `;
@@ -54,7 +54,7 @@ export const HeaderAndFirstParagraphDiv = styled.div`
 export const HeaderTextDiv = styled.div`
   text-align: center;
   
-  ${media.tablet`
+  ${media(600)`
     text-align: left;
   `}
 `;

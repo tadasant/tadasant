@@ -93,7 +93,7 @@ const MarkdownCode = styled.code`
   
     font-size: calc(${constants.typography.body2.mobile.fontSize} - 5px);
     
-    ${media.tablet`
+    ${media(600)`
       font-size: calc(${constants.typography.body2.tablet.fontSize} - 5px);
     `
   }

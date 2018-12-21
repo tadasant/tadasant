@@ -18,7 +18,7 @@ export const ContentContainerDiv = styled.div`
   
   padding: ${navbarVPadding};
   
-  ${media.tablet`
+  ${media(600)`
     padding: ${navbarVPaddingTablet};
   `}
 `;
@@ -35,7 +35,7 @@ export const MobilePageHeaderContainerDiv = styled.div`
   justify-content: center;
   grid-column-start: 2;
   
-  ${media.tablet`
+  ${media(600)`
     display: none;
   `}
 `;
@@ -46,7 +46,7 @@ export const MobileNavigationContainerDiv = styled.div`
   justify-content: flex-end;
   grid-column-start: 3;
   
-  ${media.tablet`
+  ${media(600)`
     display: none;
   `}
 `;
@@ -55,7 +55,7 @@ export const TabletNavigationContainerDiv = styled.div`
   display: none;
   grid-column-start: 3;
   
-  ${media.tablet`
+  ${media(600)`
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -70,7 +70,7 @@ export const LogoImg = styled(Img)`
   min-height: 32px;
   min-width: 32px;
   
-  ${media.tablet`
+  ${media(600)`
     min-height: 48px;
     min-width: 48px;
   `}
@@ -89,7 +89,7 @@ export const NavigationButtonSpan = styled.span`
   font-size: ${constants.typography.button.mobile.fontSize};
   font-weight: ${constants.typography.button.mobile.fontWeight};
 
-  ${media.tablet`
+  ${media(600)`
     font-size: ${constants.typography.button.tablet.fontSize};
     font-weight: ${constants.typography.button.tablet.fontWeight};
   `}
@@ -103,7 +103,7 @@ export const SubscribeButton = styled(Button).attrs({
     background-color: ${constants.colors.highlight.gold};
     font-size: ${constants.typography.button.mobile.fontSize};
     
-    ${media.tablet`
+    ${media(600)`
       font-size: ${constants.typography.button.tablet.fontSize}; 
     `
   }
@@ -120,7 +120,7 @@ export const ModalDiv = styled.div`
   width: 75vw;
   height: 75vh;
   
-  ${media.tablet`
+  ${media(600)`
     left: 25vw;
     width: 50vw;
   `}

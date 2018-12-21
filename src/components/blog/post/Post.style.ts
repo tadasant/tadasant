@@ -11,7 +11,7 @@ export const PostContainerDiv = styled.div`
   padding: 1vh 0 1vh 0;
   cursor: pointer;
   
-  ${media.desktop`
+  ${media(1200)`
     grid-template-columns: 4fr 8fr;
   `}
 `;
@@ -22,11 +22,11 @@ export const CoverPhotoDiv = styled.div`
   
   height: 200px;
   
-  ${media.tablet`
+  ${media(600)`
     height: 250px;
   `}
   
-  ${media.desktop`
+  ${media(1200)`
     height: 200px;
   `}
 `;

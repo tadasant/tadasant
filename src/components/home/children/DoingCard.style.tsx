@@ -24,7 +24,7 @@ export const CardDiv = styled.div`
   
   margin: 8px 0 8px 0;
   
-  ${media.desktop`
+  ${media(1200)`
     height: 300px;
     width: 24%;
     margin: 8px;

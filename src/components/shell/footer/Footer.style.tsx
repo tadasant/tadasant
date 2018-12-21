@@ -13,7 +13,7 @@ export const FooterContainerDiv = styled.div`
   padding: 0.5vh 0 0.5vh 0;
   height: 32px;
   
-  ${media.tablet`
+  ${media(600)`
     height: 48px;
   `}
 `;
@@ -38,7 +38,7 @@ export const IconImg = styled(Img)`
   margin-right: 1vw;
   width: 24px;
   
-  ${media.tablet`
+  ${media(600)`
     width: 32px;
   `}
 `;
