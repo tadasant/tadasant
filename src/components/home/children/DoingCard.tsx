@@ -1,29 +1,29 @@
 import * as React from 'react';
 import { FunctionComponent } from 'react';
 import { Body2, Caption, Header3 } from '../../../styling/Typography';
-import { CardDiv, UrlDisplayTextDiv } from './DoingCard.style';
+import { CardAnchor, UrlDisplayTextDiv } from './DoingCard.style';
 
 export interface ICardProps {
   title: string
   description: string
-  urlDisplay: string
-  url: string
+  urlDisplay?: string
+  url?: string
   totalCardCount: number
   cardIndex: number
 }
 
 const DoingCard: FunctionComponent<ICardProps> = props => {
   return (
-    <CardDiv {...props}>
+    <CardAnchor {...props} href={props.url || undefined} rel='noopener' target='_blank'>
       <div>
         <Header3>{props.title}</Header3>
         <br/><br/>
         <Body2>{props.description}</Body2>
       </div>
       <UrlDisplayTextDiv>
-        <Caption>{props.urlDisplay}</Caption>
+        <Caption>{props.urlDisplay || ''}</Caption>
       </UrlDisplayTextDiv>
-    </CardDiv>
+    </CardAnchor>
   );
 };
 

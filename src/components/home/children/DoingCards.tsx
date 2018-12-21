@@ -14,7 +14,7 @@ const cardProps: Partial<ICardProps>[] = [
     title: 'Job Hunting',
     description: 'Seeking a full-stack or front-end engineer role at a Silicon Valley company around the Series A/B/C stage of funding.',
     urlDisplay: 'tadas@tadasant.com',
-    url: 'mailto:tadas@tadasant.com',
+    url: 'mailto:tadas@tadasant.com?subject=Recruitment%20%2F%20Job%20Opportunity',
   },
   {
     title: 'Reading',
@@ -31,8 +31,6 @@ const cardProps: Partial<ICardProps>[] = [
   {
     title: 'Listening',
     description: 'Podcasts about startups, software, and psychology. Always eager to discuss a thought-provoking episode.',
-    urlDisplay: 'tadasant.com/podcasts',
-    url: 'https://tadasant.com/podcasts',
   },
   {
     title: 'StackOverflow',
@@ -58,7 +56,7 @@ const DoingCards: FunctionComponent = () => {
   return (
     <DoingCardsContainerDiv>
       {cardProps.map((props, i) => {
-        if (!props.title || !props.description || !props.urlDisplay || !props.url) {
+        if (!props.title || !props.description) {
           return null;
         }
         // @ts-ignore doesn't recognize null check above
