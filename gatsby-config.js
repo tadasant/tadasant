@@ -22,6 +22,7 @@ module.exports = {
     siteUrl: `https://tadasant.com`
   },
   plugins: [
+    'gatsby-plugin-netlify',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
