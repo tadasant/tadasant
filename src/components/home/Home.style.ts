@@ -25,7 +25,7 @@ export const HomeTopContainerDiv = styled.div`
     margin: 0 15vw 0 15vw;
   `}
   
-  ${media(1200)`
+  ${media(1500)`
     margin: 0 29vw 0 29vw;
   `}
 `;
@@ -60,7 +60,7 @@ export const HeaderAndFirstParagraphDiv = styled.div`
     width: calc(100vw - 175px - 32px - 16px - 16px - 30vw);
   `}
   
-  ${media(1200)`
+  ${media(1500)`
     width: calc(100vw - 175px - 32px - 16px - 16px - 58vw);
   `}
 `;

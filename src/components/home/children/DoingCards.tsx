@@ -60,7 +60,7 @@ const DoingCards: FunctionComponent = () => {
           return null;
         }
         // @ts-ignore doesn't recognize null check above
-        return <DoingCard {...props} totalCardCount={cardProps.length} cardIndex={i}/>;
+        return <DoingCard key={i} {...props} totalCardCount={cardProps.length} cardIndex={i}/>;
       })}
     </DoingCardsContainerDiv>
   );
