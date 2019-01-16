@@ -5,16 +5,16 @@ import {DoingCardsContainerDiv} from './DoingCards.style';
 
 const cardProps: Partial<ICardProps>[] = [
   {
+    title: 'Job Hunting',
+    description: 'Seeking a full-stack or front-end engineer role at a San Francisco-based company beyond Seed funding but pre-IPO.',
+    urlDisplay: 'tadas@tadasant.com',
+    url: 'mailto:tadas@tadasant.com?subject=Recruitment%20%2F%20Job%20Opportunity',
+  },
+  {
     title: 'BariBuilder',
     description: 'E-commerce web application built for weight loss surgery patients to help them comparison shop for vitamins.',
     urlDisplay: 'baribuilder.com',
     url: 'https://baribuilder.com/',
-  },
-  {
-    title: 'Job Hunting',
-    description: 'Seeking a full-stack or front-end engineer role at a Silicon Valley company beyond Seed funding but pre-IPO.',
-    urlDisplay: 'tadas@tadasant.com',
-    url: 'mailto:tadas@tadasant.com?subject=Recruitment%20%2F%20Job%20Opportunity',
   },
   {
     title: 'Reading',
@@ -34,7 +34,7 @@ const cardProps: Partial<ICardProps>[] = [
   },
   {
     title: 'StackOverflow',
-    description: 'Spend a few hours weekly answering ReactJS questions to keep a finger on the community pulse.',
+    description: 'Spend a few hours now and then answering ReactJS questions to keep a finger on the community pulse.',
     urlDisplay: 'tadasant.com/stackoverflow',
     url: 'https://tadasant.com/stackoverflow',
   },
