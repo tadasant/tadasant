@@ -24,7 +24,7 @@ const cardProps: Partial<ICardProps>[] = [
   },
   {
     title: 'Traveling',
-    description: 'In the middle of a ~6 month long US road trip. By the end, I will have looped around the US coasts by way of both the north and south.',
+    description: 'In the middle of a ~6 month long US road trip while working on BariBuilder. By the end, I will have looped around the US coasts by way of both the north and south.',
     urlDisplay: 'instagram.com/tadasant',
     url: 'https://instagram.com/tadasant',
   },
