@@ -5,10 +5,20 @@ import {DoingCardsContainerDiv} from './DoingCards.style';
 
 const cardProps: Partial<ICardProps>[] = [
   {
-    title: 'Job Hunting',
-    description: 'Seeking a full-stack or front-end engineer role at a San Francisco-based company beyond Seed funding but pre-IPO.',
+    title: 'Full-time employed',
+    description: 'At a stealth-mode startup in San Francisco - stay tuned!',
+  },
+  {
+    title: 'Connecting',
+    description: 'Having just landed in SF, my focus is to meet interesting people in tech and entreprenurship. Let\'s connect!',
     urlDisplay: 'tadas@tadasant.com',
-    url: 'mailto:tadas@tadasant.com?subject=Recruitment%20%2F%20Job%20Opportunity',
+    url: 'mailto:tadas@tadasant.com?subject=Lets%20Connect',
+  },
+  {
+    title: 'Blogging',
+    description: 'I write about software, business, and life. Not (yet) on a regular cadence, but publish about once per month.',
+    urlDisplay: 'tadasant.com/blog',
+    url: 'https://tadasant.com/blog',
   },
   {
     title: 'BariBuilder',
@@ -21,12 +31,6 @@ const cardProps: Partial<ICardProps>[] = [
     description: 'Books about society, personal development, economics, psychology, business, and technology.',
     urlDisplay: 'tadasant.com/goodreads',
     url: 'https://tadasant.com/goodreads',
-  },
-  {
-    title: 'Traveling',
-    description: 'Just wrapped up a 168-day long solo US road trip while working on BariBuilder. 10 cities, 8k miles, and a whole lot of podcasts on the open road.',
-    urlDisplay: 'instagram.com/tadasant',
-    url: 'https://instagram.com/tadasant',
   },
   {
     title: 'Listening',
@@ -43,12 +47,6 @@ const cardProps: Partial<ICardProps>[] = [
     description: 'Hackathon project that\'s become a small side project. No grand ambitions (for now) besides being a technical playground.',
     urlDisplay: 'tadasant.com/where-in-the-world',
     url: 'https://tadasant.com/where-in-the-world',
-  },
-  {
-    title: 'Blogging',
-    description: 'I write about software, business, and life. Not (yet) on a regular cadence, but publish about once per month.',
-    urlDisplay: 'tadasant.com/blog',
-    url: 'https://tadasant.com/blog',
   },
 ];
 
