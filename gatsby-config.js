@@ -35,7 +35,6 @@ module.exports = {
             options: {
               maxWidth: 1600,
               showCaptions: true,
-              backgroundColor: '#F0F1F2', // should match background of site
               linkImagesToOriginal: false,
             },
           },
