@@ -189,6 +189,10 @@ If you’re interviewing: best of luck! If you’re not: hope you enjoyed the re
 
 As noted above, I plan to write more detailed dives on each of these tips in “how-to” fashion. [Subscribe to my few-times-a-year mailing list](https://tadasant.com/subscribe/) to be the first to know when they’re out there!
 
+* * * 
+
+_A huge thank you goes out to everyone who spent time with me throughout the recruitment process. My old friends and mentors for their moral support and advice, the new friends that came about, and most of all the amazing people I was fortunate to be able to meet and connect with along the way._
+
 * * *
 
 _If anyone has specific questions about my experience with any of these companies or wants to drop me a line, feel free to shoot me an email at tadas [at] tadasant.com!_
