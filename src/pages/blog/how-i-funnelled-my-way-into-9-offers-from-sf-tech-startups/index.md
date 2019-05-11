@@ -1,6 +1,6 @@
 ---
-title: "How I Funnelled My Way Into 9 Offers From SF’s Hottest Tech Startups"
-date: "2019-05-07"
+title: "Funnelling My Way Into 9 Offers From SF’s Hottest Tech Startups"
+date: "2019-05-10"
 description: "An inside look into a set of tactics you might be able to leverage to supercharge your next software engineering job search."
 coverphoto: _cover-photo.png
 ---
