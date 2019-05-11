@@ -97,7 +97,7 @@ Maybe they’ll click “buy now” anyway if your offer is _really_ compelling,
 
 This tip was probably the most effective tactic I adopted. I realize that it is, regrettably, not a practical option for many people.
 
-But if you’re a good engineer that will inevitably land _some_ decent job, and can stomach living off of savings for 1–2 months while you commit to the job search process, those thousands of foregone salary will likely pale in comparison to the bumps you get for
+But if you’re a good engineer that will inevitably land _some_ decent job, and can stomach living off of savings for 1–2 months while you commit to the job search process, those thousands of foregone salary will likely pale in comparison to the bumps you get for:
 
 1.  The typical [“job hopping”](https://www.forbes.com/sites/lizryan/2018/04/21/yes-you-do-have-to-change-jobs-to-get-paid-what-youre-worth/) bump.
 2.  Doing exceptionally well on interviews that your new employer will value you higher than they would otherwise.
