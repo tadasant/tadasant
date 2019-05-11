@@ -158,7 +158,7 @@ Least good, but better than nothing, are generic questions like “Tell me about
 
 **Why this is important**: From what I can tell from feedback I’ve gotten, an interviewer might draw two conclusions from this Q/A interaction:
 
-1.  The candidate is deeply, genuinely interested in our company and what we’re doing; s/he _really_ wants to work here
+1.  The candidate is deeply, genuinely interested in our company and what we’re doing; s/he _really_ wants to work here.
 2.  The candidate exhibits critical thinking skills that might be useful beyond the typical responsibilities associated with an engineer (which could be a big deal for startups that require engineers to wear a lot of hats).
 
 If they’re on the edge of a pass/fail grade for your interview, this interaction could tip it in the positive direction. If the Q/A is an extremely positive interaction that goes on for a few minutes, you can count on [the serial-position effect](https://en.wikipedia.org/wiki/Serial-position_effect) to influence your interviewers’ final perception of you when they come to the team debrief table at the end of a long day.
