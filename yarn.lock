@@ -5925,6 +5925,11 @@ gatsby-plugin-extract-schema@^0.0.4:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-extract-schema/-/gatsby-plugin-extract-schema-0.0.4.tgz#77cf9c2ae8581060bb5dcafbe24491b652f6eedd"
   integrity sha512-MunYq+THr1wKOm01YX49UJnO9M3fZNngGk3OA+vYJ0QFBJOuZjDG/FakgenZieERxkPbGvaLc2a3pBqUxuTyUQ==
 
+gatsby-plugin-facebook-pixel@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-facebook-pixel/-/gatsby-plugin-facebook-pixel-1.0.3.tgz#d3cab36fa61803e9d412f36847775d383325dfdf"
+  integrity sha512-IM4e+5FkpLUCV/69tU+GFXVAs0EJXBfM/BARO/6SaMqalLfj1fj4ZXUyC8kHy3RiTMuw+y8g2mdkBMZqj7RyWQ==
+
 gatsby-plugin-favicon@^3.1.4:
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-favicon/-/gatsby-plugin-favicon-3.1.4.tgz#68e0fc5c99935e27935e2af9f92f7b1dde1ec232"
@@ -5933,6 +5938,13 @@ gatsby-plugin-favicon@^3.1.4:
     favicons-webpack-plugin "git://github.com/Creatiwity/favicons-webpack-plugin.git#f262255febeeca348bf7ae5cc140e0386c074e2c"
     html-react-parser "^0.4.6"
     lodash "^4.17.10"
+
+gatsby-plugin-google-analytics@^2.0.19:
+  version "2.0.19"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.0.19.tgz#02430313336aa65712bad75600e45a7b510bbd40"
+  integrity sha512-Db1nOpzS1Nq52E0tFfgF2uCPCnWEtJbUMKLX1RU5Hfki8BoPHpZUHrcd5NtT3KQuVa7Ekps+3uJVziK+Yj5n+A==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
 
 gatsby-plugin-netlify@^2.0.6:
   version "2.0.6"
