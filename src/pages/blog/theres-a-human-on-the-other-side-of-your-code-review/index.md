@@ -3,7 +3,6 @@ title: "There’s a human on the other side of your code review"
 date: "2017-10-28"
 description: "Some tips for the process of code reviewing and how to give code reviews the human touch they deserve."
 coverphoto: _cover-photo.jpeg
-medium: "https://medium.com/@tadasant/theres-a-human-on-the-other-side-of-your-code-review-9732cc15bfee"
 ---
 
 ![](_cover-photo.jpeg "Code reviews are a fact of life for most software developers; are we doing enough to look beyond the code within them?")

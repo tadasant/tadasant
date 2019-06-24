@@ -5,8 +5,6 @@ description: "An inside look into a set of tactics you might be able to leverage
 coverphoto: _cover-photo.png
 ---
 
-_Also posted on [Medium](https://medium.com/@tadasant/funneling-my-way-into-9-offers-from-sfs-hottest-tech-startups-d24ed8e16ede)_
-
 ![](typical-funnel.png "Typical application funnel for a software engineering candidate pursuing a new job.")
 
 Despite the demand for software engineers, almost every blog post you read about a candidate’s recruitment experience comes with a funnel breakdown that looks something like the above.

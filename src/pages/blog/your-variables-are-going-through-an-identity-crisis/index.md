@@ -3,7 +3,6 @@ title: "Your variables are going through an identity crisis"
 date: "2017-11-19"
 description: "Naming is well-known to be one of the hardest things to do well in computer science. What can we do to do better? Why should we care? "
 coverphoto: _cover-photo.jpeg
-medium: "https://medium.com/@tadasant/your-variables-are-going-through-an-identity-crisis-5d135936febf"
 ---
 
 ![](_cover-photo.jpeg)

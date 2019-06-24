@@ -8,7 +8,6 @@ import {
   GITHUB_URL,
   GOODREADS_URL,
   INSTAGRAM_URL,
-  MEDIUM_URL,
   STACKOVERFLOW_URL,
   TWITTER_URL,
 } from '../lib/constants';
@@ -28,11 +27,10 @@ interface IQueryProps {
 type TProps = IQueryProps;
 
 const Contact: SFC<TProps> = props => {
-  const { data: { mail, linkedin, github, stackoverflow, facebook, goodreads, instagram, medium, twitter } } = props;
+  const { data: { mail, linkedin, github, stackoverflow, facebook, goodreads, instagram, twitter } } = props;
   if (!facebook || !facebook.childImageSharp || !linkedin || !linkedin.childImageSharp || !github
     || !github.childImageSharp || !mail || !mail.childImageSharp || !stackoverflow || !stackoverflow.childImageSharp ||
-    !goodreads || !goodreads.childImageSharp || !instagram || !instagram.childImageSharp || !medium ||
-    !medium.childImageSharp || !twitter || !twitter.childImageSharp) {
+    !goodreads || !goodreads.childImageSharp || !instagram || !instagram.childImageSharp || !twitter || !twitter.childImageSharp) {
     console.warn(`Contact: GraphQL returned a null on build. This probably shouldn\'t happen. `);
     return null;
   }
@@ -102,12 +100,6 @@ const Contact: SFC<TProps> = props => {
           <BottomIconImage fluid={stackoverflow.childImageSharp.fluid} alt='Tadas Antanavicius StackOverflow'/>
         </UndecoratedAnchor>
         <UndecoratedAnchor
-          href={MEDIUM_URL}
-          target='__blank'
-          rel='noopener nofollower'>
-          <BottomIconImage fluid={medium.childImageSharp.fluid} alt='Tadas Antanavicius Medium'/>
-        </UndecoratedAnchor>
-        <UndecoratedAnchor
           href={TWITTER_URL}
           target='__blank'
           rel='noopener nofollower'>
@@ -173,13 +165,6 @@ const CONTACT_QUERY = graphql`
             }
         }
         instagram: file(relativePath: {eq: "images/icons/instagram.png"}) {
-            childImageSharp {
-                fluid(maxWidth: 100) {
-                    ...GatsbyImageSharpFluid_tracedSVG
-                }
-            }
-        }
-        medium: file(relativePath: {eq: "images/icons/medium.png"}) {
             childImageSharp {
                 fluid(maxWidth: 100) {
                     ...GatsbyImageSharpFluid_tracedSVG
