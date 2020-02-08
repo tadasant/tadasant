@@ -5,15 +5,11 @@ import { DoingCardsContainerDiv } from './DoingCards.style'
 
 const cardProps: Partial<ICardProps>[] = [
   {
-    title: 'Full-time employed',
-    description: 'At a stealth-mode startup in San Francisco - stay tuned!',
-  },
-  {
-    title: 'Connecting',
+    title: 'Making healthcare software innovation possible',
     description:
-      "Having just landed in SF, my focus is to meet interesting people in tech and entreprenurship. Let's connect!",
-    urlDisplay: 'tadas@tadasant.com',
-    url: 'mailto:tadas@tadasant.com?subject=Lets%20Connect',
+      "At Commure, where we're solving the reason healthcare software is so hard to build and deploy. Join me!",
+    urlDisplay: 'commure.com',
+    url: 'https://commure.com/',
   },
   {
     title: 'BariBuilder',
@@ -21,6 +17,13 @@ const cardProps: Partial<ICardProps>[] = [
       'Educational content site and companion software suite built for weight loss surgery patients.',
     urlDisplay: 'baribuilder.com',
     url: 'https://baribuilder.com/',
+  },
+  {
+    title: 'Connecting',
+    description:
+      "I love people and can talk for days about tech, healthcare, and entreprenurship. Let's connect!",
+    urlDisplay: 'tadas@tadasant.com',
+    url: 'mailto:tadas@tadasant.com?subject=Lets%20Connect',
   },
   {
     title: 'Blogging',
@@ -47,13 +50,6 @@ const cardProps: Partial<ICardProps>[] = [
     title: 'Listening',
     description:
       'Podcasts about startups, software, and psychology. Always eager to discuss a thought-provoking episode.',
-  },
-  {
-    title: 'Ships',
-    description:
-      "Hobby, non-commercializable side project I'm toying with with a focus on managing and fostering relationships: friendships, professional connections, etc.",
-    urlDisplay: 'github.com/tadasant/ships',
-    url: 'https://github.com/tadasant/ships',
   },
 ]
 
