@@ -64,13 +64,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-139973374-1",
+        trackingId: "UA-199983304-1",
         // Puts tracking script in the head instead of the body
         head: true,
         // Setting this parameter is optional
         anonymize: false,
         // Setting this parameter is also optional
-        respectDNT: true,
+        respectDNT: false,
         // Avoids sending pageview hits from custom paths
         exclude: [],
         // Enables Google Optimize using your container Id
