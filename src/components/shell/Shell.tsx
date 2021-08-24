@@ -48,7 +48,7 @@ const Shell: SFC<TProps> = ({ children, data, unstickyNavbar }) => {
           {
             name: 'description',
             content:
-              "Tadas Antanavicius' personal website. Tadas is a software engineer, entrepreneur, and blogger based in the United States. Here you'll find basic information about him, his blog, and links to his other profiles around the web.",
+              "Tadas Antanavicius' personal website. Tadas is a digital marketer, software engineer, and entrepreneur based in the United States. Here you'll find basic information about him, his blog, and links to his other profiles around the web.",
           },
           {
             name: 'google-site-verification',

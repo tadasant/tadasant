@@ -5,9 +5,9 @@ import { DoingCardsContainerDiv } from './DoingCards.style'
 
 const cardProps: Partial<ICardProps>[] = [
   {
-    title: 'SEO Consulting',
+    title: 'SEM & SEO Consulting',
     description:
-      'As a digital marketing freelancer and consultant, I help companies make more sales through organic search.',
+      'As a digital marketing service provider and consultant, I help startups generate more demand through search engines.',
     urlDisplay: 't3smarketing.com',
     url: 'https://t3smarketing.com/',
   },
