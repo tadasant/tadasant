@@ -21,7 +21,7 @@ const cardProps: Partial<ICardProps>[] = [
   {
     title: 'Connecting',
     description:
-      "I love people and can talk for days about tech, marketing, and entreprenurship. Let's connect!",
+      "I love people and can talk for days about tech, marketing, and entrepreneurship. Let's connect!",
     urlDisplay: 'tadas@tadasant.com',
     url: 'mailto:tadas@tadasant.com?subject=Lets%20Connect',
   },
