@@ -7,7 +7,7 @@ const cardProps: Partial<ICardProps>[] = [
   {
     title: 'SEO Growth Consulting',
     description:
-      'I consult early stage high growth startups on SEO as a customer acquisition channel. I work mostly with Seed and Series A stage companies building out their first SEO strategies, collaborating closely with marketers, product managers, and engineers to make it happen.',
+      'I consult early stage high growth startups on SEO as a customer acquisition channel.',
     urlDisplay: 't3smarketing.com',
     url: 'https://t3smarketing.com/',
   },
