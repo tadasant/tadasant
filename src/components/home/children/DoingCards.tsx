@@ -5,18 +5,18 @@ import { DoingCardsContainerDiv } from './DoingCards.style'
 
 const cardProps: Partial<ICardProps>[] = [
   {
-    title: 'SEM & SEO Consulting',
+    title: 'SEO Growth Consulting',
     description:
-      'As a digital marketing service provider and consultant, I help startups generate more demand through search engines.',
+      'I consult early stage high growth startups on SEO as a customer acquisition channel. I work mostly with Seed and Series A stage companies building out their first SEO strategies, collaborating closely with marketers, product managers, and engineers to make it happen.',
     urlDisplay: 't3smarketing.com',
     url: 'https://t3smarketing.com/',
   },
   {
-    title: 'BariBuilder',
+    title: 'Courtside',
     description:
-      'Educational content site and e-commerce offering built for weight loss surgery patients.',
-    urlDisplay: 'baribuilder.com',
-    url: 'https://baribuilder.com/',
+      'Marketplace that enables basketball court rentals by-the-hour.',
+    urlDisplay: 'playcourtside.com',
+    url: 'https://playcourtside.com/',
   },
   {
     title: 'Connecting',
