@@ -12,6 +12,13 @@ const cardProps: Partial<ICardProps>[] = [
     url: 'https://t3smarketing.com/',
   },
   {
+    title: 'EnglishBrain',
+    description:
+      'SaaS that helps non-native English speakers rewrite their messages in polished, professional English.',
+    urlDisplay: 'englishbrain.app',
+    url: 'https://www.englishbrain.app',
+  },
+  {
     title: 'Courtside',
     description:
       'Marketplace that enables basketball court rentals by-the-hour.',
