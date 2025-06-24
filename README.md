@@ -26,3 +26,9 @@ Solution is to have some sort of config on `gql-gen` that does not leave possibi
 ## Notes
 
 Ideal cover photo size for blog post is approximately 500px x 400px (width x height).
+
+## How to get it to work
+
+```
+yarn install
+```
